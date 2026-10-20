@@ -14,6 +14,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Session\TokenMismatchException;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\DataProvider;
 use RuntimeException;
@@ -141,12 +142,17 @@ class FormsQualityTest extends TestCase
     public function test_password_check_does_not_block_when_the_breach_service_is_offline(): void
     {
         $this->pwnedPasswords = fn () => Http::failedConnection();
+        Log::spy();
 
         $this->actingAs($this->student())->put(route('password.update'), [
             'current_password' => self::CURRENT_PASSWORD,
             'password' => 'Brand-new-2026',
             'password_confirmation' => 'Brand-new-2026',
         ])->assertSessionHasNoErrors();
+
+        // Being offline is expected: a one-line warning, not an error with a stack trace.
+        Log::shouldHaveReceived('warning')->withArgs(fn (string $message) => str_contains($message, 'Breached-password check unavailable'))->once();
+        Log::shouldNotHaveReceived('error');
     }
 
     public function test_changing_the_password_signs_out_other_sessions(): void

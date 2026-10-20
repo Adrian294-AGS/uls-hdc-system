@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Support\BreachedPasswordVerifier;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Console\Events\CommandStarting;
 use Illuminate\Contracts\Validation\UncompromisedVerifier;
@@ -11,7 +12,6 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Validation\NotPwnedVerifier;
 use Illuminate\Validation\Rules\Password;
 use RuntimeException;
 
@@ -22,8 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // Don't keep someone waiting 30 seconds on a password change when the breach check is unreachable.
-        $this->app->singleton(UncompromisedVerifier::class, fn ($app) => new NotPwnedVerifier($app->make(HttpFactory::class), 5));
+        // Breach check with a 5-second timeout that logs outages as warnings. extend() (not bind) because
+        // Laravel's deferred ValidationServiceProvider registers its own verifier later and would replace ours.
+        $this->app->extend(UncompromisedVerifier::class, fn ($verifier, $app) => new BreachedPasswordVerifier($app->make(HttpFactory::class), 5));
     }
 
     /**
