@@ -66,7 +66,6 @@
 
     <div class="py-8">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <x-flash />
 
             <div class="rounded-md border border-amber-300/60 bg-amber-50/90 px-4 py-3 text-sm text-amber-900 dark:border-amber-400/30 dark:bg-amber-500/10 dark:text-amber-200" role="note">
                 {{ __('Highly confidential. This view has been recorded in the access log.') }}

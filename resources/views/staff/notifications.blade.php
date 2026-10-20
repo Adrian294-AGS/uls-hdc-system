@@ -13,9 +13,6 @@
 
     <div class="py-8">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            @if (session('status'))
-                <div class="rounded-md bg-green-50 dark:bg-green-500/10 px-4 py-3 text-sm text-green-800 dark:text-green-300" role="status">{{ session('status') }}</div>
-            @endif
 
             <div class="glass-panel sm:rounded-lg overflow-hidden">
                 @forelse ($notifications as $notification)

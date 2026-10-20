@@ -1,5 +1,6 @@
 @php
     $editing = $college->exists;
+    $startEditing = ! $editing || $errors->hasAny(['code', 'name']);
 @endphp
 
 <x-app-layout>
@@ -12,19 +13,35 @@
 
     <div class="py-8">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <x-flash />
 
+            <div x-data="editableForm(@js($startEditing))">
             <form method="POST" action="{{ $editing ? route('director.colleges.update', $college) : route('director.colleges.store') }}"
-                class="glass-panel sm:rounded-lg p-4 sm:p-6 space-y-6">
+                class="glass-panel sm:rounded-lg p-4 sm:p-6 space-y-6"
+                @if ($editing) data-confirm="{{ __('Save the changes to :code?', ['code' => $college->code]) }}" data-confirm-button="{{ __('Save changes') }}" @endif>
 
-                <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100">{{ __('College details') }}</h3>
-                <div class="grid gap-6 sm:grid-cols-3">
-                    <x-form.text name="code" label="Code" :value="$college->code" required placeholder="CIT" hint="Must be unique." />
-                    <x-form.text name="name" label="Name" :value="$college->name" required class="sm:col-span-2" placeholder="College of Information Technology" />
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100">{{ __('College details') }}</h3>
+                    @if ($editing)
+                        <div class="flex justify-end" x-show="! editing" @if ($startEditing) style="display: none" @endif>
+                        <x-secondary-button x-on:click="edit()" data-edit-button>
+                            <svg class="me-1.5 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z" /></svg>
+                            {{ __('Edit') }}
+                        </x-secondary-button>
+                    </div>
+                    @endif
                 </div>
+                <fieldset class="grid gap-6 sm:grid-cols-3" @disabled(! $startEditing) x-bind:disabled="! editing">
+                    <legend class="sr-only">{{ __('College details') }}</legend>
+                    <x-form.text name="code" label="Code" :value="$college->code" required maxlength="20" pattern="[A-Za-z0-9\-]+" title="{{ __('Letters, numbers and dashes only.') }}" placeholder="CIT" hint="Must be unique." />
+                    <x-form.text name="name" label="Name" :value="$college->name" required maxlength="255" class="sm:col-span-2" placeholder="College of Information Technology" />
+                </fieldset>
 
-                <div class="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 dark:border-gray-700 pt-6">
-                    <a href="{{ route('director.colleges.index') }}" class="text-sm text-gray-600 dark:text-gray-400 underline hover:text-gray-900 dark:hover:text-gray-100">{{ __('Cancel') }}</a>
+                <div class="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 dark:border-gray-700 pt-6" x-show="editing" @unless ($startEditing) style="display: none" @endunless>
+                    @if ($editing)
+                        <x-secondary-button x-on:click="cancel()">{{ __('Cancel') }}</x-secondary-button>
+                    @else
+                        <a href="{{ route('director.colleges.index') }}" class="text-sm text-gray-600 dark:text-gray-400 underline hover:text-gray-900 dark:hover:text-gray-100">{{ __('Cancel') }}</a>
+                    @endif
                     <x-primary-button>{{ $editing ? __('Save college') : __('Create college') }}</x-primary-button>
                 </div>
 
@@ -33,6 +50,7 @@
                     @method('PUT')
                 @endif
             </form>
+            </div>
 
             @if ($editing)
                 {{-- Programs --}}
@@ -75,7 +93,7 @@
                         <div class="mt-3 grid gap-4 sm:grid-cols-[10rem_1fr_auto] sm:items-start">
                             <div>
                                 <x-input-label for="program_code" :value="__('Code')" />
-                                <x-text-input id="program_code" name="code" class="mt-1 block w-full" :value="$errors->program->any() ? old('code') : ''" placeholder="BSIT" required />
+                                <x-text-input id="program_code" name="code" class="mt-1 block w-full" :value="$errors->program->any() ? old('code') : ''" maxlength="20" pattern="[A-Za-z0-9\-]+" placeholder="BSIT" required />
                                 <x-input-error :messages="$errors->program->get('code')" class="mt-2" />
                             </div>
                             <div>
@@ -110,7 +128,7 @@
                         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ __('This college has no programs and can be deleted.') }}</p>
                     @endif
                     <form method="POST" action="{{ route('director.colleges.destroy', $college) }}" class="mt-4"
-                        x-data x-on:submit="if (! confirm(@js(__('Delete :code? This cannot be undone.', ['code' => $college->code])))) $event.preventDefault()">
+                        data-confirm="{{ __('Delete :code? This cannot be undone.', ['code' => $college->code]) }}" data-confirm-title="{{ __('Delete college?') }}" data-confirm-button="{{ __('Delete') }}" data-confirm-danger>
                         @csrf
                         @method('DELETE')
                         <x-danger-button :disabled="$college->programs->isNotEmpty()" class="disabled:cursor-not-allowed disabled:opacity-50">{{ __('Delete college') }}</x-danger-button>

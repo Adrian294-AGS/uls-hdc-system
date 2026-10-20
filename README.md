@@ -72,7 +72,7 @@ DB_USERNAME=root
 DB_PASSWORD=your-local-mysql-password
 
 DIRECTOR_EMAIL=director@uls.test
-DIRECTOR_PASSWORD=Local-dev-2026      # at least 10 characters, letters and numbers
+DIRECTOR_PASSWORD=Local-dev-2026!     # 10+ characters: upper and lower case, a number and a symbol
 ```
 
 Create the tables and the starting data (colleges and programs, the director, and a sample counselor), then build the
@@ -185,7 +185,7 @@ Important values (all explained in `.env.production.example`):
 - `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL=https://...`, `FORCE_HTTPS=true`
 - `SESSION_SECURE_COOKIE=true`, `SESSION_ENCRYPT=true`, `SESSION_LIFETIME=60`
 - `DB_*` from step 1; `MAIL_*` for password-reset and backup-failure e-mails
-- `DIRECTOR_EMAIL` / `DIRECTOR_PASSWORD`: at least 10 characters with letters and numbers (the seeder refuses
+- `DIRECTOR_EMAIL` / `DIRECTOR_PASSWORD`: at least 10 characters with upper- and lowercase letters, a number and a symbol (the seeder refuses
   anything weaker, and refuses the placeholder)
 - `BACKUP_ARCHIVE_PASSWORD`: a long random password, **stored in the HDC password manager, not only on the server**
 
@@ -353,7 +353,9 @@ What the system enforces (covered by the tests in `tests/Feature`):
   interview goes through a policy that checks the student's college against the user's assigned colleges. Students
   get 403 on all staff and report routes.
 - **Accounts:** the role can never be set from a form (it is not mass-assignable). Passwords need at least
-  10 characters with letters and numbers. Login is limited to 5 attempts per minute per e-mail and IP; registration
+  10 characters with upper- and lowercase letters, a number and a symbol, must differ from the current one, and
+  must not appear in known data breaches (checked online when reachable). Changing it signs out the user's other
+  sessions. Login is limited to 5 attempts per minute per e-mail and IP; registration
   and password-reset requests are rate limited too. Deactivated accounts are signed out on their next request.
 - **Data:** Form 8 counselor notes and "specify" fields, and Form 5 family notes, are encrypted in the database.
   Photos are stored privately (JPG/PNG/WebP up to 2 MB) and served only to authorized users. Reports show counts

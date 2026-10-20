@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\College;
 use App\Models\Program;
 use App\Models\User;
+use App\Support\Validation;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -42,17 +43,17 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'last_name' => ['required', 'string', 'max:100'],
-            'first_name' => ['required', 'string', 'max:100'],
-            'middle_name' => ['nullable', 'string', 'max:100'],
-            'student_number' => ['required', 'string', 'max:30', 'regex:/^[A-Za-z0-9-]+$/', 'unique:'.User::class],
+            'last_name' => Validation::name(),
+            'first_name' => Validation::name(),
+            'middle_name' => Validation::name(required: false),
+            'student_number' => [...Validation::studentNumber(), 'unique:'.User::class],
             'program_id' => ['required', 'integer', 'exists:'.Program::class.',id'],
             'year_level' => ['required', 'integer', 'between:1,5'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ], [
-            'student_number.regex' => 'The student number may only contain letters, numbers and dashes.',
-        ], [
+        ], Validation::messages([
+            'last_name' => 'name', 'first_name' => 'name', 'middle_name' => 'name', 'student_number' => 'student_number',
+        ]), [
             'program_id' => 'program',
         ]);
 

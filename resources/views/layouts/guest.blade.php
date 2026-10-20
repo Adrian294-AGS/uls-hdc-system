@@ -17,6 +17,8 @@
     </head>
     <body class="font-sans text-gray-900 antialiased bg-transparent dark:text-gray-100">
         @include('partials.theme-bg')
+        <x-toasts />
+        <x-confirm-modal />
 
         <div class="absolute right-4 top-4 z-50">
             <x-theme-toggle />

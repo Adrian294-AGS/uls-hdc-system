@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\View\View;
+use Throwable;
 
 /**
  * HDC Form 8 intake interviews (staff only; students never reach these routes).
@@ -155,7 +156,12 @@ class IntakeInterviewController extends Controller
             ->whereKeyNot($actor->id)
             ->get();
 
-        Notification::send($directors, new IntakeNeedsFollowUp($interview));
+        // A notification problem must never lose the counselor's interview.
+        try {
+            Notification::send($directors, new IntakeNeedsFollowUp($interview));
+        } catch (Throwable $exception) {
+            report($exception);
+        }
     }
 
     private function log(Request $request, IntakeInterview $interview, string $action): void

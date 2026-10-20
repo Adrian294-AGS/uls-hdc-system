@@ -102,4 +102,16 @@ return [
 
     'queue_worker_via_scheduler' => (bool) env('QUEUE_WORKER_VIA_SCHEDULER', false),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Local Time Zone
+    |--------------------------------------------------------------------------
+    |
+    | Used for "not in the future" date checks (birth date, exam date), so that
+    | today's date in the Philippines is always accepted.
+    |
+    */
+
+    'local_timezone' => env('LOCAL_TIMEZONE', 'Asia/Manila'),
+
 ];

@@ -9,10 +9,13 @@ use App\Support\Reports\Report;
 use App\Support\Reports\ReportFilters;
 use App\Support\Reports\ReportResult;
 use App\Support\Reports\Suppression;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
+use Throwable;
 
 /**
  * Aggregate reports (FR-09). Every number is a suppressed count; no page links a count to
@@ -36,9 +39,15 @@ class ReportController extends Controller
         ]);
     }
 
-    public function print(Request $request, string $report): View
+    public function print(Request $request, string $report): View|RedirectResponse
     {
-        [$report, $filters, $result] = $this->run($request, $report);
+        try {
+            [$report, $filters, $result] = $this->run($request, $report);
+        } catch (HttpExceptionInterface $exception) {
+            throw $exception;
+        } catch (Throwable $exception) {
+            return $this->exportFailed($request, $report, $exception);
+        }
         $this->log($request, AccessLog::ACTION_EXPORT_REPORT, $report, $filters, 'print');
 
         return view('reports.print', [
@@ -50,9 +59,15 @@ class ReportController extends Controller
         ]);
     }
 
-    public function csv(Request $request, string $report): StreamedResponse
+    public function csv(Request $request, string $report): StreamedResponse|RedirectResponse
     {
-        [$report, $filters, $result] = $this->run($request, $report);
+        try {
+            [$report, $filters, $result] = $this->run($request, $report);
+        } catch (HttpExceptionInterface $exception) {
+            throw $exception;
+        } catch (Throwable $exception) {
+            return $this->exportFailed($request, $report, $exception);
+        }
         $this->log($request, AccessLog::ACTION_EXPORT_REPORT, $report, $filters, 'csv');
 
         $user = $request->user();
@@ -89,6 +104,15 @@ class ReportController extends Controller
 
             fclose($out);
         }, $filename, ['Content-Type' => 'text/csv; charset=UTF-8']);
+    }
+
+    private function exportFailed(Request $request, string $report, Throwable $exception): RedirectResponse
+    {
+        report($exception);
+
+        return redirect()
+            ->route('reports.show', [$report, ...$request->only(['school_year', 'semester', 'from', 'to', 'college_id', 'program_id', 'year_level'])])
+            ->with('error', __('The report could not be exported. Please try again in a moment.'));
     }
 
     /**

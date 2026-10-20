@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Staff;
 
 use App\Models\EntranceTestResult;
+use App\Support\Validation;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -33,7 +34,7 @@ class EntranceTestResultRequest extends FormRequest
         $quotient = config('sata.limits.quotient');
 
         $rules = [
-            'exam_date' => ['required', 'date', 'before_or_equal:today'],
+            'exam_date' => ['required', 'date', 'before_or_equal:'.Validation::today(), 'after:2000-01-01'],
             'quotient' => ['required', 'integer', "between:{$quotient['min']},{$quotient['max']}"],
             'quotient_descriptor' => ['required', $descriptors],
             'remarks' => ['nullable', 'string', 'max:2000'],

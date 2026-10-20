@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use Throwable;
 
 /**
  * Form 5 (Student Cumulative Record) wizard for students.
@@ -161,10 +163,15 @@ class CumulativeRecordController extends Controller
         if ($isFirstSubmission) {
             $student = $request->user()->loadMissing('program');
 
-            Notification::send(
-                User::query()->staffResponsibleFor($student->program?->college_id)->get(),
-                new RecordSubmitted($record->setRelation('student', $student)),
-            );
+            // A notification problem must never undo the student's submission.
+            try {
+                Notification::send(
+                    User::query()->staffResponsibleFor($student->program?->college_id)->get(),
+                    new RecordSubmitted($record->setRelation('student', $student)),
+                );
+            } catch (Throwable $exception) {
+                report($exception);
+            }
         }
 
         return redirect()
@@ -189,17 +196,37 @@ class CumulativeRecordController extends Controller
         return $record->load(['parents', 'siblings', 'schools', 'organizations', 'program.college']);
     }
 
+    /**
+     * Store a new photo first and only then remove the old one, so a failed upload never loses the
+     * photo the student already had.
+     *
+     * @throws ValidationException
+     */
     private function storePhoto(SaveRecordStepRequest $request, CumulativeRecord $record): void
     {
-        $removing = $request->boolean('remove_photo') || $request->hasFile('photo');
+        $newPath = null;
 
-        if ($removing && $record->photo_path) {
+        if ($request->hasFile('photo')) {
+            try {
+                $newPath = $request->file('photo')->store('record-photos/'.$request->user()->id);
+            } catch (Throwable $exception) {
+                report($exception);
+            }
+
+            if (! $newPath) {
+                throw ValidationException::withMessages([
+                    'photo' => 'Your photo could not be uploaded. Please try again, or continue without a photo for now.',
+                ]);
+            }
+        }
+
+        if (($newPath || $request->boolean('remove_photo')) && $record->photo_path) {
             Storage::delete($record->photo_path);
             $record->photo_path = null;
         }
 
-        if ($request->hasFile('photo')) {
-            $record->photo_path = $request->file('photo')->store('record-photos/'.$request->user()->id);
+        if ($newPath) {
+            $record->photo_path = $newPath;
         }
     }
 

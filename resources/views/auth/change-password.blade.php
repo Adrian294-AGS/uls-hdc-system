@@ -16,13 +16,15 @@
 
         <div>
             <x-input-label for="password" :value="__('New password')" />
-            <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" required autocomplete="new-password" />
+            <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" :invalid="$errors->has('password')" required minlength="10" autocomplete="new-password" />
+            <x-password-rules for="password" />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <div>
             <x-input-label for="password_confirmation" :value="__('Confirm new password')" />
             <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" required autocomplete="new-password" />
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-between gap-3 pt-2">

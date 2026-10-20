@@ -4,11 +4,14 @@ namespace App\Providers;
 
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Console\Events\CommandStarting;
+use Illuminate\Contracts\Validation\UncompromisedVerifier;
+use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Validation\NotPwnedVerifier;
 use Illuminate\Validation\Rules\Password;
 use RuntimeException;
 
@@ -19,7 +22,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Don't keep someone waiting 30 seconds on a password change when the breach check is unreachable.
+        $this->app->singleton(UncompromisedVerifier::class, fn ($app) => new NotPwnedVerifier($app->make(HttpFactory::class), 5));
     }
 
     /**
@@ -28,7 +32,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // Every password a person chooses (registration, reset, change, counselor accounts, director seeder).
-        Password::defaults(fn () => Password::min(10)->letters()->numbers());
+        // uncompromised() checks the Have I Been Pwned range API; if it cannot be reached it lets the password through.
+        Password::defaults(fn () => Password::min(10)->mixedCase()->numbers()->symbols()->uncompromised());
 
         if (config('app.force_https')) {
             URL::forceHttps();

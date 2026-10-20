@@ -25,15 +25,17 @@ class ProductionHardeningTest extends TestCase
     public static function passwords(): array
     {
         return [
-            'too short' => ['Abc12345', false],
-            'letters only' => ['abcdefghijkl', false],
-            'numbers only' => ['123456789012', false],
-            '10 chars, letters and numbers' => ['abcdefgh12', true],
+            'too short' => ['Abc-1234', false],
+            'no uppercase' => ['abcdefgh-12', false],
+            'no lowercase' => ['ABCDEFGH-12', false],
+            'no number' => ['Abcdefgh-xy', false],
+            'no symbol' => ['Abcdefgh123', false],
+            'all rules met' => ['Abcdefgh-12', true],
         ];
     }
 
     #[DataProvider('passwords')]
-    public function test_passwords_need_10_characters_with_letters_and_numbers(string $password, bool $accepted): void
+    public function test_passwords_need_10_characters_mixed_case_a_number_and_a_symbol(string $password, bool $accepted): void
     {
         $response = $this->post('/register', [
             'last_name' => 'Dela Cruz',

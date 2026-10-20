@@ -10,7 +10,6 @@
 
     <div class="py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <x-flash />
 
             @forelse ($colleges as $college)
                 <section class="glass-panel sm:rounded-lg overflow-hidden" aria-labelledby="college-{{ $college->id }}">

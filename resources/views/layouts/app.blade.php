@@ -17,6 +17,8 @@
     </head>
     <body class="font-sans antialiased bg-transparent text-gray-900 dark:text-gray-100">
         @include('partials.theme-bg')
+        <x-toasts />
+        <x-confirm-modal />
 
         <div class="relative z-0 min-h-screen">
             @include('layouts.navigation')

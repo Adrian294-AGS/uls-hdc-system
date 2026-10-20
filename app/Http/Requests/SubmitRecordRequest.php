@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\Models\CumulativeRecord;
 use App\Support\Form5;
+use App\Support\Validation;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Validator;
@@ -32,7 +33,7 @@ class SubmitRecordRequest extends FormRequest
     {
         return [
             'consent' => ['accepted'],
-            'consent_name' => ['required', 'string', 'max:255'],
+            'consent_name' => Validation::name(max: 255),
         ];
     }
 
@@ -46,6 +47,7 @@ class SubmitRecordRequest extends FormRequest
         return [
             'consent.accepted' => 'You must agree to the Data Privacy Notice before submitting.',
             'consent_name.required' => 'Type your full name as your signature.',
+            ...Validation::messages(['consent_name' => 'name']),
         ];
     }
 

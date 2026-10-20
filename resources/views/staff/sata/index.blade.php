@@ -18,7 +18,6 @@
 
     <div class="py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <x-flash />
 
             @forelse ($results as $result)
                 <section class="glass-panel sm:rounded-lg p-4 sm:p-6" aria-labelledby="result-{{ $result->id }}">

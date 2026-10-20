@@ -23,7 +23,6 @@
 
     <div class="py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <x-flash />
 
             <div class="glass-panel sm:rounded-lg p-4 sm:p-6">
                 @include('staff.sata.partials.result-table')

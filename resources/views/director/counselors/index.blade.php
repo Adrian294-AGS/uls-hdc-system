@@ -10,7 +10,6 @@
 
     <div class="py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <x-flash />
 
             <div class="glass-panel sm:rounded-lg overflow-hidden">
                 @if ($counselors->isEmpty())
@@ -62,7 +61,7 @@
                                                 <a href="{{ route('director.counselors.edit', $counselor) }}" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">{{ __('Edit') }}</a>
                                                 @if ($counselor->is_active)
                                                     <form method="POST" action="{{ route('director.counselors.deactivate', $counselor) }}"
-                                                        x-data x-on:submit="if (! confirm(@js(__('Deactivate :name? They will no longer be able to log in.', ['name' => $counselor->name])))) $event.preventDefault()">
+                                                        data-confirm="{{ __('Deactivate :name? They will no longer be able to log in.', ['name' => $counselor->name]) }}" data-confirm-title="{{ __('Deactivate counselor?') }}" data-confirm-button="{{ __('Deactivate') }}" data-confirm-danger>
                                                         @csrf
                                                         @method('PATCH')
                                                         <button type="submit" class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300">{{ __('Deactivate') }}</button>

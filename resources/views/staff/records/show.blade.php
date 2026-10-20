@@ -22,9 +22,6 @@
 
     <div class="py-8">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            @if (session('status'))
-                <div class="rounded-md bg-green-50 dark:bg-green-500/10 px-4 py-3 text-sm text-green-800 dark:text-green-300" role="status">{{ session('status') }}</div>
-            @endif
 
             <div class="glass-panel sm:rounded-lg p-4 sm:p-6">
                 <div class="flex flex-col gap-6 sm:flex-row sm:items-start">
@@ -70,7 +67,7 @@
 
                 @can('review', $record)
                     <form method="POST" action="{{ route('staff.records.review', $record) }}" class="mt-6 flex flex-wrap items-center gap-3 border-t border-gray-100 dark:border-gray-700 pt-4"
-                        x-data x-on:submit="if (! confirm(@js(__('Mark this record as reviewed? The student will no longer be able to edit it.')))) $event.preventDefault()">
+                        data-confirm="{{ __('Mark this record as reviewed? The student will no longer be able to edit it.') }}" data-confirm-title="{{ __('Mark as reviewed?') }}" data-confirm-button="{{ __('Mark as reviewed') }}">
                         @csrf
                         <x-primary-button>{{ __('Mark as reviewed') }}</x-primary-button>
                         <p class="text-xs text-gray-500 dark:text-gray-400">{{ __('After this, the student can no longer edit the record.') }}</p>

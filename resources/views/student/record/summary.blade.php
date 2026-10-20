@@ -30,7 +30,7 @@
             'Civil status' => $option(Form5::CIVIL_STATUSES, $record->civil_status),
             'Spouse name' => $record->spouse_name,
             'No. of children' => $record->number_of_children,
-            'Cell phone / landline no.' => $record->contact_number,
+            'Mobile no.' => $record->contact_number,
             'E-mail address' => $record->email,
             'Nationality' => $record->nationality,
             'Religion' => $record->religion,

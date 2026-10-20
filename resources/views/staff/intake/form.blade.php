@@ -43,7 +43,6 @@
                 @method('PUT')
             @endif
 
-            <x-flash />
 
             <div class="rounded-md border border-amber-300/60 bg-amber-50/90 px-4 py-3 text-sm text-amber-900 dark:border-amber-400/30 dark:bg-amber-500/10 dark:text-amber-200" role="note">
                 {{ __('Highly confidential. Only HDC staff assigned to this student\'s college can see this form. The student never sees it.') }}
@@ -73,7 +72,7 @@
                     <h3 class="mt-1 text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">{{ __('INTAKE INTERVIEW FORM') }}</h3>
                 </div>
                 <div class="mt-4 grid gap-4 sm:grid-cols-2">
-                    <x-form.text name="date_of_entry" label="Date of entry" type="date" :value="$interview->date_of_entry" />
+                    <x-form.text name="date_of_entry" label="Date of entry" type="date" :value="$interview->date_of_entry" :max="\App\Support\Validation::today()" />
                     <x-form.text name="academic_status" label="Academic status" :value="$interview->academic_status" maxlength="100" />
                 </div>
             </section>
@@ -87,26 +86,26 @@
                     </p>
                 @endunless
                 <div class="mt-4 grid gap-4 sm:grid-cols-6">
-                    <x-form.text name="name" label="Name" :value="$interview->name" class="sm:col-span-3" maxlength="255" />
-                    <x-form.text name="nickname" label="Nickname" :value="$interview->nickname" class="sm:col-span-1" maxlength="100" />
+                    <x-form.text name="name" label="Name" kind="name" :value="$interview->name" class="sm:col-span-3" maxlength="255" />
+                    <x-form.text name="nickname" label="Nickname" kind="name" :value="$interview->nickname" class="sm:col-span-1" />
                     <x-form.text name="course" label="Course" :value="$interview->course" class="sm:col-span-2" maxlength="255" />
                     <x-form.text name="home_address" label="Complete home address" :value="$interview->home_address" class="sm:col-span-6" maxlength="500" />
                     <x-form.text name="age" label="Age" type="number" :value="$interview->age" class="sm:col-span-1" min="10" max="99" />
                     <x-form.select name="sex" label="Sex" :options="Form5::SEXES" :value="$interview->sex" class="sm:col-span-1" />
-                    <x-form.text name="birth_date" label="Birthdate" type="date" :value="$interview->birth_date" class="sm:col-span-2" />
+                    <x-form.text name="birth_date" label="Birthdate" type="date" :value="$interview->birth_date" class="sm:col-span-2" min="1900-01-01" :max="\App\Support\Validation::today()" />
                     <x-form.text name="place_of_birth" label="Place of birth" :value="$interview->place_of_birth" class="sm:col-span-2" maxlength="255" />
                     <x-form.select name="civil_status" label="Civil status" :options="Form5::CIVIL_STATUSES" :value="$interview->civil_status" class="sm:col-span-2" />
-                    <x-form.text name="spouse_name" label="If married, name of spouse" :value="$interview->spouse_name" class="sm:col-span-3" maxlength="255" />
+                    <x-form.text name="spouse_name" label="If married, name of spouse" kind="name" :value="$interview->spouse_name" class="sm:col-span-3" maxlength="255" />
                     <x-form.text name="number_of_children" label="No. of children" type="number" :value="$interview->number_of_children" class="sm:col-span-1" min="0" max="30" />
                     <x-form.select name="citizenship" label="Citizenship" :options="Form8::CITIZENSHIPS" :value="$interview->citizenship" class="sm:col-span-2" />
                     <x-form.text name="citizenship_other" label="If not Filipino, please specify" :value="$interview->citizenship_other" class="sm:col-span-2" maxlength="100" />
                     <x-form.text name="religion" label="Religion" :value="$interview->religion" class="sm:col-span-2" maxlength="100" />
-                    <x-form.text name="contact_number" label="Contact no." :value="$interview->contact_number" class="sm:col-span-2" maxlength="50" />
+                    <x-form.text name="contact_number" label="Contact no." kind="phone" :value="$interview->contact_number" class="sm:col-span-2" />
                     <x-form.text name="boarding_address" label="Boarding house address" :value="$interview->boarding_address" class="sm:col-span-4" maxlength="500" />
-                    <x-form.text name="emergency_contact_name" label="Name of person we can contact in case of emergency" :value="$interview->emergency_contact_name" class="sm:col-span-4" maxlength="255" />
+                    <x-form.text name="emergency_contact_name" kind="name" label="Name of person we can contact in case of emergency" :value="$interview->emergency_contact_name" class="sm:col-span-4" maxlength="255" />
                     <x-form.text name="emergency_contact_relationship" label="Relationship" :value="$interview->emergency_contact_relationship" class="sm:col-span-2" maxlength="100" />
                     <x-form.text name="emergency_contact_address" label="Address" :value="$interview->emergency_contact_address" class="sm:col-span-4" maxlength="500" />
-                    <x-form.text name="emergency_contact_number" label="Contact no." :value="$interview->emergency_contact_number" class="sm:col-span-2" maxlength="50" />
+                    <x-form.text name="emergency_contact_number" label="Contact no." kind="phone" :value="$interview->emergency_contact_number" class="sm:col-span-2" />
                 </div>
             </section>
 
@@ -203,12 +202,14 @@
                 <a href="{{ $backUrl }}" class="text-sm text-gray-600 dark:text-gray-400 underline hover:text-gray-900 dark:hover:text-gray-100">{{ __('Cancel') }}</a>
                 <div class="flex flex-wrap items-center gap-3">
                     @if ($finalized)
-                        <x-primary-button name="action" value="finalize">{{ __('Save changes') }}</x-primary-button>
-                    @else
-                        <x-secondary-button type="submit" name="action" value="draft">{{ __('Save as draft') }}</x-secondary-button>
                         <x-primary-button name="action" value="finalize"
-                            data-confirm="{{ __('Finalize this intake interview? After this, only the director can edit it.') }}"
-                            x-data x-on:click="if (! confirm($el.dataset.confirm)) $event.preventDefault()">
+                            data-confirm="{{ __('Save the changes to this finalized intake interview? The edit will be recorded in the access log.') }}" data-confirm-button="{{ __('Save changes') }}">{{ __('Save changes') }}</x-primary-button>
+                    @else
+                        <x-secondary-button type="submit" name="action" value="draft"
+                            :data-confirm="$editing ? __('Save the changes to this intake interview draft?') : null"
+                            :data-confirm-button="$editing ? __('Save draft') : null">{{ __('Save as draft') }}</x-secondary-button>
+                        <x-primary-button name="action" value="finalize"
+                            data-confirm="{{ __('Finalize this intake interview? After this, only the director can edit it.') }}" data-confirm-title="{{ __('Finalize intake interview?') }}" data-confirm-button="{{ __('Finalize') }}">
                             {{ __('Finalize') }}
                         </x-primary-button>
                     @endif

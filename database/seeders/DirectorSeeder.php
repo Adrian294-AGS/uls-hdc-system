@@ -11,7 +11,7 @@ use RuntimeException;
 
 /**
  * Creates the single HDC Director account from DIRECTOR_EMAIL / DIRECTOR_PASSWORD in .env.
- * The password must meet the app's password rules (at least 10 characters, letters and numbers)
+ * The password must meet the app's password rules (10+ characters, mixed case, a number and a symbol)
  * and must not be the placeholder from the example .env files.
  * If the account already exists it is left untouched (its password is not reset).
  */
