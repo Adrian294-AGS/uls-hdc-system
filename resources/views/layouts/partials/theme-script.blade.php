@@ -16,7 +16,7 @@
         preload.rel = 'preload';
         preload.as = 'image';
         preload.type = 'image/webp';
-        preload.href = dark ? '/images/bg-night.webp' : '/images/bg-day.webp';
+        preload.href = dark ? @json(Vite::asset('resources/images/bg-night.webp')) : @json(Vite::asset('resources/images/bg-day.webp'));
         preload.setAttribute('fetchpriority', 'high');
         document.head.appendChild(preload);
 

@@ -37,7 +37,7 @@ html.dark {
 }
 
 .theme-bg-day {
-    background-image: url('/images/bg-day.png');
+    background-image: url('../images/bg-day.png');
     opacity: 1;
 }
 
@@ -46,7 +46,7 @@ html.dark {
 }
 
 .theme-bg-night {
-    background-image: url('/images/bg-night.png');
+    background-image: url('../images/bg-night.png');
     opacity: 0;
 }
 
@@ -55,13 +55,13 @@ html.dark {
 }
 
 /* Smaller .webp where supported; the .png above stays as the fallback. */
-@supports (background-image: image-set(url('/images/bg-day.webp') type('image/webp'))) {
+@supports (background-image: image-set(url('../images/bg-day.webp') type('image/webp'))) {
     .theme-bg-day {
-        background-image: image-set(url('/images/bg-day.webp') type('image/webp'), url('/images/bg-day.png') type('image/png'));
+        background-image: image-set(url('../images/bg-day.webp') type('image/webp'), url('../images/bg-day.png') type('image/png'));
     }
 
     .theme-bg-night {
-        background-image: image-set(url('/images/bg-night.webp') type('image/webp'), url('/images/bg-night.png') type('image/png'));
+        background-image: image-set(url('../images/bg-night.webp') type('image/webp'), url('../images/bg-night.png') type('image/png'));
     }
 }
 
