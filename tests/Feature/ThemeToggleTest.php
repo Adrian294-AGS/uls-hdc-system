@@ -31,42 +31,42 @@ class ThemeToggleTest extends TestCase
         $html = $this->actingAs($user)->get(route($user->dashboardRoute()))->assertOk()->getContent();
 
         // Desktop nav + mobile menu
-        $this->assertSame(2, substr_count($html, 'data-theme-toggle'));
-        $this->assertStringContainsString("localStorage.getItem('theme')", $html);
-        $this->assertStringContainsString('Switch to dark mode', $html);
-        $this->assertStringContainsString('Switch to light mode', $html);
-        $this->assertBackgroundLayersRender($html);
+        $this->assertSame(2, substr_count($html, 'onclick="toggleTheme()"'));
+        $this->assertThemeSetup($html);
     }
 
-    public function test_theme_toggle_and_no_flash_script_are_on_guest_pages(): void
+    public function test_theme_toggle_and_background_are_on_guest_pages(): void
     {
         foreach (['/', route('login'), route('register')] as $url) {
             $html = $this->get($url)->assertOk()->getContent();
 
-            $this->assertStringContainsString('data-theme-toggle', $html);
-            $this->assertStringContainsString('prefers-color-scheme: dark', $html);
-            $this->assertLessThan(
-                strpos($html, '</head>'),
-                strpos($html, "localStorage.getItem('theme')"),
-                'Theme script must run inside <head>, before the page renders.',
-            );
+            $this->assertSame(1, substr_count($html, 'onclick="toggleTheme()"'));
+            $this->assertThemeSetup($html);
         }
     }
 
-    public function test_login_page_renders_a_clickable_toggle_above_the_beach_background(): void
+    public function test_login_page_renders_the_theme_toggle(): void
     {
-        $html = $this->get(route('login'))->assertOk()->getContent();
-
-        $this->assertStringContainsString('data-theme-toggle', $html);
-        $this->assertStringContainsString('<div class="absolute right-4 top-4 z-50">', $html);
-        $this->assertBackgroundLayersRender($html);
+        $this->get(route('login'))
+            ->assertOk()
+            ->assertSee('aria-label="Toggle light/dark mode"', false)
+            ->assertSee('class="icon-moon"', false)
+            ->assertSee('class="icon-sun"', false);
     }
 
-    private function assertBackgroundLayersRender(string $html): void
+    private function assertThemeSetup(string $html): void
     {
-        $this->assertStringContainsString('<div class="pointer-events-none fixed inset-0 -z-10" aria-hidden="true" data-theme-background>', $html);
-        $this->assertStringContainsString('theme-bg theme-bg-day', $html);
-        $this->assertStringContainsString('theme-bg theme-bg-night', $html);
+        // The saved theme is applied in <head>, before anything renders.
+        $this->assertStringStartsWith('<script>', ltrim(explode('<head>', $html, 2)[1]));
+        $this->assertLessThan(strpos($html, '</head>'), strpos($html, "localStorage.getItem('theme')"));
+        $this->assertStringContainsString(asset('images/bg-day.png'), $html);
+        $this->assertStringContainsString(asset('images/bg-night.png'), $html);
+
+        // Background layers come first in <body>, exactly once.
+        $this->assertStringStartsWith('<div class="beach-bg beach-day"', ltrim(explode('>', explode('<body', $html, 2)[1], 2)[1]));
+        $this->assertSame(1, substr_count($html, 'class="beach-bg beach-day"'));
+        $this->assertSame(1, substr_count($html, 'class="beach-bg beach-night"'));
+        $this->assertSame(1, substr_count($html, 'class="beach-tint"'));
         $this->assertStringNotContainsString('bg-gray-100 dark:bg-gray-900', $html);
     }
 }
