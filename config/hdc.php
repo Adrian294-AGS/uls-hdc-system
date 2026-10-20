@@ -86,4 +86,20 @@ return [
         'summer' => ['start' => '04-01', 'end' => '05-31'],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Scheduler and Queue
+    |--------------------------------------------------------------------------
+    |
+    | schedule_timezone: the time zone for scheduled tasks (backups at 01:30).
+    | queue_worker_via_scheduler: on shared hosting without Supervisor, set
+    | QUEUE_WORKER_VIA_SCHEDULER=true so the every-minute cron also runs the
+    | queue worker. Leave it false when Supervisor runs `queue:work`.
+    |
+    */
+
+    'schedule_timezone' => env('SCHEDULE_TIMEZONE', 'Asia/Manila'),
+
+    'queue_worker_via_scheduler' => (bool) env('QUEUE_WORKER_VIA_SCHEDULER', false),
+
 ];

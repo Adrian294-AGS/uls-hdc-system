@@ -6,9 +6,11 @@ use App\Enums\Role;
 use App\Models\College;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use RuntimeException;
 
 /**
- * Test-only counselor assigned to CIT. DatabaseSeeder skips this in production.
+ * Local/test-only counselor assigned to CIT (password "password"). Refuses to run in production,
+ * even when called directly with db:seed --class.
  */
 class SampleCounselorSeeder extends Seeder
 {
@@ -19,6 +21,10 @@ class SampleCounselorSeeder extends Seeder
      */
     public function run(): void
     {
+        if (app()->isProduction()) {
+            throw new RuntimeException('SampleCounselorSeeder creates a demo account and must never run in production.');
+        }
+
         $counselor = User::firstOrNew(['email' => self::EMAIL]);
         $counselor->fill([
             'first_name' => 'Sample',
