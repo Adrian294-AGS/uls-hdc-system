@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Student;
 
 use App\Enums\RecordStatus;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Staff\RecordExportController;
 use App\Http\Requests\SaveRecordStepRequest;
 use App\Http\Requests\SubmitRecordRequest;
 use App\Models\College;
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Throwable;
 
@@ -177,6 +179,16 @@ class CumulativeRecordController extends Controller
         return redirect()
             ->route('student.record.show', $record)
             ->with('status', 'Your Student Cumulative Record has been submitted. Thank you!');
+    }
+
+    /**
+     * The student's own Form 5 as PDF (never SATA or Form 8).
+     */
+    public function pdf(Request $request, CumulativeRecord $record): BinaryFileResponse|RedirectResponse
+    {
+        Gate::authorize('export', $record);
+
+        return RecordExportController::download($request, $record, 'pdf');
     }
 
     /**

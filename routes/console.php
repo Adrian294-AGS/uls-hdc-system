@@ -28,6 +28,14 @@ Schedule::command('backup:run')->dailyAt('01:30')->timezone($timezone)->withoutO
 Schedule::command('backup:monitor')->dailyAt('07:00')->timezone($timezone);
 
 // Housekeeping.
+// Export files are deleted after download; this removes any left behind by an interrupted download.
+Schedule::call(function (): void {
+    foreach (glob(storage_path('app/tmp-exports/*')) ?: [] as $file) {
+        if (is_file($file) && filemtime($file) < now()->subHour()->getTimestamp()) {
+            @unlink($file);
+        }
+    }
+})->name('prune-temporary-exports')->hourly();
 Schedule::command('auth:clear-resets')->dailyAt('02:30')->timezone($timezone);
 Schedule::command('queue:prune-failed --hours=720')->weekly()->timezone($timezone);
 

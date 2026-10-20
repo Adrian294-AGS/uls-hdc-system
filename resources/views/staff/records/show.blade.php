@@ -16,6 +16,19 @@
                 <a href="#intake" class="text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">{{ __('Intake interviews') }} &darr;</a>
                 <a href="#sata" class="text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">{{ $sata ? __('SATA result') : __('Encode SATA result') }} &darr;</a>
                 <x-record-status :status="$record->status" />
+                <x-export-menu :action="route('staff.records.export', $record)" :formats="['pdf' => 'PDF', 'xlsx' => 'Excel', 'docx' => 'Word']">
+                    <p class="text-xs text-gray-600 dark:text-gray-400">{{ __('HDC Form 5 is always included. Also include:') }}</p>
+                    <label class="flex items-start gap-2">
+                        <input type="checkbox" name="include[]" value="sata" class="mt-0.5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-900 dark:text-indigo-500">
+                        <span>{{ __('SATA entrance test result') }}</span>
+                    </label>
+                    @can('exportConfidential', $record)
+                        <label class="flex items-start gap-2">
+                            <input type="checkbox" name="include[]" value="intake" class="mt-0.5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-900 dark:text-indigo-500">
+                            <span>{{ __('Form 8 intake interviews') }} <span class="block text-xs text-gray-500 dark:text-gray-400">{{ __('Highly confidential') }}</span></span>
+                        </label>
+                    @endcan
+                </x-export-menu>
             </div>
         </div>
     </x-slot>

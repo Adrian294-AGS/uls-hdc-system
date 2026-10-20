@@ -9,6 +9,8 @@ use App\Http\Controllers\Staff\EntranceTestResultController;
 use App\Http\Controllers\Staff\IntakeInterviewController;
 use App\Http\Controllers\Staff\NotificationController;
 use App\Http\Controllers\Staff\RecordController;
+use App\Http\Controllers\Staff\RecordExportController;
+use App\Http\Controllers\Staff\RecordListExportController;
 use App\Http\Controllers\Staff\ReportController;
 use App\Http\Controllers\Staff\TrackerController;
 use App\Http\Controllers\Student\CumulativeRecordController;
@@ -39,6 +41,7 @@ Route::middleware(['auth', 'verified', 'role:student'])->prefix('student')->name
     Route::post('/record', [CumulativeRecordController::class, 'store'])->name('record.store');
     Route::get('/records/{record}', [CumulativeRecordController::class, 'show'])->name('record.show');
     Route::get('/records/{record}/photo', [CumulativeRecordController::class, 'photo'])->name('record.photo');
+    Route::get('/records/{record}/pdf', [CumulativeRecordController::class, 'pdf'])->name('record.pdf');
     Route::get('/records/{record}/steps/{step}', [CumulativeRecordController::class, 'edit'])
         ->whereIn('step', array_keys(Form5::STEPS))
         ->name('record.edit');
@@ -71,7 +74,9 @@ Route::middleware(['auth', 'verified', 'role:director'])->prefix('director')->na
  */
 Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('staff')->name('staff.')->group(function () {
     Route::get('/records', [RecordController::class, 'index'])->name('records.index');
+    Route::get('/records/export', RecordListExportController::class)->name('records.export-list');
     Route::get('/records/{record}', [RecordController::class, 'show'])->name('records.show');
+    Route::get('/records/{record}/export', RecordExportController::class)->name('records.export');
     Route::get('/records/{record}/photo', [RecordController::class, 'photo'])->name('records.photo');
     Route::post('/records/{record}/review', [RecordController::class, 'review'])->name('records.review');
 

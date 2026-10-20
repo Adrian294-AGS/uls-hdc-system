@@ -28,6 +28,10 @@ class AccessLog extends Model
 
     public const ACTION_EXPORT_REPORT = 'export_report';
 
+    public const ACTION_EXPORT_RECORD = 'export_record';
+
+    public const ACTION_EXPORT_LIST = 'export_list';
+
     /**
      * @return BelongsTo<IntakeInterview, $this>
      */
