@@ -32,6 +32,14 @@ class AccessLog extends Model
 
     public const ACTION_EXPORT_LIST = 'export_list';
 
+    public const ACTION_IMPORT = 'import';
+
+    public const ACTION_RUN_BACKUP = 'run_backup';
+
+    public const ACTION_DOWNLOAD_BACKUP = 'download_backup';
+
+    public const ACTION_DELETE_BACKUP = 'delete_backup';
+
     /**
      * @return BelongsTo<IntakeInterview, $this>
      */

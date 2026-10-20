@@ -18,7 +18,7 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-6 lg:-my-px lg:ms-8 lg:flex">
+                <div class="hidden space-x-5 xl:-my-px xl:ms-6 xl:flex">
                     <x-nav-link :href="route($user->dashboardRoute())" :active="request()->routeIs($user->dashboardRoute())">
                         {{ __('Dashboard') }}
                     </x-nav-link>
@@ -37,13 +37,19 @@
                         <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
                             {{ __('Reports') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('staff.imports.index')" :active="request()->routeIs('staff.imports.*')">
+                            {{ __('Import') }}
+                        </x-nav-link>
                     @endif
                     @if ($user->isDirector())
                         <x-nav-link :href="route('director.counselors.index')" :active="request()->routeIs('director.counselors.*')">
                             {{ __('Counselors') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('director.colleges.index')" :active="request()->routeIs('director.colleges.*', 'director.programs.*')">
-                            {{ __('Colleges & Programs') }}
+                        <x-nav-link :href="route('director.colleges.index')" :active="request()->routeIs('director.colleges.*', 'director.programs.*')" title="{{ __('Colleges & Programs') }}">
+                            {{ __('Colleges') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('director.backups.index')" :active="request()->routeIs('director.backups.*')">
+                            {{ __('Backups') }}
                         </x-nav-link>
                     @endif
                     <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
@@ -53,13 +59,13 @@
             </div>
 
             <!-- User + Theme + Logout -->
-            <div class="hidden lg:flex lg:items-center lg:gap-3 lg:ms-6">
+            <div class="hidden xl:flex xl:items-center xl:gap-3 xl:ms-6">
                 @if ($isStaff)
                     <x-notification-bell :count="$unreadCount" />
                 @endif
 
-                <div class="text-right leading-tight">
-                    <div class="text-sm font-medium text-gray-800 dark:text-gray-100">{{ $user->name }}</div>
+                <div class="hidden 2xl:block text-right leading-tight">
+                    <div class="text-sm font-medium text-gray-800 dark:text-gray-100 whitespace-nowrap">{{ $user->name }}</div>
                     <div class="text-xs text-gray-500 dark:text-gray-400">{{ $user->role->label() }}</div>
                 </div>
 
@@ -67,12 +73,12 @@
 
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <x-secondary-button type="submit">{{ __('Log Out') }}</x-secondary-button>
+                    <x-secondary-button type="submit" class="whitespace-nowrap">{{ __('Log Out') }}</x-secondary-button>
                 </form>
             </div>
 
             <!-- Hamburger -->
-            <div class="-me-2 flex items-center gap-2 lg:hidden">
+            <div class="-me-2 flex items-center gap-2 xl:hidden">
                 @if ($isStaff)
                     <x-notification-bell :count="$unreadCount" />
                 @endif
@@ -87,7 +93,7 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden xl:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route($user->dashboardRoute())" :active="request()->routeIs($user->dashboardRoute())">
                 {{ __('Dashboard') }}
@@ -107,6 +113,9 @@
                 <x-responsive-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
                     {{ __('Reports') }}
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('staff.imports.index')" :active="request()->routeIs('staff.imports.*')">
+                    {{ __('Import') }}
+                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('staff.notifications.index')" :active="request()->routeIs('staff.notifications.*')">
                     {{ __('Notifications') }} @if ($unreadCount) ({{ $unreadCount }}) @endif
                 </x-responsive-nav-link>
@@ -117,6 +126,9 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('director.colleges.index')" :active="request()->routeIs('director.colleges.*', 'director.programs.*')">
                     {{ __('Colleges & Programs') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('director.backups.index')" :active="request()->routeIs('director.backups.*')">
+                    {{ __('Backups') }}
                 </x-responsive-nav-link>
             @endif
             <x-responsive-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">

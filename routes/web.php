@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\Director\BackupController;
 use App\Http\Controllers\Director\CollegeController;
 use App\Http\Controllers\Director\CounselorController;
 use App\Http\Controllers\Director\ProgramController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Staff\DashboardController;
 use App\Http\Controllers\Staff\EntranceTestResultController;
+use App\Http\Controllers\Staff\ImportController;
 use App\Http\Controllers\Staff\IntakeInterviewController;
 use App\Http\Controllers\Staff\NotificationController;
 use App\Http\Controllers\Staff\RecordController;
@@ -62,6 +64,12 @@ Route::middleware(['auth', 'verified', 'role:director'])->prefix('director')->na
     Route::patch('/counselors/{counselor}/deactivate', [CounselorController::class, 'deactivate'])->name('counselors.deactivate');
     Route::patch('/counselors/{counselor}/reactivate', [CounselorController::class, 'reactivate'])->name('counselors.reactivate');
 
+    // FR-11 backups
+    Route::get('/backups', [BackupController::class, 'index'])->name('backups.index');
+    Route::post('/backups', [BackupController::class, 'store'])->name('backups.store');
+    Route::get('/backups/{filename}', [BackupController::class, 'download'])->where('filename', '[A-Za-z0-9._-]+\.zip')->name('backups.download');
+    Route::delete('/backups/{filename}', [BackupController::class, 'destroy'])->where('filename', '[A-Za-z0-9._-]+\.zip')->name('backups.destroy');
+
     Route::resource('colleges', CollegeController::class)->except(['show']);
     Route::post('/programs', [ProgramController::class, 'store'])->name('programs.store');
     Route::get('/programs/{program}/edit', [ProgramController::class, 'edit'])->name('programs.edit');
@@ -94,6 +102,15 @@ Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('staf
     Route::get('/intake/{interview}', [IntakeInterviewController::class, 'show'])->name('intake.show');
     Route::get('/intake/{interview}/edit', [IntakeInterviewController::class, 'edit'])->name('intake.edit');
     Route::put('/intake/{interview}', [IntakeInterviewController::class, 'update'])->name('intake.update');
+
+    // Excel/CSV import (counselors: their own colleges only, checked per row)
+    Route::get('/imports', [ImportController::class, 'index'])->name('imports.index');
+    Route::get('/imports/templates/{type}.{format}', [ImportController::class, 'template'])->name('imports.template');
+    Route::post('/imports', [ImportController::class, 'preview'])->name('imports.preview');
+    Route::get('/imports/{token}', [ImportController::class, 'show'])->name('imports.show');
+    Route::post('/imports/{token}', [ImportController::class, 'store'])->name('imports.store');
+    Route::get('/imports/{token}/problems.csv', [ImportController::class, 'errors'])->name('imports.errors');
+    Route::delete('/imports/{token}', [ImportController::class, 'destroy'])->name('imports.destroy');
 
     Route::get('/tracker', TrackerController::class)->name('tracker');
 

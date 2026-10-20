@@ -66,7 +66,11 @@ return [
                 'use_single_transaction' => true,
                 'mysql_gtid_purged' => 'OFF',
                 'add_extra_option' => '--no-tablespaces',
-                'dump_binary_path' => env('DB_DUMP_BINARY_PATH'),
+                // The web server and cron often run with a minimal PATH, so look in the usual places too.
+                'dump_binary_path' => env('DB_DUMP_BINARY_PATH') ?: collect([
+                    '/usr/bin', '/usr/local/bin', '/usr/local/mysql/bin', '/opt/homebrew/bin', '/opt/homebrew/opt/mysql-client/bin',
+                    'C:\\xampp\\mysql\\bin', 'C:\\laragon\\bin\\mysql\\current\\bin',
+                ])->first(fn (string $directory) => is_file($directory.'/mysqldump') || is_file($directory.'\\mysqldump.exe')),
             ]),
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),

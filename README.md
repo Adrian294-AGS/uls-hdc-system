@@ -20,6 +20,7 @@ Built with Laravel 13, MySQL 8, Blade, Tailwind CSS, Alpine.js and Chart.js.
 - [Running the tests](#running-the-tests)
 - [Deploying to shared hosting (Hostinger)](#deploying-to-shared-hosting-hostinger)
 - [Cron and queue](#cron-and-queue)
+- [Importing students and SATA results](#importing-students-and-sata-results)
 - [Backups and restore (FR-11)](#backups-and-restore-fr-11)
 - [Security](#security)
 - [Deployment checklist](#deployment-checklist)
@@ -250,9 +251,10 @@ All scheduled work runs from Laravel's scheduler (`routes/console.php`), in Phil
 
 | Time | Task |
 | --- | --- |
-| 01:00 | `backup:clean`: delete backups older than 30 days |
-| 01:30 | `backup:run`: database + private uploads, encrypted |
+| 01:30 | `backup:clean`: delete backups older than 30 days |
+| 02:00 | `backup:run`: database + private uploads, encrypted |
 | 02:30 | `auth:clear-resets`: remove expired password-reset tokens |
+| hourly | remove leftover temporary export files and import previews older than a day |
 | 07:00 | `backup:monitor`: e-mail if the newest backup is missing or too old |
 | weekly | `queue:prune-failed`: forget failed jobs older than 30 days |
 
@@ -288,13 +290,31 @@ future e-mail and background jobs moving. Choose one:
 
   Then `sudo supervisorctl reread && sudo supervisorctl update`. Run `php artisan queue:restart` after each deploy.
 
+## Importing students and SATA results
+
+**Import** in the staff menu (director: all colleges; counselors: only their assigned colleges, checked row by row):
+
+1. Download the **Excel** or **CSV template** for *Student roster* or *SATA results*. The Excel template has an
+   *Instructions* sheet and dropdowns for program codes (only your programs), year levels and descriptors. Row 2 is an
+   example; its student number starts with `EXAMPLE`, so it is never imported.
+2. Upload the filled-in file (.xlsx or .csv, up to 5 MB and 2,000 rows).
+3. Check the **preview**: every row is marked *Ready*, *Skipped* (already exists, duplicate in the file, or the example
+   row) or *Error*, with the reason under each wrong cell. Nothing is saved yet.
+4. Click **Import** and confirm. Only the ready rows are saved, all in one database transaction. The summary shows how
+   many were imported, skipped and wrong, with a **problem report (CSV)** to fix and re-upload.
+
+Rows use the same rules as the forms (names, student number format, e-mail, program code in your colleges, year level
+1–5; SATA scores and descriptors from `config/sata.php`, exam date not in the future). New students get their
+**student number as a temporary password** and must change it on first login. Every import is recorded in the access
+log (`import`, with the counts).
+
 ## Backups and restore (FR-11)
 
 Backups use [spatie/laravel-backup](https://spatie.be/docs/laravel-backup) (`config/backup.php`):
 
 - **What:** the MySQL database (gzipped `mysqldump`) and `storage/app/private` (student photos). The code is not
   backed up; it comes from Git.
-- **When:** every night at 01:30 (needs the cron entry).
+- **When:** every night at 2:00 AM Philippine time (needs the cron entry), or any time with **Backups → Back up now**.
 - **Where:** `storage/app/backups/uls-hdc/` (change with `BACKUP_PATH`).
 - **Protection:** each archive is a ZIP encrypted with **AES-256** using `BACKUP_ARCHIVE_PASSWORD`, and checked after
   it is written. In production, `backup:run` refuses to run without a password.
@@ -308,6 +328,11 @@ Backups use [spatie/laravel-backup](https://spatie.be/docs/laravel-backup) (`con
 > latest archive regularly (for example weekly) to university-controlled storage, or configure a second backup disk.
 > Where off-site copies are kept is an HDC decision (see the checklist).
 
+**Backups page (director only):** *Backups* in the menu lists every backup with its date and size, and has
+**Back up now**, **Download** and **Delete** (each asks for confirmation and is recorded in the access log). The director
+dashboard shows the date of the last successful backup and turns red when it is more than 2 days old, which usually
+means the cron job is not running.
+
 Useful commands:
 
 ```bash
@@ -320,13 +345,13 @@ php artisan backup:monitor        # check health now
 
 Practice this on a **separate test database** at least once per semester, so you know the backups work.
 
-1. **Get the archive.** Download the `.zip` you need from `storage/app/backups/uls-hdc/` (hPanel File Manager or
-   `scp`).
+1. **Get the archive.** As the director, open **Backups** and click **Download** next to the backup you need (or copy
+   it from `storage/app/backups/uls-hdc/` with the hPanel File Manager or `scp`).
 2. **Open it with the backup password.** The archive is AES-256 encrypted, which the built-in macOS and Windows
    unzip tools cannot open. Use **7-Zip** (Windows), **Keka** or `7zz` (Mac, `brew install sevenzip`), or `7z` (Linux):
 
    ```bash
-   7z x 2026-10-20-01-30-00.zip        # asks for BACKUP_ARCHIVE_PASSWORD
+   7z x 2026-10-20-02-00-00.zip        # asks for BACKUP_ARCHIVE_PASSWORD
    ```
 
    Inside are `db-dumps/mysql-<database>.sql.gz` and `private/` (the photos).
@@ -400,4 +425,7 @@ working default so the system runs, but HDC should confirm them before real stud
 | **Who may self-register**: today anyone can register as a student with any unused student number, and e-mail addresses are not verified | Open registration | Options: check against the registrar's list, require a school e-mail, or have HDC create accounts |
 | **Counselor-to-college assignments**, and whether any counselor needs all colleges | Director assigns them in the app | Director → Counselors |
 | **Session timeout** on shared computers | Signed out after 60 idle minutes in production | `SESSION_LIFETIME` |
+| **Temporary password for imported students** | Their student number (they must change it at first login). Student numbers are easy to guess, so someone who knows a classmate's number could log in first. Safer: e-mail a one-time link, or a random password printed for each student | `app/Support/Imports/RosterImport.php` |
+| **Phone numbers**: Form 5 and Form 8 accept only Philippine mobile numbers (09XXXXXXXXX / +639XXXXXXXXX). The paper form says "Cell phone / landline" | Mobile only | `App\Support\Validation` |
+| **Who may export what**: counselors can export a student's full Form 5 (and Form 8 for their colleges); the director can export lists with contact details | As described | Export controllers |
 | **Time zone** for dates shown in the app | UTC (times show 8 hours behind Philippine time) | `config/app.php` → `timezone`; best decided **before** real data is entered, because existing timestamps are stored in that zone |

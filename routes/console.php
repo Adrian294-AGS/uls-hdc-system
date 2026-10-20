@@ -1,5 +1,6 @@
 <?php
 
+use App\Support\Imports\ImportStore;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schedule;
@@ -23,8 +24,8 @@ Artisan::command('inspire', function () {
 $timezone = config('hdc.schedule_timezone');
 
 // FR-11 backups: database + private uploads, encrypted, kept 30 days.
-Schedule::command('backup:clean')->dailyAt('01:00')->timezone($timezone)->withoutOverlapping();
-Schedule::command('backup:run')->dailyAt('01:30')->timezone($timezone)->withoutOverlapping();
+Schedule::command('backup:clean')->dailyAt('01:30')->timezone($timezone)->withoutOverlapping();
+Schedule::command('backup:run')->dailyAt('02:00')->timezone($timezone)->withoutOverlapping();
 Schedule::command('backup:monitor')->dailyAt('07:00')->timezone($timezone);
 
 // Housekeeping.
@@ -36,6 +37,9 @@ Schedule::call(function (): void {
         }
     }
 })->name('prune-temporary-exports')->hourly();
+
+// Uploaded import previews are kept for a day, then removed.
+Schedule::call(fn () => ImportStore::prune())->name('prune-import-previews')->hourly();
 Schedule::command('auth:clear-resets')->dailyAt('02:30')->timezone($timezone);
 Schedule::command('queue:prune-failed --hours=720')->weekly()->timezone($timezone);
 

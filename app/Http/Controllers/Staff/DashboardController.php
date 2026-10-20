@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Staff;
 
 use App\Http\Controllers\Controller;
+use App\Support\Backups;
 use App\Support\StudentRecordQuery;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -18,6 +19,7 @@ class DashboardController extends Controller
 
         return view($user->isDirector() ? 'director.dashboard' : 'counselor.dashboard', [
             'stats' => (new StudentRecordQuery($user))->summary(),
+            'lastBackup' => $user->isDirector() ? Backups::latestDate() : null,
         ]);
     }
 }

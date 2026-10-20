@@ -167,7 +167,7 @@ class ProductionHardeningTest extends TestCase
             $this->assertNotNull($event, "{$command} is not scheduled");
             $this->assertSame('Asia/Manila', $event[2]);
         }
-        $this->assertSame('30 1 * * *', $commands->first(fn ($event) => str_contains($event[0], 'backup:run'))[1]);
+        $this->assertSame('0 2 * * *', $commands->first(fn ($event) => str_contains($event[0], 'backup:run'))[1]);
         $this->assertNull($commands->first(fn ($event) => str_contains($event[0], 'queue:work')), 'The cron queue worker is opt-in.');
     }
 }
