@@ -9,9 +9,11 @@ use App\Http\Controllers\Staff\EntranceTestResultController;
 use App\Http\Controllers\Staff\IntakeInterviewController;
 use App\Http\Controllers\Staff\NotificationController;
 use App\Http\Controllers\Staff\RecordController;
+use App\Http\Controllers\Staff\ReportController;
 use App\Http\Controllers\Staff\TrackerController;
 use App\Http\Controllers\Student\CumulativeRecordController;
 use App\Support\Form5;
+use App\Support\Reports\Report;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -93,6 +95,16 @@ Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('staf
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');
     Route::post('/notifications/read-all', [NotificationController::class, 'markAllRead'])->name('notifications.read-all');
     Route::get('/notifications/{notification}', [NotificationController::class, 'open'])->name('notifications.open');
+});
+
+/*
+ * Aggregate reports (FR-09): counts only. Counselors see their assigned colleges; the director sees all.
+ */
+Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('reports')->name('reports.')->group(function () {
+    Route::get('/', [ReportController::class, 'show'])->name('index');
+    Route::get('/{report}', [ReportController::class, 'show'])->whereIn('report', array_keys(Report::REPORTS))->name('show');
+    Route::get('/{report}/csv', [ReportController::class, 'csv'])->whereIn('report', array_keys(Report::REPORTS))->name('csv');
+    Route::get('/{report}/print', [ReportController::class, 'print'])->whereIn('report', array_keys(Report::REPORTS))->name('print');
 });
 
 Route::middleware('auth')->group(function () {

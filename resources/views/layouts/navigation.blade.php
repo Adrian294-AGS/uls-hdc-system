@@ -34,6 +34,9 @@
                         <x-nav-link :href="route('staff.tracker')" :active="request()->routeIs('staff.tracker')">
                             {{ __('Tracker') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
+                            {{ __('Reports') }}
+                        </x-nav-link>
                     @endif
                     @if ($user->isDirector())
                         <x-nav-link :href="route('director.counselors.index')" :active="request()->routeIs('director.counselors.*')">
@@ -100,6 +103,9 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('staff.tracker')" :active="request()->routeIs('staff.tracker')">
                     {{ __('Tracker') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
+                    {{ __('Reports') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('staff.notifications.index')" :active="request()->routeIs('staff.notifications.*')">
                     {{ __('Notifications') }} @if ($unreadCount) ({{ $unreadCount }}) @endif

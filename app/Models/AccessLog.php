@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * One row per staff view/action on a full Form 5 record, SATA result or intake interview.
+ * One row per staff view/action on a full Form 5 record, SATA result, intake interview or report.
  */
-#[Fillable(['user_id', 'cumulative_record_id', 'entrance_test_result_id', 'intake_interview_id', 'action', 'ip'])]
+#[Fillable(['user_id', 'cumulative_record_id', 'entrance_test_result_id', 'intake_interview_id', 'action', 'details', 'ip'])]
 class AccessLog extends Model
 {
     public const UPDATED_AT = null;
@@ -23,6 +23,10 @@ class AccessLog extends Model
     public const ACTION_VIEW_INTAKE = 'view_intake';
 
     public const ACTION_EDIT_INTAKE = 'edit_intake';
+
+    public const ACTION_VIEW_REPORT = 'view_report';
+
+    public const ACTION_EXPORT_REPORT = 'export_report';
 
     /**
      * @return BelongsTo<IntakeInterview, $this>
