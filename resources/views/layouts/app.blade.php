@@ -19,7 +19,7 @@
     <body class="font-sans antialiased bg-transparent text-gray-900 dark:text-gray-100">
         @include('layouts.partials.theme-background')
 
-        <div class="min-h-screen">
+        <div class="relative z-0 min-h-screen">
             @include('layouts.navigation')
 
             <!-- Page Heading -->

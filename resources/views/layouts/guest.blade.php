@@ -19,11 +19,11 @@
     <body class="font-sans text-gray-900 antialiased bg-transparent dark:text-gray-100">
         @include('layouts.partials.theme-background')
 
-        <div class="absolute right-4 top-4 z-10">
+        <div class="absolute right-4 top-4 z-50">
             <x-theme-toggle />
         </div>
 
-        <div class="min-h-screen flex flex-col justify-center items-center px-4 pt-16 pb-8 sm:pt-8">
+        <div class="relative z-0 min-h-screen flex flex-col justify-center items-center px-4 pt-16 pb-8 sm:pt-8">
             <div class="glass-card w-full sm:max-w-md px-6 py-6 sm:px-8">
                 <a href="/" class="flex flex-col items-center gap-2 text-center">
                     <x-application-logo class="w-16 h-16 fill-current text-gray-700 dark:text-gray-200" />
