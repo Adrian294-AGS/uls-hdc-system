@@ -6,6 +6,7 @@ use App\Http\Controllers\Director\ProgramController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Staff\DashboardController;
 use App\Http\Controllers\Staff\EntranceTestResultController;
+use App\Http\Controllers\Staff\IntakeInterviewController;
 use App\Http\Controllers\Staff\NotificationController;
 use App\Http\Controllers\Staff\RecordController;
 use App\Http\Controllers\Staff\TrackerController;
@@ -79,6 +80,13 @@ Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('staf
     Route::get('/sata/{result}', [EntranceTestResultController::class, 'show'])->name('sata.show');
     Route::get('/sata/{result}/edit', [EntranceTestResultController::class, 'edit'])->name('sata.edit');
     Route::put('/sata/{result}', [EntranceTestResultController::class, 'update'])->name('sata.update');
+
+    // Form 8 intake interviews (highly sensitive; never exposed to students)
+    Route::get('/students/{student}/intake/create', [IntakeInterviewController::class, 'create'])->name('intake.create');
+    Route::post('/students/{student}/intake', [IntakeInterviewController::class, 'store'])->name('intake.store');
+    Route::get('/intake/{interview}', [IntakeInterviewController::class, 'show'])->name('intake.show');
+    Route::get('/intake/{interview}/edit', [IntakeInterviewController::class, 'edit'])->name('intake.edit');
+    Route::put('/intake/{interview}', [IntakeInterviewController::class, 'update'])->name('intake.update');
 
     Route::get('/tracker', TrackerController::class)->name('tracker');
 

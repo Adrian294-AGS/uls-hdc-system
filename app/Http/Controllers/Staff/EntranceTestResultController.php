@@ -24,7 +24,7 @@ class EntranceTestResultController extends Controller
      *
      * @var list<string>
      */
-    public const LIST_FILTERS = ['q', 'college_id', 'program_id', 'year_level', 'status', 'sata'];
+    public const LIST_FILTERS = ['q', 'college_id', 'program_id', 'year_level', 'status', 'sata', 'intake'];
 
     /**
      * A student's SATA history (latest first).

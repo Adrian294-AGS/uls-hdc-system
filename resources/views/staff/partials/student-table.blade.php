@@ -22,6 +22,7 @@
                         <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-300">{{ __('Status') }}</th>
                         <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-300">{{ __('Submitted') }}</th>
                         <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-300">{{ __('SATA') }}</th>
+                        <th scope="col" class="px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-300">{{ __('Intake') }}</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
@@ -52,6 +53,18 @@
                                     <span class="text-xs text-gray-500 dark:text-gray-400">{{ __('Not encoded') }}</span>
                                     <a href="{{ route('staff.sata.create', [$student, ...$listFilters]) }}" class="ms-2 text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">{{ __('Encode SATA result') }}</a>
                                 @endif
+                            </td>
+                            <td class="px-4 py-3">
+                                <div class="flex flex-wrap items-center gap-1.5">
+                                    @if ($record && $student->latestIntakeInterview)
+                                        <a href="{{ route('staff.records.show', $record) }}#intake" class="hover:opacity-80"><x-intake-status :status="$student->latestIntakeInterview->status" /></a>
+                                    @else
+                                        <x-intake-status :status="$student->latestIntakeInterview?->status" />
+                                    @endif
+                                    @if ($student->needs_follow_up)
+                                        <x-follow-up-badge />
+                                    @endif
+                                </div>
                             </td>
                         </tr>
                     @endforeach

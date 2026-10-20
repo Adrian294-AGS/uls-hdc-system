@@ -129,6 +129,38 @@ class User extends Authenticatable
     }
 
     /**
+     * HDC Form 8 intake interviews for this student (staff only; never shown to the student).
+     *
+     * @return HasMany<IntakeInterview, $this>
+     */
+    public function intakeInterviews(): HasMany
+    {
+        return $this->hasMany(IntakeInterview::class, 'student_id');
+    }
+
+    /**
+     * The student's most recent intake interview (by creation).
+     *
+     * @return HasOne<IntakeInterview, $this>
+     */
+    public function latestIntakeInterview(): HasOne
+    {
+        return $this->hasOne(IntakeInterview::class, 'student_id')->latestOfMany();
+    }
+
+    /**
+     * Load what staff lists show about intake interviews: the latest one's status and a
+     * `needs_follow_up` flag. Never loads concern answers or notes into a list.
+     *
+     * @param  Builder<User>  $query
+     */
+    public function scopeWithIntakeSummary(Builder $query): void
+    {
+        $query->with('latestIntakeInterview:intake_interviews.id,intake_interviews.student_id,intake_interviews.status')
+            ->withExists(['intakeInterviews as needs_follow_up' => fn (Builder $interviews) => $interviews->needingFollowUp()]);
+    }
+
+    /**
      * Whether a staff user may see this student's records (student is in one of their colleges).
      */
     public function isVisibleTo(User $viewer): bool
