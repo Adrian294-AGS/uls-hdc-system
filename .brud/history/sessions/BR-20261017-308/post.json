@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-308",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\SampleStudentSeeder.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\SampleStudentSeeder.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\seeders\\\\SampleStudentSeeder.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\seeders\\\\SampleStudentSeeder.php\"\tpost\n@@ -40,12 +40,12 @@\n             $student = User::firstOrNew(['email' => $data['email']]);\n             $student->fill([\n                 'first_name' => $data['first'],\n                 'last_name' => $data['last'],\n+                'username' => strtolower($data['first']),\n                 'password' => Hash::make('password'),\n                 'program_id' => $program->id,\n                 'year_level' => $data['year'],\n-                'student_number' => sprintf('24-%05d', $i + 1),\n             ]);\n             $student->role = Role::Student;\n             $student->email_verified_at ??= now();\n             $student->save();\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-273",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -61,9 +61,9 @@\n                     <x-notification-bell :count=\"$unreadCount\" />\n                 @endif\n \n                 <div class=\"text-right leading-tight\">\n-                    <div class=\"text-sm font-medium text-gray-800 dark:text-gray-100\">{{ $user->name }}</div>\n+                    <div class=\"text-sm font-medium text-gray-800 dark:text-gray-100\">{{ Str::before($user->name, ' ') }}</div>\n                     <div class=\"text-xs text-gray-500 dark:text-gray-400\">{{ $user->role->label() }}</div>\n                 </div>\n \n                 <x-theme-toggle />\n"
+  },
+  "diffFromPrevious": ""
+}

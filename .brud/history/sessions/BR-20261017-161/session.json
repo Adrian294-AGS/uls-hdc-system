@@ -1,0 +1,33 @@
+{
+  "sessionId": "BR-20261017-161",
+  "timestamp": "2026-10-17T08:32:33.455Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-163233-264",
+      "kind": "search_replace",
+      "status": "aborted",
+      "message": "The text \"                                        <th scope=\"col\" class=\"px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-300\">{{ __('Update status') }}</th>\n                                    </tr>\n                                </thead>\n                                <tbody class=\"divide-y divide-gray-200 dark:divide-gray-700\">\n                                    @foreach ($appointments as $appointment)\n                                        <tr>\n                                            <th scope=\"row\" class=\"px-4 py-3 text-left font-medium text-gray-900 dark:text-gray-100\">\n                                                {{ $appointment->student->name }}\n                                                @if ($appointment->student->program)\n                                                    <span class=\"block text-xs font-normal text-gray-500 dark:text-gray-400\">\n                                                        {{ $appointment->student->program->code }} · {{ $appointment->student->program->college->name }}\n                                                    </span>\n                                                @endif\n                                            </th>\n                                            <td class=\"px-4 py-3 text-gray-700 dark:text-gray-300\">{{ $appointment->staff->name }}</td>\n                                            <td class=\"whitespace-nowrap px-4 py-3 text-gray-700 dark:text-gray-300\">\n                                                {{ $appointment->scheduled_at->format('M j, Y g:i A') }}\n                                            </td>\n                                            <td class=\"px-4 py-3 text-gray-700 dark:text-gray-300\">{{ $appointment->purpose }}</td>\n                                            <td class=\"px-4 py-3 text-gray-700 dark:text-gray-300\">{{ $appointment->notes ?: '—' }}</td>\n                                            <td class=\"px-4 py-3\">\n                                                <span class=\"inline-flex rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium capitalize text-gray-700 dark:bg-gray-700 dark:text-gray-200\">\n                                                    {{ $appointment->status }}\n                                                </span>\n                                            </td>\n                                            <td class=\"px-4 py-3\">\n                                                <form method=\"POST\" action=\"{{ route('appointments.status', $appointment) }}\" class=\"flex items-center gap-2\">\n                                                    @csrf\n                                                    @method('PATCH')\n                                                    <select name=\"status\" aria-label=\"{{ __('Status for :student', ['student' => $appointment->student->name]) }}\" class=\"glass-input rounded-md text-sm\">\n                                                        @foreach (['pending' => __('Pending'), 'approved' => __('Approved'), 'completed' => __('Completed'), 'rejected' => __('Rejected')] as $status => $label)\n                                                            <option value=\"{{ $status }}\" @selected($appointment->status === $status)>{{ $label }}</option>\n                                                        @endforeach\n                                                    </select>\n                                                    <x-primary-button>{{ __('Save') }}</x-primary-button>\n                                                </form>\n                                                <x-input-error :messages=\"$errors->get('status')\" class=\"mt-2\" />\n                                            </td>\n                                        </tr>\n                                    @endforeach\" was not found in \"resources/views/appointments/index.blade.php\".",
+      "path": "resources/views/appointments/index.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\index.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/appointments/index.blade.php",
+        "index": "1"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

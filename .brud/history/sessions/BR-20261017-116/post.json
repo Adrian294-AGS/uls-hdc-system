@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-116",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpost\n@@ -57,8 +57,11 @@\n     Route::patch('/counselors/{counselor}/deactivate', [CounselorController::class, 'deactivate'])->name('counselors.deactivate');\n     Route::patch('/counselors/{counselor}/reactivate', [CounselorController::class, 'reactivate'])->name('counselors.reactivate');\n \n     Route::resource('colleges', CollegeController::class)->except(['show']);\n+\n+    Route::get('/export/analysis', [\\App\\Http\\Controllers\\Director\\ExportController::class, 'analysis'])->name('export.analysis');\n+    Route::get('/export/logs', [\\App\\Http\\Controllers\\Director\\ExportController::class, 'logs'])->name('export.logs');\n     Route::post('/programs', [ProgramController::class, 'store'])->name('programs.store');\n     Route::get('/programs/{program}/edit', [ProgramController::class, 'edit'])->name('programs.edit');\n     Route::put('/programs/{program}', [ProgramController::class, 'update'])->name('programs.update');\n     Route::delete('/programs/{program}', [ProgramController::class, 'destroy'])->name('programs.destroy');\n"
+  },
+  "diffFromPrevious": ""
+}

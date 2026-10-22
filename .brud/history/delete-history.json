@@ -1,0 +1,2804 @@
+{
+  "workspace": "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system",
+  "deletions": [
+    {
+      "deleteId": "DEL-20261017-131058",
+      "timestamp": "2026-10-17T05:10:58.272Z",
+      "sessionId": "BR-20261017-114",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_delete",
+      "expiresAt": "2026-10-24T05:10:58.259Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.323Z",
+      "sessionId": "BR-20261015-001",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.310Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.339Z",
+      "sessionId": "BR-20261015-002",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.328Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.352Z",
+      "sessionId": "BR-20261015-003",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.344Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.367Z",
+      "sessionId": "BR-20261015-004",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.358Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.380Z",
+      "sessionId": "BR-20261015-005",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.372Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.394Z",
+      "sessionId": "BR-20261015-006",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.385Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.407Z",
+      "sessionId": "BR-20261015-007",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.399Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.420Z",
+      "sessionId": "BR-20261015-008",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.412Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.434Z",
+      "sessionId": "BR-20261015-009",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.424Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.446Z",
+      "sessionId": "BR-20261015-010",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.438Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.460Z",
+      "sessionId": "BR-20261015-011",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.451Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.472Z",
+      "sessionId": "BR-20261015-012",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.465Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.487Z",
+      "sessionId": "BR-20261015-013",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.477Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.500Z",
+      "sessionId": "BR-20261015-014",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.492Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.515Z",
+      "sessionId": "BR-20261015-015",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.505Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.529Z",
+      "sessionId": "BR-20261015-016",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.520Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.544Z",
+      "sessionId": "BR-20261015-017",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.534Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.558Z",
+      "sessionId": "BR-20261015-018",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.549Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.571Z",
+      "sessionId": "BR-20261015-019",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.563Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.591Z",
+      "sessionId": "BR-20261015-020",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.576Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.608Z",
+      "sessionId": "BR-20261015-021",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.597Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.627Z",
+      "sessionId": "BR-20261015-022",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.614Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.657Z",
+      "sessionId": "BR-20261015-023",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.633Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.674Z",
+      "sessionId": "BR-20261015-024",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.663Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.689Z",
+      "sessionId": "BR-20261015-025",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.678Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.704Z",
+      "sessionId": "BR-20261015-026",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.694Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.719Z",
+      "sessionId": "BR-20261015-027",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.708Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.733Z",
+      "sessionId": "BR-20261015-028",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.724Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.747Z",
+      "sessionId": "BR-20261015-029",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.738Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.760Z",
+      "sessionId": "BR-20261015-030",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.752Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.773Z",
+      "sessionId": "BR-20261015-031",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.764Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.786Z",
+      "sessionId": "BR-20261015-032",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.778Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.800Z",
+      "sessionId": "BR-20261015-033",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.791Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.814Z",
+      "sessionId": "BR-20261015-034",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.805Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.828Z",
+      "sessionId": "BR-20261015-035",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.819Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.843Z",
+      "sessionId": "BR-20261015-036",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.832Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.859Z",
+      "sessionId": "BR-20261015-037",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.848Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.872Z",
+      "sessionId": "BR-20261015-038",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.864Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.887Z",
+      "sessionId": "BR-20261015-039",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.877Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.901Z",
+      "sessionId": "BR-20261015-040",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.892Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.915Z",
+      "sessionId": "BR-20261015-041",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.906Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.930Z",
+      "sessionId": "BR-20261015-042",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.919Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.944Z",
+      "sessionId": "BR-20261015-043",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.934Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.961Z",
+      "sessionId": "BR-20261015-044",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.950Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.976Z",
+      "sessionId": "BR-20261015-045",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.967Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131109",
+      "timestamp": "2026-10-17T05:11:09.990Z",
+      "sessionId": "BR-20261015-046",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.981Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.004Z",
+      "sessionId": "BR-20261015-047",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:09.995Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.019Z",
+      "sessionId": "BR-20261015-048",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.009Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.034Z",
+      "sessionId": "BR-20261015-049",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.024Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.048Z",
+      "sessionId": "BR-20261015-050",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.039Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.062Z",
+      "sessionId": "BR-20261015-051",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.053Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.076Z",
+      "sessionId": "BR-20261017-001",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.067Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.091Z",
+      "sessionId": "BR-20261017-002",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.081Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.104Z",
+      "sessionId": "BR-20261017-003",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.096Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.119Z",
+      "sessionId": "BR-20261017-004",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.109Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.131Z",
+      "sessionId": "BR-20261017-005",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.123Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.146Z",
+      "sessionId": "BR-20261017-006",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.135Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.161Z",
+      "sessionId": "BR-20261017-007",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.152Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.176Z",
+      "sessionId": "BR-20261017-008",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.166Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.190Z",
+      "sessionId": "BR-20261017-009",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.181Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.204Z",
+      "sessionId": "BR-20261017-010",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.194Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.219Z",
+      "sessionId": "BR-20261017-011",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.209Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.233Z",
+      "sessionId": "BR-20261017-012",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.224Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.247Z",
+      "sessionId": "BR-20261017-013",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.238Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.262Z",
+      "sessionId": "BR-20261017-014",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.252Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.276Z",
+      "sessionId": "BR-20261017-015",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.267Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.291Z",
+      "sessionId": "BR-20261017-016",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.280Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.305Z",
+      "sessionId": "BR-20261017-017",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.296Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.318Z",
+      "sessionId": "BR-20261017-018",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.310Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.335Z",
+      "sessionId": "BR-20261017-019",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.323Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.350Z",
+      "sessionId": "BR-20261017-020",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.340Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.373Z",
+      "sessionId": "BR-20261017-021",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.356Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.393Z",
+      "sessionId": "BR-20261017-022",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.380Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.412Z",
+      "sessionId": "BR-20261017-023",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.399Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.445Z",
+      "sessionId": "BR-20261017-024",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.436Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.459Z",
+      "sessionId": "BR-20261017-025",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.449Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.475Z",
+      "sessionId": "BR-20261017-026",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.463Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.488Z",
+      "sessionId": "BR-20261017-027",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.479Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.504Z",
+      "sessionId": "BR-20261017-028",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.493Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.520Z",
+      "sessionId": "BR-20261017-029",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.509Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.536Z",
+      "sessionId": "BR-20261017-030",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.525Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.552Z",
+      "sessionId": "BR-20261017-031",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.541Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.569Z",
+      "sessionId": "BR-20261017-032",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.557Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.587Z",
+      "sessionId": "BR-20261017-033",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.574Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.603Z",
+      "sessionId": "BR-20261017-034",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.592Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.621Z",
+      "sessionId": "BR-20261017-035",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.608Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.637Z",
+      "sessionId": "BR-20261017-036",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.627Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.652Z",
+      "sessionId": "BR-20261017-037",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.642Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.665Z",
+      "sessionId": "BR-20261017-038",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.657Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.680Z",
+      "sessionId": "BR-20261017-039",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.669Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.697Z",
+      "sessionId": "BR-20261017-040",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.686Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.715Z",
+      "sessionId": "BR-20261017-041",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.702Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.730Z",
+      "sessionId": "BR-20261017-042",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.720Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.745Z",
+      "sessionId": "BR-20261017-043",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.735Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.761Z",
+      "sessionId": "BR-20261017-044",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.750Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.776Z",
+      "sessionId": "BR-20261017-045",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.766Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.791Z",
+      "sessionId": "BR-20261017-046",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.780Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.805Z",
+      "sessionId": "BR-20261017-047",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.795Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.821Z",
+      "sessionId": "BR-20261017-048",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.810Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.836Z",
+      "sessionId": "BR-20261017-049",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.826Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.852Z",
+      "sessionId": "BR-20261017-050",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.841Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.869Z",
+      "sessionId": "BR-20261017-051",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.857Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.885Z",
+      "sessionId": "BR-20261017-052",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.874Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.900Z",
+      "sessionId": "BR-20261017-053",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.890Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.916Z",
+      "sessionId": "BR-20261017-054",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.905Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.937Z",
+      "sessionId": "BR-20261017-055",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.922Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.956Z",
+      "sessionId": "BR-20261017-056",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.943Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.972Z",
+      "sessionId": "BR-20261017-057",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.961Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131110",
+      "timestamp": "2026-10-17T05:11:10.990Z",
+      "sessionId": "BR-20261017-058",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.978Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.012Z",
+      "sessionId": "BR-20261017-059",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:10.997Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.030Z",
+      "sessionId": "BR-20261017-060",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.017Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.046Z",
+      "sessionId": "BR-20261017-061",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.035Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.062Z",
+      "sessionId": "BR-20261017-062",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.050Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.077Z",
+      "sessionId": "BR-20261017-063",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.066Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.093Z",
+      "sessionId": "BR-20261017-064",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.082Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.107Z",
+      "sessionId": "BR-20261017-065",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.098Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.120Z",
+      "sessionId": "BR-20261017-066",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.112Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.134Z",
+      "sessionId": "BR-20261017-067",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.125Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.149Z",
+      "sessionId": "BR-20261017-068",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.139Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.164Z",
+      "sessionId": "BR-20261017-069",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.153Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.180Z",
+      "sessionId": "BR-20261017-070",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.169Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.194Z",
+      "sessionId": "BR-20261017-071",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.185Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.207Z",
+      "sessionId": "BR-20261017-072",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.198Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.222Z",
+      "sessionId": "BR-20261017-073",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.212Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.236Z",
+      "sessionId": "BR-20261017-074",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.228Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.250Z",
+      "sessionId": "BR-20261017-075",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.241Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.265Z",
+      "sessionId": "BR-20261017-076",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.255Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.277Z",
+      "sessionId": "BR-20261017-077",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.270Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.293Z",
+      "sessionId": "BR-20261017-078",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.283Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.307Z",
+      "sessionId": "BR-20261017-079",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.298Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.324Z",
+      "sessionId": "BR-20261017-080",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.312Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.339Z",
+      "sessionId": "BR-20261017-081",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.328Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.354Z",
+      "sessionId": "BR-20261017-082",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.344Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.369Z",
+      "sessionId": "BR-20261017-083",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.359Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.382Z",
+      "sessionId": "BR-20261017-084",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.375Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.396Z",
+      "sessionId": "BR-20261017-085",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.387Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.411Z",
+      "sessionId": "BR-20261017-086",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.400Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.426Z",
+      "sessionId": "BR-20261017-087",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.416Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.442Z",
+      "sessionId": "BR-20261017-088",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.431Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.456Z",
+      "sessionId": "BR-20261017-089",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.446Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.471Z",
+      "sessionId": "BR-20261017-090",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.461Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.486Z",
+      "sessionId": "BR-20261017-091",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.475Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.500Z",
+      "sessionId": "BR-20261017-092",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.490Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.515Z",
+      "sessionId": "BR-20261017-093",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.505Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.530Z",
+      "sessionId": "BR-20261017-094",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.520Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.544Z",
+      "sessionId": "BR-20261017-095",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.535Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.559Z",
+      "sessionId": "BR-20261017-096",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.549Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.585Z",
+      "sessionId": "BR-20261017-097",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.576Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.610Z",
+      "sessionId": "BR-20261017-098",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.603Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.632Z",
+      "sessionId": "BR-20261015-007",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.625Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.646Z",
+      "sessionId": "BR-20261015-008",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.636Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.660Z",
+      "sessionId": "BR-20261017-100",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.649Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.670Z",
+      "sessionId": "BR-20261015-009",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.663Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.695Z",
+      "sessionId": "BR-20261015-010",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.686Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.708Z",
+      "sessionId": "BR-20261015-011",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.700Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.720Z",
+      "sessionId": "BR-20261017-103",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.711Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.743Z",
+      "sessionId": "BR-20261015-013",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.734Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.757Z",
+      "sessionId": "BR-20261017-105",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.747Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.783Z",
+      "sessionId": "BR-20261017-106",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.773Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.800Z",
+      "sessionId": "BR-20261015-016",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.788Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.831Z",
+      "sessionId": "BR-20261017-107",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.803Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.846Z",
+      "sessionId": "BR-20261015-017",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.832Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.873Z",
+      "sessionId": "BR-20261015-018",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.862Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.888Z",
+      "sessionId": "BR-20261017-111",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.877Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.914Z",
+      "sessionId": "BR-20261017-112",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.904Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.929Z",
+      "sessionId": "BR-20261015-021",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.918Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.952Z",
+      "sessionId": "BR-20261017-114",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.941Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.965Z",
+      "sessionId": "BR-20261015-023",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.956Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131111",
+      "timestamp": "2026-10-17T05:11:11.990Z",
+      "sessionId": "BR-20261015-024",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.980Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.004Z",
+      "sessionId": "BR-20261015-025",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:11.994Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.018Z",
+      "sessionId": "BR-20261015-026",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.009Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.034Z",
+      "sessionId": "BR-20261015-027",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.022Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.047Z",
+      "sessionId": "BR-20261015-028",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.039Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.061Z",
+      "sessionId": "BR-20261015-029",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.051Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.075Z",
+      "sessionId": "BR-20261015-030",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.065Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.090Z",
+      "sessionId": "BR-20261015-031",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.080Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.105Z",
+      "sessionId": "BR-20261015-032",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.094Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.119Z",
+      "sessionId": "BR-20261015-033",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.110Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.134Z",
+      "sessionId": "BR-20261015-034",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.124Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.148Z",
+      "sessionId": "BR-20261015-035",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.139Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.161Z",
+      "sessionId": "BR-20261015-036",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.152Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.175Z",
+      "sessionId": "BR-20261015-037",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.166Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.189Z",
+      "sessionId": "BR-20261015-038",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.179Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.203Z",
+      "sessionId": "BR-20261015-039",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.193Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.217Z",
+      "sessionId": "BR-20261015-040",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.208Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.232Z",
+      "sessionId": "BR-20261015-041",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.222Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.246Z",
+      "sessionId": "BR-20261015-042",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.237Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.261Z",
+      "sessionId": "BR-20261015-043",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.251Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.274Z",
+      "sessionId": "BR-20261015-044",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.265Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.289Z",
+      "sessionId": "BR-20261015-045",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.279Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.303Z",
+      "sessionId": "BR-20261015-046",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.293Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.318Z",
+      "sessionId": "BR-20261015-047",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.308Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.333Z",
+      "sessionId": "BR-20261015-048",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.322Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.347Z",
+      "sessionId": "BR-20261015-049",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.338Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.362Z",
+      "sessionId": "BR-20261015-050",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.352Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.375Z",
+      "sessionId": "BR-20261015-051",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.366Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.388Z",
+      "sessionId": "BR-20261017-001",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.381Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.403Z",
+      "sessionId": "BR-20261017-002",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.393Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.418Z",
+      "sessionId": "BR-20261017-003",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.408Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.431Z",
+      "sessionId": "BR-20261017-004",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.422Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.445Z",
+      "sessionId": "BR-20261017-005",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.436Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.460Z",
+      "sessionId": "BR-20261017-006",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.449Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.474Z",
+      "sessionId": "BR-20261017-007",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.465Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.489Z",
+      "sessionId": "BR-20261017-008",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.479Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.504Z",
+      "sessionId": "BR-20261017-009",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.494Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.518Z",
+      "sessionId": "BR-20261017-010",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.508Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.532Z",
+      "sessionId": "BR-20261017-011",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.523Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.545Z",
+      "sessionId": "BR-20261017-012",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.537Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.561Z",
+      "sessionId": "BR-20261017-013",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.550Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.575Z",
+      "sessionId": "BR-20261017-014",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.566Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.590Z",
+      "sessionId": "BR-20261017-015",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.580Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.607Z",
+      "sessionId": "BR-20261017-016",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.596Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.623Z",
+      "sessionId": "BR-20261017-017",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.612Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.639Z",
+      "sessionId": "BR-20261017-018",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.627Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.655Z",
+      "sessionId": "BR-20261017-019",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.644Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.668Z",
+      "sessionId": "BR-20261017-020",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.659Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.683Z",
+      "sessionId": "BR-20261017-021",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.673Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.698Z",
+      "sessionId": "BR-20261017-022",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.688Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.711Z",
+      "sessionId": "BR-20261017-023",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.702Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.727Z",
+      "sessionId": "BR-20261017-024",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.716Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.742Z",
+      "sessionId": "BR-20261017-025",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.731Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.756Z",
+      "sessionId": "BR-20261017-026",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.746Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.770Z",
+      "sessionId": "BR-20261017-027",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.760Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.785Z",
+      "sessionId": "BR-20261017-028",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.775Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.798Z",
+      "sessionId": "BR-20261017-029",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.790Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.811Z",
+      "sessionId": "BR-20261017-030",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.803Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.826Z",
+      "sessionId": "BR-20261017-031",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.816Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.842Z",
+      "sessionId": "BR-20261017-032",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.831Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.855Z",
+      "sessionId": "BR-20261017-033",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.846Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.870Z",
+      "sessionId": "BR-20261017-034",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.860Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.884Z",
+      "sessionId": "BR-20261017-035",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.874Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.901Z",
+      "sessionId": "BR-20261017-036",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.889Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.916Z",
+      "sessionId": "BR-20261017-037",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.906Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.932Z",
+      "sessionId": "BR-20261017-038",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.921Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.947Z",
+      "sessionId": "BR-20261017-039",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.937Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.964Z",
+      "sessionId": "BR-20261017-040",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.952Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.979Z",
+      "sessionId": "BR-20261017-041",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.969Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131112",
+      "timestamp": "2026-10-17T05:11:12.995Z",
+      "sessionId": "BR-20261017-042",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:12.983Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.010Z",
+      "sessionId": "BR-20261017-043",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.000Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.025Z",
+      "sessionId": "BR-20261017-044",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.015Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.041Z",
+      "sessionId": "BR-20261017-045",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.030Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.058Z",
+      "sessionId": "BR-20261017-046",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.046Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.075Z",
+      "sessionId": "BR-20261017-047",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.063Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.090Z",
+      "sessionId": "BR-20261017-048",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.080Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.106Z",
+      "sessionId": "BR-20261017-049",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.095Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.120Z",
+      "sessionId": "BR-20261017-050",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.111Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.135Z",
+      "sessionId": "BR-20261017-051",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.125Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.152Z",
+      "sessionId": "BR-20261017-052",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.140Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.168Z",
+      "sessionId": "BR-20261017-053",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.157Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.182Z",
+      "sessionId": "BR-20261017-054",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.173Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.198Z",
+      "sessionId": "BR-20261017-055",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.187Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.213Z",
+      "sessionId": "BR-20261017-056",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.203Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.229Z",
+      "sessionId": "BR-20261017-057",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.218Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.246Z",
+      "sessionId": "BR-20261017-058",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.235Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.262Z",
+      "sessionId": "BR-20261017-059",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.251Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.276Z",
+      "sessionId": "BR-20261017-060",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.267Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.291Z",
+      "sessionId": "BR-20261017-061",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.281Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.305Z",
+      "sessionId": "BR-20261017-062",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.295Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.321Z",
+      "sessionId": "BR-20261017-063",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.310Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.336Z",
+      "sessionId": "BR-20261017-064",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.325Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.355Z",
+      "sessionId": "BR-20261017-065",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.347Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.374Z",
+      "sessionId": "BR-20261017-066",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.362Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.392Z",
+      "sessionId": "BR-20261017-067",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.380Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.423Z",
+      "sessionId": "BR-20261017-068",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.413Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.439Z",
+      "sessionId": "BR-20261017-069",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.428Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.456Z",
+      "sessionId": "BR-20261017-070",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.443Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.474Z",
+      "sessionId": "BR-20261017-071",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.460Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.489Z",
+      "sessionId": "BR-20261017-072",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.478Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.506Z",
+      "sessionId": "BR-20261017-073",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.495Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.523Z",
+      "sessionId": "BR-20261017-074",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.511Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.538Z",
+      "sessionId": "BR-20261017-075",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.528Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.554Z",
+      "sessionId": "BR-20261017-076",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.543Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.586Z",
+      "sessionId": "BR-20261017-077",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.559Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.601Z",
+      "sessionId": "BR-20261017-078",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.591Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.615Z",
+      "sessionId": "BR-20261017-079",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.606Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.631Z",
+      "sessionId": "BR-20261017-080",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.620Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.646Z",
+      "sessionId": "BR-20261017-081",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.635Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.661Z",
+      "sessionId": "BR-20261017-082",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.650Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.679Z",
+      "sessionId": "BR-20261017-083",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.666Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.694Z",
+      "sessionId": "BR-20261017-084",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.683Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.710Z",
+      "sessionId": "BR-20261017-085",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.699Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.725Z",
+      "sessionId": "BR-20261017-086",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.716Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.741Z",
+      "sessionId": "BR-20261017-087",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.730Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.755Z",
+      "sessionId": "BR-20261017-088",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.746Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.772Z",
+      "sessionId": "BR-20261017-089",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.760Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.788Z",
+      "sessionId": "BR-20261017-090",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.777Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.807Z",
+      "sessionId": "BR-20261017-091",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.794Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.823Z",
+      "sessionId": "BR-20261017-092",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.812Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.838Z",
+      "sessionId": "BR-20261017-093",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.827Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.855Z",
+      "sessionId": "BR-20261017-094",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.843Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.869Z",
+      "sessionId": "BR-20261017-095",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.859Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.885Z",
+      "sessionId": "BR-20261017-096",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.875Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.902Z",
+      "sessionId": "BR-20261017-097",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.890Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.919Z",
+      "sessionId": "BR-20261017-098",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.907Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.936Z",
+      "sessionId": "BR-20261017-099",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.924Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.951Z",
+      "sessionId": "BR-20261017-100",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.941Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.969Z",
+      "sessionId": "BR-20261017-101",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.956Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131113",
+      "timestamp": "2026-10-17T05:11:13.985Z",
+      "sessionId": "BR-20261017-102",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.974Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.001Z",
+      "sessionId": "BR-20261017-103",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:13.990Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.019Z",
+      "sessionId": "BR-20261017-104",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.006Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.036Z",
+      "sessionId": "BR-20261017-105",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.024Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.053Z",
+      "sessionId": "BR-20261017-106",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.041Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.069Z",
+      "sessionId": "BR-20261017-107",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.058Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.086Z",
+      "sessionId": "BR-20261017-108",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.073Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.102Z",
+      "sessionId": "BR-20261017-109",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.091Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.120Z",
+      "sessionId": "BR-20261017-110",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.109Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.136Z",
+      "sessionId": "BR-20261017-111",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.126Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.152Z",
+      "sessionId": "BR-20261017-112",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.141Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.167Z",
+      "sessionId": "BR-20261017-113",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.156Z"
+    },
+    {
+      "deleteId": "DEL-20261017-131114",
+      "timestamp": "2026-10-17T05:11:14.184Z",
+      "sessionId": "BR-20261017-114",
+      "action": "soft_delete",
+      "deletedBy": "user",
+      "reason": "manual_wipe",
+      "expiresAt": "2026-10-24T05:11:14.172Z"
+    }
+  ]
+}

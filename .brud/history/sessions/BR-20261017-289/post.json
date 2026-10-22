@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-289",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\auth\\login.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\auth\\login.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\auth\\\\login.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\auth\\\\login.blade.php\"\tpost\n@@ -4,13 +4,13 @@\n \n     <form method=\"POST\" action=\"{{ route('login') }}\">\n         @csrf\n \n-        <!-- Email Address -->\n+        <!-- Username -->\n         <div>\n-            <x-input-label for=\"email\" :value=\"__('Email')\" />\n-            <x-text-input id=\"email\" class=\"block mt-1 w-full\" type=\"email\" name=\"email\" :value=\"old('email')\" required autofocus autocomplete=\"username\" />\n-            <x-input-error :messages=\"$errors->get('email')\" class=\"mt-2\" />\n+            <x-input-label for=\"username\" :value=\"__('Username')\" />\n+            <x-text-input id=\"username\" class=\"block mt-1 w-full\" type=\"text\" name=\"username\" :value=\"old('username')\" required autofocus autocomplete=\"username\" />\n+            <x-input-error :messages=\"$errors->get('username')\" class=\"mt-2\" />\n         </div>\n \n         <!-- Password -->\n         <div class=\"mt-4\">\n"
+  },
+  "diffFromPrevious": ""
+}

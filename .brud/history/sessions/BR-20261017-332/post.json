@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-332",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -86,16 +86,14 @@\n             </div>\n         </div>\n     </div>\n \n-    @if ($isStaff)\n-        <div data-notification-toast role=\"status\" aria-live=\"polite\"\n-            class=\"fixed right-4 top-24 z-50 hidden max-w-sm rounded-lg bg-gray-900 px-4 py-3 text-sm text-white shadow-lg\">\n-            <a href=\"{{ route('staff.notifications.index') }}\" data-notification-toast-link>\n-                <span data-notification-toast-message></span>\n-            </a>\n-        </div>\n-    @endif\n+    <div data-notification-toast role=\"status\" aria-live=\"polite\"\n+        class=\"fixed right-4 top-24 z-50 hidden max-w-sm rounded-lg bg-gray-900 px-4 py-3 text-sm text-white shadow-lg\">\n+        <a href=\"{{ $isStaff ? route('staff.notifications.index') : route('appointments.index') }}\" data-notification-toast-link>\n+            <span data-notification-toast-message></span>\n+        </a>\n+    </div>\n \n     <!-- Responsive Navigation Menu -->\n     <div :class=\"{'block': open, 'hidden': ! open}\" class=\"hidden lg:hidden pt-2\">\n         <div class=\"pt-2 pb-3 space-y-1\">\n"
+  },
+  "diffFromPrevious": ""
+}

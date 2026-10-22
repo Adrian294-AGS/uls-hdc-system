@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261018-020",
+  "timestamp": "2026-10-18T14:57:11.051Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261018-225711-057",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n  GET|HEAD       director/export/logs .......................... director.export.logs › Director\\ExportController@logs\n\n                                                                                                    Showing [1] routes\n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan route:list --name=director.export.logs",
+        "output": "\n  GET|HEAD       director/export/logs .......................... director.export.logs › Director\\ExportController@logs\n\n                                                                                                    Showing [1] routes\n\n",
+        "exitCode": 0,
+        "duration": 796,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

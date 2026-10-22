@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-094",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Student\\CumulativeRecordController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Student\\CumulativeRecordController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Student\\\\CumulativeRecordController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Student\\\\CumulativeRecordController.php\"\tpost\n@@ -87,8 +87,10 @@\n         $this->storePhoto($request, $record);\n         $record->markStepCompleted('entry');\n         $record->save();\n \n+        AccessLog::record($user->id, AccessLog::ACTION_CREATE, 'Created Form 5 draft', $request->ip());\n+\n         return redirect()\n             ->route('student.record.edit', [$record, Form5::nextStep('entry')])\n             ->with('status', 'Draft saved.');\n     }\n"
+  },
+  "diffFromPrevious": ""
+}

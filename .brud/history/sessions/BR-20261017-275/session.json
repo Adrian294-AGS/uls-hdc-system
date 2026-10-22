@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-275",
+  "timestamp": "2026-10-17T12:06:20.142Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-200620-492",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\"Cancelled.\"\n",
+      "path": "",
+      "data": {
+        "command": "echo \"Cancelled.\"",
+        "output": "\"Cancelled.\"\n",
+        "exitCode": 0,
+        "duration": 48,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

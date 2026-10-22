@@ -1,0 +1,52 @@
+{
+  "sessionId": "BR-20261015-045",
+  "timestamp": "2026-10-15T06:41:03.362Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261015-144103-121",
+      "kind": "search_replace",
+      "status": "aborted",
+      "message": "The text \"                 <a href=\"{{ route('staff.records.export-one', $record) }}\" class=\"inline-flex items-center px-3 py-1.5 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-700 focus:outline-none transition ease-in-out duration-150\">\n                     {{ __('Export Info (CSV)') }}\n                 </a>\" was not found in \"resources/views/staff/records/show.blade.php\".",
+      "path": "resources/views/staff/records/show.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\records\\show.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/staff/records/show.blade.php",
+        "index": "4"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": [],
+  "isDeleted": true,
+  "deletedAt": "2026-10-17T05:11:12.279Z",
+  "expiresAt": "2026-10-24T05:11:12.279Z",
+  "deletedBy": "user",
+  "deleteReason": "manual_wipe",
+  "softDeleteHistory": [
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:09.967Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    },
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:12.279Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    }
+  ]
+}

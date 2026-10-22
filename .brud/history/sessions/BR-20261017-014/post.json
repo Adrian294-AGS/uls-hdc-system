@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-014",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\phpunit.xml": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\phpunit.xml\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\phpunit.xml\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\phpunit.xml\"\tpost\n@@ -22,10 +22,10 @@\n         <env name=\"APP_MAINTENANCE_DRIVER\" value=\"file\"/>\n         <env name=\"BCRYPT_ROUNDS\" value=\"4\"/>\n         <env name=\"BROADCAST_CONNECTION\" value=\"null\"/>\n         <env name=\"CACHE_STORE\" value=\"array\"/>\n-        <env name=\"DB_CONNECTION\" value=\"sqlite\"/>\n-        <env name=\"DB_DATABASE\" value=\":memory:\"/>\n+        <env name=\"DB_CONNECTION\" value=\"mysql\"/>\n+        <env name=\"DB_DATABASE\" value=\"HDC_DATABASE\"/>\n         <env name=\"DB_URL\" value=\"\"/>\n         <env name=\"MAIL_MAILER\" value=\"array\"/>\n         <env name=\"QUEUE_CONNECTION\" value=\"sync\"/>\n         <env name=\"SESSION_DRIVER\" value=\"array\"/>\n"
+  },
+  "diffFromPrevious": ""
+}

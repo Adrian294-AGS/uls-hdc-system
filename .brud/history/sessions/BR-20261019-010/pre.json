@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261019-010",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Auth\\PasswordController.php": "<?php\n\nnamespace App\\Http\\Controllers\\Auth;\n\nuse App\\Http\\Controllers\\Controller;\nuse Illuminate\\Http\\RedirectResponse;\nuse Illuminate\\Http\\Request;\nuse Illuminate\\Support\\Facades\\Hash;\nuse Illuminate\\Validation\\Rules\\Password;\n\nclass PasswordController extends Controller\n{\n    /**\n     * Update the user's password.\n     */\n    public function update(Request $request): RedirectResponse\n    {\n        $validated = $request->validateWithBag('updatePassword', [\n            'current_password' => ['required', 'current_password'],\n            'password' => ['required', Password::defaults(), 'confirmed'],\n        ]);\n\n        $request->user()->update([\n            'password' => Hash::make($validated['password']),\n        ]);\n\n        return back()->with('status', 'password-updated');\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

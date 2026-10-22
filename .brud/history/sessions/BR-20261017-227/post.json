@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-227",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\SaveRecordStepRequest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\SaveRecordStepRequest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\SaveRecordStepRequest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\SaveRecordStepRequest.php\"\tpost\n@@ -335,14 +335,14 @@\n             'course_reason_other' => [\n                 'nullable', 'string', 'max:255',\n                 Rule::requiredIf(fn () => in_array('others', (array) $this->input('course_reasons'), true)),\n             ],\n-            'second_course' => ['nullable', 'string', 'max:255'],\n-            'considered_occupation' => ['nullable', 'string', 'max:2000'],\n+            'second_course' => ['required', 'string', 'max:255'],\n+            'considered_occupation' => ['required', 'string', 'max:2000'],\n             'has_work_experience' => ['required', 'boolean'],\n             'work_experience_when' => ['nullable', 'required_if:has_work_experience,1', 'string', 'max:255'],\n             'work_experience_details' => ['nullable', 'required_if:has_work_experience,1', 'string', 'max:255'],\n-            'work_experience_likes' => ['nullable', 'string', 'max:2000'],\n+            'work_experience_likes' => ['required', 'string', 'max:2000'],\n         ];\n     }\n \n     /**\n"
+  },
+  "diffFromPrevious": ""
+}

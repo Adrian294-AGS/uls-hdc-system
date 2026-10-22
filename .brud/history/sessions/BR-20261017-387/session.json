@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-387",
+  "timestamp": "2026-10-17T15:00:46.584Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-230046-123",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\"Clearing cache\"\n",
+      "path": "",
+      "data": {
+        "command": "echo \"Clearing cache\"",
+        "output": "\"Clearing cache\"\n",
+        "exitCode": 0,
+        "duration": 39,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

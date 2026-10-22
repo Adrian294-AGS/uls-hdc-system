@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-119",
+  "timestamp": "2026-10-17T07:22:07.595Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-152207-207",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n   INFO  Running migrations.  \n\n  2026_10_17_060000_add_description_to_access_logs_table ............................................... 159.21ms DONE\n\n\n   INFO  Clearing cached bootstrap files.  \n\n  config ................................................................................................. 3.94ms DONE\n  cache ................................................................................................. 52.60ms DONE\n  compiled ............................................................................................... 3.75ms DONE\n  events ................................................................................................. 1.18ms DONE\n  routes ................................................................................................. 0.98ms DONE\n  views ................................................................................................. 48.71ms DONE\n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan migrate --force && php artisan optimize:clear",
+        "output": "\n   INFO  Running migrations.  \n\n  2026_10_17_060000_add_description_to_access_logs_table ............................................... 159.21ms DONE\n\n\n   INFO  Clearing cached bootstrap files.  \n\n  config ................................................................................................. 3.94ms DONE\n  cache ................................................................................................. 52.60ms DONE\n  compiled ............................................................................................... 3.75ms DONE\n  events ................................................................................................. 1.18ms DONE\n  routes ................................................................................................. 0.98ms DONE\n  views ................................................................................................. 48.71ms DONE\n\n",
+        "exitCode": 0,
+        "duration": 2100,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-110",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Director\\ProgramController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Director\\ProgramController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Director\\\\ProgramController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Director\\\\ProgramController.php\"\tpost\n@@ -33,8 +33,10 @@\n     public function update(ProgramRequest $request, Program $program): RedirectResponse\n     {\n         $program->update($request->validated());\n \n+        AccessLog::record($request->user()->id, AccessLog::ACTION_MANAGE, \"Updated program: {$program->code}\", $request->ip());\n+\n         return redirect()\n             ->route('director.colleges.edit', $program->college_id)\n             ->with('status', \"Saved program {$program->code}.\");\n     }\n"
+  },
+  "diffFromPrevious": ""
+}

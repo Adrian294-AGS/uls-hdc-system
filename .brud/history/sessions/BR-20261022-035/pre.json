@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-035",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\application-logo.blade.php": "<!-- Responsive logo: scales with viewport width, capped on larger screens. Width stays auto to preserve aspect ratio. -->\n<img src=\"{{ asset('images/hdc-logo.png') }}\" alt=\"ULS HDC Logo\" class=\"h-15 sm:h-12 md:h-14 lg:h-16 w-auto\" {{ $attributes }} />\n"
+  },
+  "diffFromPrevious": ""
+}

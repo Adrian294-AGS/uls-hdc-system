@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-152",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\form\\select.blade.php": "@props(['name', 'label', 'options' => [], 'value' => null, 'required' => false, 'placeholder' => 'Select…'])\n\n@php\n    $id = str_replace('.', '_', $name);\n    $selected = (string) old($name, $value);\n    $extra = $required ? ['required' => true] : [];\n@endphp\n\n<div {{ $attributes->only(['class', 'x-show', 'x-cloak']) }}>\n    <x-input-label :for=\"$id\">\n        {{ $label }} @if ($required)<span class=\"text-red-600 dark:text-red-400\" aria-hidden=\"true\">*</span>@endif\n    </x-input-label>\n    <select id=\"{{ $id }}\" name=\"{{ \\App\\Support\\FormName::html($name) }}\"\n        class=\"mt-1 block w-full glass-input focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm dark:focus:border-indigo-400 dark:focus:ring-indigo-400\"\n        {{ $attributes->except(['class', 'x-show', 'x-cloak'])->merge($extra) }}>\n        <option value=\"\">{{ $placeholder }}</option>\n        @if ($slot->isNotEmpty())\n            {{ $slot }}\n        @else\n            @foreach ($options as $optionValue => $optionLabel)\n                <option value=\"{{ $optionValue }}\" @selected($selected === (string) $optionValue)>{{ $optionLabel }}</option>\n            @endforeach\n        @endif\n    </select>\n    <x-input-error :messages=\"$errors->get($name)\" class=\"mt-2\" />\n</div>\n"
+  },
+  "diffFromPrevious": ""
+}

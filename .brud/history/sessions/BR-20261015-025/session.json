@@ -1,0 +1,52 @@
+{
+  "sessionId": "BR-20261015-025",
+  "timestamp": "2026-10-15T05:37:04.756Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261015-133704-078",
+      "kind": "search_replace",
+      "status": "success",
+      "message": "Patched resources/views/components/primary-button.blade.php.",
+      "path": "resources/views/components/primary-button.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\primary-button.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/components/primary-button.blade.php",
+        "index": "3"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": [],
+  "isDeleted": true,
+  "deletedAt": "2026-10-17T05:11:11.994Z",
+  "expiresAt": "2026-10-24T05:11:11.994Z",
+  "deletedBy": "user",
+  "deleteReason": "manual_wipe",
+  "softDeleteHistory": [
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:09.678Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    },
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:11.994Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    }
+  ]
+}

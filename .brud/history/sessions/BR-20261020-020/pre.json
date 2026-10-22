@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261020-020",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\partials\\theme-background.blade.php": "{{-- Fixed day and night beach backgrounds; CSS crossfades them when the theme changes. --}}\n<div class=\"theme-bg theme-bg-day\" style=\"background-image: url('{{ asset('images/bg-day.webp') }}');\" aria-hidden=\"true\"></div>\n<div class=\"theme-bg theme-bg-night\" style=\"background-image: url('{{ asset('images/bg-night.webp') }}');\" aria-hidden=\"true\"></div>\n"
+  },
+  "diffFromPrevious": ""
+}

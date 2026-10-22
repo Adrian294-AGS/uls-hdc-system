@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-256",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\DatabaseSeeder.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\DatabaseSeeder.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\seeders\\\\DatabaseSeeder.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\seeders\\\\DatabaseSeeder.php\"\tpost\n@@ -17,7 +17,8 @@\n         ]);\n \n         if (! app()->isProduction()) {\n             $this->call(SampleCounselorSeeder::class);\n+            $this->call(SampleStudentSeeder::class);\n         }\n     }\n }\n"
+  },
+  "diffFromPrevious": ""
+}

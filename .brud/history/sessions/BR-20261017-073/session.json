@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-073",
+  "timestamp": "2026-10-17T06:32:16.291Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-143216-121",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n  GET|HEAD   appointments ........................................... appointments.index › AppointmentController@index\n  POST       appointments ........................................... appointments.store › AppointmentController@store\n  PATCH      appointments/{appointment}/status .............. appointments.status › AppointmentController@updateStatus\n\n                                                                                                    Showing [3] routes\n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan route:list --path=appointment",
+        "output": "\n  GET|HEAD   appointments ........................................... appointments.index › AppointmentController@index\n  POST       appointments ........................................... appointments.store › AppointmentController@store\n  PATCH      appointments/{appointment}/status .............. appointments.status › AppointmentController@updateStatus\n\n                                                                                                    Showing [3] routes\n\n",
+        "exitCode": 0,
+        "duration": 548,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

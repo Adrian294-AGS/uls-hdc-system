@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-092",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\AccessLog.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\AccessLog.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\AccessLog.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\AccessLog.php\"\tpost\n@@ -8,9 +8,9 @@\n \n /**\n  * One row per staff view/action on a full Form 5 record.\n  */\n-#[Fillable(['user_id', 'cumulative_record_id', 'entrance_test_result_id', 'action', 'ip'])]\n+#[Fillable(['user_id', 'cumulative_record_id', 'entrance_test_result_id', 'action', 'description', 'ip'])]\n class AccessLog extends Model\n {\n     public const UPDATED_AT = null;\n \n"
+  },
+  "diffFromPrevious": ""
+}

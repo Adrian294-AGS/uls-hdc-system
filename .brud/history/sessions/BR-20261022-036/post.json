@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-036",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpost\n@@ -44,10 +44,10 @@\n /* Responsive logo sizing — edit the width values here to resize every logo app-wide.\n    The image keeps its aspect ratio automatically (height: auto). */\n @layer components {\n     .logo-responsive {\n-        width: auto;   /* 40px — mobile */\n-        height: 100px;\n+        width: 2.5rem; /* 40px — mobile */\n+        height: auto;\n         max-width: 100%;\n         object-fit: contain;\n     }\n \n"
+  },
+  "diffFromPrevious": ""
+}

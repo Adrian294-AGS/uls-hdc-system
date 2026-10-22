@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261022-001",
+  "timestamp": "2026-10-22T01:34:24.707Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261022-093424-003",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\nConfiguration File (php.ini) Path: \"\"\nLoaded Configuration File:         \"C:\\php\\php-8.5.9-Win32-vs17-x64\\php.ini\"\nScan for additional .ini files in: (none)\nAdditional .ini files parsed:      (none)\n",
+      "path": "",
+      "data": {
+        "command": "php --ini",
+        "output": "Configuration File (php.ini) Path: \"\"\nLoaded Configuration File:         \"C:\\php\\php-8.5.9-Win32-vs17-x64\\php.ini\"\nScan for additional .ini files in: (none)\nAdditional .ini files parsed:      (none)\n",
+        "exitCode": 0,
+        "duration": 131,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

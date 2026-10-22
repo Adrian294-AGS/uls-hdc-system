@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-306",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\DirectorSeeder.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\DirectorSeeder.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\seeders\\\\DirectorSeeder.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\seeders\\\\DirectorSeeder.php\"\tpost\n@@ -33,8 +33,9 @@\n         $director = new User([\n             'first_name' => $config['first_name'],\n             'last_name' => $config['last_name'],\n             'email' => $config['email'],\n+            'username' => 'director',\n             'password' => $config['password'],\n         ]);\n         $director->role = Role::Director;\n         $director->email_verified_at = now();\n"
+  },
+  "diffFromPrevious": ""
+}

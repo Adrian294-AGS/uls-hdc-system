@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-033",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpost\n@@ -39,4 +39,33 @@\n             @apply bg-white dark:bg-slate-800;\n         }\n     }\n }\n+\n+/* Responsive logo sizing — edit the width values here to resize every logo app-wide.\n+   The image keeps its aspect ratio automatically (height: auto). */\n+@layer components {\n+    .logo-responsive {\n+        width: 2.5rem;   /* 40px — mobile */\n+        height: auto;\n+        max-width: 100%;\n+        object-fit: contain;\n+    }\n+\n+    @media (min-width: 640px) {   /* sm */\n+        .logo-responsive {\n+            width: 3rem;  /* 48px */\n+        }\n+    }\n+\n+    @media (min-width: 768px) {   /* md */\n+        .logo-responsive {\n+            width: 3.5rem; /* 56px */\n+        }\n+    }\n+\n+    @media (min-width: 1024px) {  /* lg */\n+        .logo-responsive {\n+            width: 4rem;  /* 64px */\n+        }\n+    }\n+}\n"
+  },
+  "diffFromPrevious": ""
+}

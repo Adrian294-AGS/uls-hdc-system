@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-300",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\auth\\register.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\auth\\register.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\auth\\\\register.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\auth\\\\register.blade.php\"\tpost\n@@ -29,13 +29,13 @@\n             <x-text-input id=\"middle_name\" class=\"block mt-1 w-full\" type=\"text\" name=\"middle_name\" :value=\"old('middle_name')\" autocomplete=\"additional-name\" />\n             <x-input-error :messages=\"$errors->get('middle_name')\" class=\"mt-2\" />\n         </div>\n \n-        <!-- Student Number -->\n+        <!-- Username -->\n         <div class=\"mt-4\">\n-            <x-input-label for=\"student_number\" :value=\"__('Student Number')\" />\n-            <x-text-input id=\"student_number\" class=\"block mt-1 w-full\" type=\"text\" name=\"student_number\" :value=\"old('student_number')\" required />\n-            <x-input-error :messages=\"$errors->get('student_number')\" class=\"mt-2\" />\n+            <x-input-label for=\"username\" :value=\"__('Username')\" />\n+            <x-text-input id=\"username\" class=\"block mt-1 w-full\" type=\"text\" name=\"username\" :value=\"old('username')\" required />\n+            <x-input-error :messages=\"$errors->get('username')\" class=\"mt-2\" />\n         </div>\n \n         <!-- Program (grouped by college) -->\n         <div class=\"mt-4\">\n"
+  },
+  "diffFromPrevious": ""
+}

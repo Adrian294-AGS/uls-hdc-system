@@ -1,0 +1,33 @@
+{
+  "sessionId": "BR-20261017-206",
+  "timestamp": "2026-10-17T09:30:26.819Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-173026-336",
+      "kind": "search_replace",
+      "status": "aborted",
+      "message": "The text \"                        <div class=\"flex items-end\">\n                            <x-primary-button>{{ __('Apply filters') }}</x-primary-button>\n                        </div>\" was not found in \"resources/views/appointments/partials/filters.blade.php\".",
+      "path": "resources/views/appointments/partials/filters.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\partials\\filters.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/appointments/partials/filters.blade.php",
+        "index": "1"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

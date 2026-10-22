@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-121",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\AccessLog.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\AccessLog.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\AccessLog.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\AccessLog.php\"\tpost\n@@ -34,9 +34,9 @@\n \n     /**\n      * Convenience for non-record actions that only carry a description.\n      */\n-    public static function record(int $userId, string $action, string $description, ?string $ip = null): self\n+    public static function logAction(int $userId, string $action, string $description, ?string $ip = null): self\n     {\n         return self::create([\n             'user_id' => $userId,\n             'action' => $action,\n"
+  },
+  "diffFromPrevious": ""
+}

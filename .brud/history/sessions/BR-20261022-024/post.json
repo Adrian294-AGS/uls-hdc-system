@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-024",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\application-logo.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\application-logo.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\application-logo.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\application-logo.blade.php\"\tpost\n@@ -1,1 +1,2 @@\n-<img src=\"{{ asset('images/hdc-logo.png') }}\" alt=\"ULS HDC Logo\" {{ $attributes }} />\n+<!-- EDIT THE GLOBAL SIZE HERE: Change 'h-12 w-auto' to your preferred Tailwind size (e.g., 'h-16 w-16', 'h-10 w-auto') -->\n+<img src=\"{{ asset('images/hdc-logo.png') }}\" alt=\"ULS HDC Logo\" class=\"h-12 w-auto\" {{ $attributes }} />\n"
+  },
+  "diffFromPrevious": ""
+}

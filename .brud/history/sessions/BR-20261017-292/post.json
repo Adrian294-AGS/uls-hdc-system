@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-292",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\User.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\User.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\User.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\User.php\"\tpost\n@@ -20,9 +20,9 @@\n /**\n  * `role`, `is_active` and `must_change_password` are intentionally NOT fillable: they are only\n  * ever set explicitly in code (registration hardcodes Student; the director's screens set staff accounts).\n  */\n-#[Fillable(['name', 'last_name', 'first_name', 'middle_name', 'email', 'password', 'student_number', 'program_id', 'year_level'])]\n+#[Fillable(['name', 'username', 'last_name', 'first_name', 'middle_name', 'email', 'password', 'student_number', 'program_id', 'year_level'])]\n #[Hidden(['password', 'remember_token'])]\n class User extends Authenticatable\n {\n     /** @use HasFactory<UserFactory> */\n"
+  },
+  "diffFromPrevious": ""
+}

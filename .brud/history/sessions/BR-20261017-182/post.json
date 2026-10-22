@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-182",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpost\n@@ -97,8 +97,9 @@\n });\n \n Route::middleware(['auth', 'verified', 'role:student,counselor,director'])->group(function () {\n     Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments.index');\n+    Route::get('/appointments/export', [AppointmentController::class, 'export'])->name('appointments.export');\n     Route::post('/appointments', [AppointmentController::class, 'store'])\n         ->middleware('role:student')\n         ->name('appointments.store');\n     Route::get('/appointments/{appointment}', [AppointmentController::class, 'show'])->name('appointments.show');\n"
+  },
+  "diffFromPrevious": ""
+}

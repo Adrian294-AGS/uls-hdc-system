@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-012",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpost\n@@ -90,7 +90,11 @@\n \n Route::middleware('auth')->group(function () {\n     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');\n     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');\n+\n+    Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments.index');\n+    Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');\n+    Route::patch('/appointments/{appointment}/status', [AppointmentController::class, 'updateStatus'])->name('appointments.status');\n });\n \n require __DIR__.'/auth.php';\n"
+  },
+  "diffFromPrevious": ""
+}

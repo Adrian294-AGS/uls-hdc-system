@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-311",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\factories\\UserFactory.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\factories\\UserFactory.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\factories\\\\UserFactory.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\factories\\\\UserFactory.php\"\tpost\n@@ -56,9 +56,8 @@\n     public function student(?Program $program = null): static\n     {\n         return $this->state(fn (array $attributes) => [\n             'role' => Role::Student,\n-            'student_number' => fake()->unique()->numerify('##-#####'),\n             'program_id' => $program?->id ?? Program::factory(),\n             'year_level' => fake()->numberBetween(1, 4),\n         ]);\n     }\n"
+  },
+  "diffFromPrevious": ""
+}

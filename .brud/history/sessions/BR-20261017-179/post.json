@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-179",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpost\n@@ -116,7 +116,7 @@\n         $appointment->update(['status' => $validated['status']]);\n \n         AccessLog::logAction($user->id, AccessLog::ACTION_APPOINTMENT, \"Appointment #{$appointment->id} marked {$validated['status']}\", $request->ip());\n \n-        return back()->with('status', 'Appointment status updated successfully.');\n+        return redirect()->route('appointments.index')->with('status', 'Appointment status updated successfully.');\n     }\n }\n"
+  },
+  "diffFromPrevious": ""
+}

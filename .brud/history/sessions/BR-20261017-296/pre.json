@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-296",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\sata\\partials\\student-header.blade.php": "{{-- Student identity line for SATA pages. Expects $student. --}}\n<p class=\"text-sm text-gray-600 dark:text-gray-400\">\n    {{ $student->student_number }}\n    · {{ $student->program?->code }} – {{ $student->program?->college?->name }}\n    · {{ \\App\\Support\\Form5::YEAR_LEVELS[$student->year_level] ?? '' }}\n</p>\n"
+  },
+  "diffFromPrevious": ""
+}

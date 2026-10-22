@@ -1,0 +1,33 @@
+{
+  "sessionId": "BR-20261017-377",
+  "timestamp": "2026-10-17T14:46:06.473Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-224606-107",
+      "kind": "search_replace",
+      "status": "aborted",
+      "message": "The text \"            @include('staff.partials.filters')\" was not found in \"resources/views/staff/records/index.blade.php\".",
+      "path": "resources/views/staff/records/index.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\records\\index.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/staff/records/index.blade.php",
+        "index": "1"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

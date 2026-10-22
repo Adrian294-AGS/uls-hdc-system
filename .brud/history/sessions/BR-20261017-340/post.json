@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-340",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\notification-bell.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\notification-bell.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\notification-bell.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\notification-bell.blade.php\"\tpost\n@@ -1,8 +1,8 @@\n @props(['count' => 0])\n \n @php\n-    $url = auth()->user()?->isStudent() ? route('appointments.index') : route('staff.notifications.index');\n+    $url = auth()->user()?->isStudent() ? route('student.notifications.index') : route('staff.notifications.index');\n @endphp\n \n <a href=\"{{ $url }}\"\n     class=\"relative inline-flex h-9 w-9 items-center justify-center rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200\"\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-270",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -6,9 +6,9 @@\n \n <nav x-data=\"{ open: false }\" class=\"glass-bar sticky top-0 z-40\">\n     <!-- Primary Navigation Menu -->\n     <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n-        <div class=\"flex justify-between h-16\">\n+        <div class=\"flex justify-between h-20\">\n             <div class=\"flex\">\n                 <!-- Logo -->\n                 <div class=\"shrink-0 flex items-center\">\n                     <a href=\"{{ route($user->dashboardRoute()) }}\" class=\"flex items-center gap-2\">\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-033",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\Auth\\RegistrationTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\Auth\\RegistrationTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\Auth\\\\RegistrationTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\Auth\\\\RegistrationTest.php\"\tpost\n@@ -23,9 +23,9 @@\n             'middle_name' => 'Santos',\n             'student_number' => '26-00001',\n             'program_id' => Program::factory()->create()->id,\n             'year_level' => 1,\n-            'email' => 'juan@example.com',\n+            'username' => 'juan-student',\n             'password' => 'Password123',\n             'password_confirmation' => 'Password123',\n         ], $overrides);\n     }\n"
+  },
+  "diffFromPrevious": ""
+}

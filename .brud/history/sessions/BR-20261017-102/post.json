@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-102",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Director\\CounselorController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Director\\CounselorController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Director\\\\CounselorController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Director\\\\CounselorController.php\"\tpost\n@@ -99,8 +99,10 @@\n             $counselor->save();\n             $counselor->colleges()->sync($validated['colleges']);\n         });\n \n+        AccessLog::record($request->user()->id, AccessLog::ACTION_MANAGE, \"Updated counselor account: {$counselor->name}\", $request->ip());\n+\n         return redirect()\n             ->route('director.counselors.index')\n             ->with('status', filled($validated['password'] ?? null)\n                 ? \"Saved. {$counselor->name} must change the new temporary password on next login.\"\n"
+  },
+  "diffFromPrevious": ""
+}

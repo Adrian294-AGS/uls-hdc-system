@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-140",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php": "<?php\n\nrequire __DIR__.'/vendor/autoload.php';\n$app = require_once __DIR__.'/bootstrap/app.php';\n$app->make(Illuminate\\Contracts\\Console\\Kernel::class)->bootstrap();\n\nuse App\\Models\\User;\nuse Illuminate\\Support\\Facades\\DB;\n\n$student = User::where('role', 'student')->whereNotNull('program_id')->first();\necho 'Student: '.($student?->name ?? 'none').PHP_EOL;\necho 'college_id: '.($student?->program?->college_id ?? 'none').PHP_EOL;\n\n$collegeId = $student?->program?->college_id;\n\necho 'Counselors assigned to that college: '.User::where('role', 'counselor')\n    ->whereHas('colleges', fn ($q) => $q->where('colleges.id', $collegeId))->count().PHP_EOL;\necho 'Total active counselors: '.User::where('role', 'counselor')->where('is_active', true)->count().PHP_EOL;\necho 'Counselor-college links: '.DB::table('college_counselor')->count().PHP_EOL;\necho 'Students with null program_id: '.User::where('role', 'student')->whereNull('program_id')->count().PHP_EOL;"
+  },
+  "diffFromPrevious": ""
+}

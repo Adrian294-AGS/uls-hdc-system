@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-216",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpost\n@@ -92,8 +92,9 @@\n         }\n \n         $query\n             ->when($status, fn (Builder $q, string $s) => $q->where('status', $s))\n+            ->when($date, fn (Builder $q, string $d) => $q->whereDate('scheduled_at', $d))\n             ->when($search, function (Builder $q, string $term): void {\n                 $like = '%'.addcslashes($term, '\\\\%_').'%';\n                 $q->where(function (Builder $inner) use ($like): void {\n                     $inner->whereHas('student', fn (Builder $s) => $s->where('users.name', 'like', $like))\n"
+  },
+  "diffFromPrevious": ""
+}

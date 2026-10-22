@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-003",
+  "timestamp": "2026-10-17T05:34:06.430Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-133406-018",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n   INFO  Model [C:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\Appointment.php] created successfully.  \n\n   INFO  Migration [C:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_053406_create_appointments_table.php] created successfully.  \n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan make:model Appointment -m",
+        "output": "\n   INFO  Model [C:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\Appointment.php] created successfully.  \n\n   INFO  Migration [C:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_053406_create_appointments_table.php] created successfully.  \n\n",
+        "exitCode": 0,
+        "duration": 11663,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

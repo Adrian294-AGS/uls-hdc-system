@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-087",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\director\\dashboard.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\director\\dashboard.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\director\\\\dashboard.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\director\\\\dashboard.blade.php\"\tpost\n@@ -64,9 +64,9 @@\n                                         <tr>\n                                             <th scope=\"row\" class=\"px-4 py-2 pl-8 text-left font-normal text-gray-700 dark:text-gray-300\">\n                                                 {{ App\\Support\\Form5::YEAR_LEVELS[$row['year_level']] ?? __('No year level') }}\n                                             </th>\n-                                            @foreach (array_keys(App\\Support\\StudentRecordQuery::STATUSES) as $status)\n+                                            @foreach (array_keys($statusLabels) as $status)\n                                                 <td class=\"px-4 py-2 text-right tabular-nums text-gray-700 dark:text-gray-300\">{{ $row['counts'][$status] }}</td>\n                                             @endforeach\n                                             <td class=\"px-4 py-2 text-right tabular-nums text-gray-700 dark:text-gray-300\">{{ $row['counts']['total'] }}</td>\n                                         </tr>\n"
+  },
+  "diffFromPrevious": ""
+}

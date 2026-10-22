@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-047",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\Auth\\RegistrationTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\Auth\\RegistrationTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\Auth\\\\RegistrationTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\Auth\\\\RegistrationTest.php\"\tpost\n@@ -47,9 +47,9 @@\n \n         $this->assertAuthenticated();\n         $response->assertRedirect(route('student.dashboard', absolute: false));\n \n-        $user = User::where('email', 'juan@example.com')->firstOrFail();\n+        $user = User::where('username', 'juan-student')->firstOrFail();\n         $this->assertSame(Role::Student, $user->role);\n         $this->assertSame('Juan Santos Dela Cruz', $user->name);\n         $this->assertSame('26-00001', $user->student_number);\n         $this->assertSame(1, $user->year_level);\n@@ -58,9 +58,9 @@\n     public function test_role_in_the_request_is_ignored(): void\n     {\n         $this->post('/register', $this->validPayload(['role' => 'director']));\n \n-        $this->assertSame(Role::Student, User::where('email', 'juan@example.com')->firstOrFail()->role);\n+        $this->assertSame(Role::Student, User::where('username', 'juan-student')->firstOrFail()->role);\n     }\n \n     public function test_student_number_must_be_unique(): void\n     {\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-245",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\CumulativeRecordTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\CumulativeRecordTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\CumulativeRecordTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\CumulativeRecordTest.php\"\tpost\n@@ -64,8 +64,9 @@\n             'semester' => '1st',\n             'student_type' => 'new',\n         ]);\n \n+        $response->assertSessionHasNoErrors();\n         $record = $student->cumulativeRecords()->sole();\n         $response->assertRedirect(route('student.record.edit', [$record, 'personal']));\n \n         $this->assertSame(RecordStatus::Draft, $record->status);\n"
+  },
+  "diffFromPrevious": ""
+}

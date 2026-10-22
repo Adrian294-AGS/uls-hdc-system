@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-325",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -4,9 +4,9 @@\n     $unreadCount = $isStaff ? $user->unreadNotifications()->count() : 0;\n @endphp\n \n <nav x-data=\"{ open: false }\"\n-    data-realtime-user-id=\"{{ $isStaff ? $user->id : '' }}\"\n+    data-realtime-user-id=\"{{ $user->id }}\"\n     class=\"glass-bar sticky top-0 z-40\">\n     <!-- Primary Navigation Menu -->\n     <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n         <div class=\"flex justify-between h-20\">\n"
+  },
+  "diffFromPrevious": ""
+}

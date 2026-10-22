@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-321",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Notifications\\AppointmentStatusUpdated.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Notifications\\AppointmentStatusUpdated.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Notifications\\\\AppointmentStatusUpdated.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Notifications\\\\AppointmentStatusUpdated.php\"\tpost\n@@ -0,0 +1,30 @@\n+<?php\n+\n+namespace App\\Notifications;\n+\n+use App\\Models\\Appointment;\n+use Illuminate\\Notifications\\Notification;\n+\n+class AppointmentStatusUpdated extends Notification\n+{\n+    public function __construct(public Appointment $appointment) {}\n+\n+    public function via(object $notifiable): array\n+    {\n+        return ['database', 'broadcast'];\n+    }\n+\n+    public function toArray(object $notifiable): array\n+    {\n+        $status = ucfirst($this->appointment->status);\n+        $staff = $this->appointment->staff;\n+        $date = $this->appointment->scheduled_at->format('M j, Y g:i A');\n+\n+        return [\n+            'appointment_id' => $this->appointment->id,\n+            'status' => $this->appointment->status,\n+            'url' => route('appointments.show', $this->appointment, absolute: false),\n+            'message' => \"Your appointment with {$staff->name} for {$date} has been {$status}.\",\n+        ];\n+    }\n+}\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

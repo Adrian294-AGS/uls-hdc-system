@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-008",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\Appointment.php": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Appointment extends Model\n{\n    //\n}\n"
+  },
+  "diffFromPrevious": ""
+}

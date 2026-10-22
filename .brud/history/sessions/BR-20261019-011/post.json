@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261019-011",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\README.md": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\README.md\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\README.md\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\README.md\"\tpost\n@@ -241,9 +241,9 @@\n ### 2. Real-Time Tables\n \n 1. Keep the same two browsers open: the Student in Browser 1 and the Counselor in Browser 2.\n 2. In Browser 2, as the Counselor, **approve** the Student's appointment.\n-3. In Browser 1, the Student's appointments table should **update automatically within 5 seconds**, with no manual refresh.\n+3. In Browser 1, the Student's appointments table should **update instantly** (with a brief highlight effect on the status badge), with no manual refresh.\n \n ### 3. Cloud Uploads (Backblaze B2)\n \n 1. Log in as a **Student** (for example, `juan` / `password`).\n"
+  },
+  "diffFromPrevious": ""
+}

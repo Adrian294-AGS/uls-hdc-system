@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-043",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpost\n@@ -84,9 +84,9 @@\n     }\n \n     @media (min-width: 768px) {   /* md */\n         .logo-responsive--guest {\n-            width: 7rem;  /* 112px (2x) */\n+            width: 10rem;  /* 160px */\n         }\n     }\n \n     @media (min-width: 1024px) {  /* lg */\n"
+  },
+  "diffFromPrevious": ""
+}

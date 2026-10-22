@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-006",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Enums\\AppointmentStatus.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Enums\\AppointmentStatus.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Enums\\\\AppointmentStatus.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Enums\\\\AppointmentStatus.php\"\tpost\n@@ -0,0 +1,34 @@\n+<?php\n+\n+namespace App\\Enums;\n+\n+enum AppointmentStatus: string\n+{\n+    case Pending = 'pending';\n+    case Approved = 'approved';\n+    case Rejected = 'rejected';\n+    case Completed = 'completed';\n+    case Cancelled = 'cancelled';\n+\n+    public function label(): string\n+    {\n+        return match ($this) {\n+            self::Pending => 'Pending Review',\n+            self::Approved => 'Approved',\n+            self::Rejected => 'Rejected',\n+            self::Completed => 'Completed',\n+            self::Cancelled => 'Cancelled',\n+        };\n+    }\n+\n+    public function color(): string\n+    {\n+        return match ($this) {\n+            self::Pending => 'yellow',\n+            self::Approved => 'blue',\n+            self::Rejected => 'red',\n+            self::Completed => 'green',\n+            self::Cancelled => 'gray',\n+        };\n+    }\n+}\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

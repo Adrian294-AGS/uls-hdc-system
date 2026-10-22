@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-364",
+  "timestamp": "2026-10-17T14:35:27.563Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-223527-091",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n   INFO  Configuration cache cleared successfully.  \n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan config:clear",
+        "output": "\n   INFO  Configuration cache cleared successfully.  \n\n",
+        "exitCode": 0,
+        "duration": 650,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

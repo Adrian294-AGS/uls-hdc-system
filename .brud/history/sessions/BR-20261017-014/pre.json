@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-014",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\phpunit.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<phpunit xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:noNamespaceSchemaLocation=\"vendor/phpunit/phpunit/phpunit.xsd\"\n         bootstrap=\"vendor/autoload.php\"\n         colors=\"true\"\n>\n    <testsuites>\n        <testsuite name=\"Unit\">\n            <directory>tests/Unit</directory>\n        </testsuite>\n        <testsuite name=\"Feature\">\n            <directory>tests/Feature</directory>\n        </testsuite>\n    </testsuites>\n    <source>\n        <include>\n            <directory>app</directory>\n        </include>\n    </source>\n    <php>\n        <env name=\"APP_ENV\" value=\"testing\"/>\n        <env name=\"APP_MAINTENANCE_DRIVER\" value=\"file\"/>\n        <env name=\"BCRYPT_ROUNDS\" value=\"4\"/>\n        <env name=\"BROADCAST_CONNECTION\" value=\"null\"/>\n        <env name=\"CACHE_STORE\" value=\"array\"/>\n        <env name=\"DB_CONNECTION\" value=\"sqlite\"/>\n        <env name=\"DB_DATABASE\" value=\":memory:\"/>\n        <env name=\"DB_URL\" value=\"\"/>\n        <env name=\"MAIL_MAILER\" value=\"array\"/>\n        <env name=\"QUEUE_CONNECTION\" value=\"sync\"/>\n        <env name=\"SESSION_DRIVER\" value=\"array\"/>\n        <env name=\"PULSE_ENABLED\" value=\"false\"/>\n        <env name=\"TELESCOPE_ENABLED\" value=\"false\"/>\n        <env name=\"NIGHTWATCH_ENABLED\" value=\"false\"/>\n    </php>\n</phpunit>\n"
+  },
+  "diffFromPrevious": ""
+}

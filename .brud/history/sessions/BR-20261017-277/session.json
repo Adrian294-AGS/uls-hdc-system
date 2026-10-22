@@ -1,0 +1,33 @@
+{
+  "sessionId": "BR-20261017-277",
+  "timestamp": "2026-10-17T12:09:18.423Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-200918-496",
+      "kind": "search_replace",
+      "status": "aborted",
+      "message": "The text \"{{ $attributes->merge(['class' => 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150']) }}\" was not found in \"resources/views/components/primary-button.blade.php\".",
+      "path": "resources/views/components/primary-button.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\primary-button.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/components/primary-button.blade.php",
+        "index": "2"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-038",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\guest.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\guest.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\guest.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\guest.blade.php\"\tpost\n@@ -27,9 +27,9 @@\n \n         <div class=\"relative z-0 min-h-screen flex flex-col justify-center items-center px-4 pt-16 pb-8 sm:pt-8\">\n             <div class=\"glass-card w-full sm:max-w-md px-6 py-6 sm:px-8\">\n                 <a href=\"/\" class=\"flex flex-col items-center gap-2 text-center\">\n-                    <x-application-logo class=\"block\" />\n+                    <x-application-logo class=\"logo-responsive--guest\" />\n                     <span class=\"text-2xl font-bold tracking-tight text-gray-900 dark:text-white\">ULS HDC</span>\n                     <span class=\"text-sm font-medium text-gray-700 dark:text-gray-300\">{{ __('Human Development Center') }}</span>\n                 </a>\n \n"
+  },
+  "diffFromPrevious": ""
+}

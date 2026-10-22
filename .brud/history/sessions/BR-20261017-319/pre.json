@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-319",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\trigger_notification.php": "<?php\n\nrequire __DIR__.'/vendor/autoload.php';\n\n$app = require_once __DIR__.'/bootstrap/app.php';\n$kernel = $app->make(Illuminate\\Contracts\\Console\\Kernel::class);\n$kernel->bootstrap();\n\n$record = App\\Models\\CumulativeRecord::find(6);\n$record->completed_steps = ['entry', 'personal', 'family', 'education', 'health', 'socio-economic', 'vocational', 'self', 'skills', 'social'];\n$record->status = App\\Enums\\RecordStatus::Submitted;\n$record->submitted_at = now();\n$record->consent_given = true;\n$record->consented_at = now();\n$record->consent_name = 'Adrian G. Santiago';\n$record->save();\n\n$student = $record->student->loadMissing('program');\n$staff = App\\Models\\User::query()->staffResponsibleFor($student->program?->college_id)->get();\n\nIlluminate\\Support\\Facades\\Notification::send($staff, new App\\Notifications\\RecordSubmitted($record->setRelation('student', $student)));\n\necho \"Notification sent successfully!\\n\";"
+  },
+  "diffFromPrevious": ""
+}

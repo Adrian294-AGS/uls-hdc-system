@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261022-004",
+  "timestamp": "2026-10-22T01:35:43.837Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261022-093543-007",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\nzip\n",
+      "path": "",
+      "data": {
+        "command": "php -m | findstr zip",
+        "output": "zip\n",
+        "exitCode": 0,
+        "duration": 1264,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

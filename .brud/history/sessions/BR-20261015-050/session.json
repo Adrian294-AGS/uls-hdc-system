@@ -1,0 +1,54 @@
+{
+  "sessionId": "BR-20261015-050",
+  "timestamp": "2026-10-15T06:53:57.221Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261015-145357-135",
+      "kind": "terminal_command",
+      "status": "failed",
+      "message": "Terminal command failed (exit code: 1)\nOutput:\n\n   INFO  Published 'broadcasting' configuration file.  \n\n   INFO  Published 'channels' route file.  \n\n\n   TypeError \n\n  Laravel\\Prompts\\select(): Return value must be of type string|int, null returned\n\n  at vendor\\laravel\\prompts\\src\\helpers.php:108\n    104▕         bool|string $required = true,\n    105▕         ?Closure $transform = null,\n    106▕         string|Closure $info = '',\n    107▕     ): int|string {\n  ➜ 108▕         return (new SelectPrompt(...get_defined_vars()))->prompt();\n    109▕     }\n    110▕ }\n    111▕ \n    112▕ if (! function_exists('\\Laravel\\Prompts\\multiselect')) {\n\n  1   vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\BroadcastingInstallCommand.php:549\n\n  2   vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\BroadcastingInstallCommand.php:95\n      Illuminate\\Foundation\\Console\\BroadcastingInstallCommand::resolveDriver()\n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan install:broadcasting --no-interaction",
+        "output": "\n   INFO  Published 'broadcasting' configuration file.  \n\n   INFO  Published 'channels' route file.  \n\n\n   TypeError \n\n  Laravel\\Prompts\\select(): Return value must be of type string|int, null returned\n\n  at vendor\\laravel\\prompts\\src\\helpers.php:108\n    104▕         bool|string $required = true,\n    105▕         ?Closure $transform = null,\n    106▕         string|Closure $info = '',\n    107▕     ): int|string {\n  ➜ 108▕         return (new SelectPrompt(...get_defined_vars()))->prompt();\n    109▕     }\n    110▕ }\n    111▕ \n    112▕ if (! function_exists('\\Laravel\\Prompts\\multiselect')) {\n\n  1   vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\BroadcastingInstallCommand.php:549\n\n  2   vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\BroadcastingInstallCommand.php:95\n      Illuminate\\Foundation\\Console\\BroadcastingInstallCommand::resolveDriver()\n\n",
+        "exitCode": 1,
+        "duration": 961,
+        "success": false
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": [],
+  "isDeleted": true,
+  "deletedAt": "2026-10-17T05:11:12.352Z",
+  "expiresAt": "2026-10-24T05:11:12.352Z",
+  "deletedBy": "user",
+  "deleteReason": "manual_wipe",
+  "softDeleteHistory": [
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:10.039Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    },
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:12.352Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    }
+  ]
+}

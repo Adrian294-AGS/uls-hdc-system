@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261019-002",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpost\n@@ -1,8 +1,9 @@\n <?php\n \n namespace App\\Http\\Controllers;\n \n+use App\\Events\\AppointmentStatusChanged;\n use App\\Models\\AccessLog;\n use App\\Models\\Appointment;\n use App\\Models\\User;\n use App\\Notifications\\AppointmentRequested;\n"
+  },
+  "diffFromPrevious": ""
+}

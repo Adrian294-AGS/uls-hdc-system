@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-091",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_060000_add_description_to_access_logs_table.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_060000_add_description_to_access_logs_table.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\migrations\\\\2026_10_17_060000_add_description_to_access_logs_table.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\migrations\\\\2026_10_17_060000_add_description_to_access_logs_table.php\"\tpost\n@@ -0,0 +1,27 @@\n+<?php\n+\n+use Illuminate\\Database\\Migrations\\Migration;\n+use Illuminate\\Database\\Schema\\Blueprint;\n+use Illuminate\\Support\\Facades\\Schema;\n+\n+/**\n+ * Access logs now record any staff/director action (records, SATA, appointments,\n+ * counselor/college/program changes, logins) with a human-readable description.\n+ * Non-record actions leave both record FKs null.\n+ */\n+return new class extends Migration\n+{\n+    public function up(): void\n+    {\n+        Schema::table('access_logs', function (Blueprint $table) {\n+            $table->string('description', 255)->nullable()->after('action');\n+        });\n+    }\n+\n+    public function down(): void\n+    {\n+        Schema::table('access_logs', function (Blueprint $table) {\n+            $table->dropColumn('description');\n+        });\n+    }\n+};\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-012",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpost\n@@ -90,8 +90,12 @@\n \n     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');\n     Route::post('/notifications/read-all', [NotificationController::class, 'markAllRead'])->name('notifications.read-all');\n     Route::get('/notifications/{notification}', [NotificationController::class, 'open'])->name('notifications.open');\n+\n+    // Staff Appointments Management\n+    Route::get('/appointments', [\\App\\Http\\Controllers\\Staff\\AppointmentController::class, 'index'])->name('appointments.index');\n+    Route::patch('/appointments/{appointment}', [\\App\\Http\\Controllers\\Staff\\AppointmentController::class, 'update'])->name('appointments.update');\n });\n \n Route::middleware('auth')->group(function () {\n     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');\n"
+  },
+  "diffFromPrevious": ""
+}

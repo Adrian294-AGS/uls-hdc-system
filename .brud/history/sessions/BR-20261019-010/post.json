@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261019-010",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Auth\\PasswordController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Auth\\PasswordController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Auth\\\\PasswordController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Auth\\\\PasswordController.php\"\tpost\n@@ -16,9 +16,9 @@\n     public function update(Request $request): RedirectResponse\n     {\n         $validated = $request->validateWithBag('updatePassword', [\n             'current_password' => ['required', 'current_password'],\n-            'password' => ['required', Password::defaults(), 'confirmed'],\n+            'password' => ['required', Password::defaults(), 'confirmed', 'different:current_password'],\n         ]);\n \n         $request->user()->update([\n             'password' => Hash::make($validated['password']),\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-018",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\AppointmentController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\AppointmentController.php\"\tpost\n@@ -178,10 +178,16 @@\n             'notes' => $validated['notes'] ?? null,\n             'status' => 'pending',\n         ]);\n \n-        $staffMember->notify(new AppointmentRequested($appointment));\n+        $staffsToNotify = User::query()\n+            ->staffResponsibleFor($student->program?->college_id)\n+            ->get();\n \n+        foreach ($staffsToNotify as $staff) {\n+            $staff->notify(new AppointmentRequested($appointment));\n+        }\n+\n         return redirect()->route('appointments.index')->with('status', 'Appointment requested successfully.');\n     }\n \n     public function updateStatus(Request $request, Appointment $appointment): RedirectResponse\n"
+  },
+  "diffFromPrevious": ""
+}

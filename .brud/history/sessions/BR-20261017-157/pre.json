@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-157",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php": "<?php\n\nrequire __DIR__.'/vendor/autoload.php';\n$app = require_once __DIR__.'/bootstrap/app.php';\n$app->make(Illuminate\\Contracts\\Console\\Kernel::class)->bootstrap();\n\nuse App\\Models\\User;\nuse App\\Models\\College;\n\necho \"COLLEGES AND THEIR COUNSELORS:\\n\";\nforeach (College::all() as $college) {\n    $counselors = User::where('role', 'counselor')\n        ->whereHas('colleges', fn($q) => $q->where('colleges.id', $college->id))\n        ->get();\n    \n    echo \"- [{$college->id}] {$college->code}: \" . $counselors->count() . \" counselors (\" . $counselors->pluck('name')->implode(', ') . \")\\n\";\n}\n\necho \"\\nSTUDENT ACCOUNTS:\\n\";\nforeach (User::where('role', 'student')->get() as $student) {\n    $college = $student->program?->college;\n    echo \"- {$student->email} => College: \" . ($college ? \"[{$college->id}] {$college->code}\" : \"NONE\") . \"\\n\";\n}"
+  },
+  "diffFromPrevious": ""
+}

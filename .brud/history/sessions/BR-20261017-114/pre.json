@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-114",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Providers\\AppServiceProvider.php": "<?php\n\nnamespace App\\Providers;\n\nuse App\\Models\\AccessLog;\nuse Illuminate\\Auth\\Events\\Login;\nuse Illuminate\\Support\\Facades\\Event;\nuse Illuminate\\Support\\ServiceProvider;\nuse Illuminate\\Validation\\Rules\\Password;\n\nclass AppServiceProvider extends ServiceProvider\n{\n    /**\n     * Register any application services.\n     */\n    public function register(): void\n    {\n        //\n    }\n\n    /**\n     * Bootstrap any application services.\n     */\n    public function boot(): void\n    {\n        Password::defaults(fn () => Password::min(8)->letters()->mixedCase()->numbers());\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

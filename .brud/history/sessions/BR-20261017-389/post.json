@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-389",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\README.md": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\README.md\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\README.md\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\README.md\"\tpost\n@@ -1,27 +0,0 @@\n-# ULS HDC System\r\n-\r\n-The Student Cumulative Record System for the Human Development Center at the University of La Salette, Santiago City.\r\n-\r\n-## Features\r\n-- Role-based access (Student, Counselor, Director).\r\n-- Form 5 (Cumulative Record) digital wizard.\r\n-- SATA entrance test result encoding.\r\n-- Real-time appointment booking and notifications.\r\n-- Real-time activity logs and table updates.\r\n-- Backblaze B2 cloud storage for student photos.\r\n-\r\n-## 🚀 Setup Instructions\r\n-\r\n-### 1. Prerequisites\r\n-Ensure you have the following installed:\r\n-- PHP 8.2+\r\n-- Composer\r\n-- Node.js & NPM\r\n-- MySQL\r\n-- A [Backblaze B2](https://www.backblaze.com/) account (for cloud storage).\r\n-\r\n-### 2. Installation\r\n-Clone the repository and install dependencies:\r\n-```bash\r\n-composer install\r\n-npm install\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

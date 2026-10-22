@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261019-006",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\js\\app.js": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\js\\app.js\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\js\\\\app.js\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\js\\\\app.js\"\tpost\n@@ -107,8 +107,22 @@\n         }\n \n         document.querySelector('[data-mark-all-read]')?.classList.remove('hidden');\n \n+        // Real-time table update for appointment status changes\n+        const appointmentRow = document.querySelector(`tr[data-appointment-id=\"${notification.appointment_id}\"]`);\n+        if (appointmentRow && notification.status) {\n+            const statusBadge = appointmentRow.querySelector('td span.inline-flex.rounded-full');\n+            if (statusBadge) {\n+                statusBadge.textContent = notification.status.toLowerCase();\n+                // Brief highlight to draw attention to the change\n+                statusBadge.classList.add('bg-indigo-100', 'text-indigo-700', 'dark:bg-indigo-900', 'dark:text-indigo-200');\n+                setTimeout(() => {\n+                    statusBadge.classList.remove('bg-indigo-100', 'text-indigo-700', 'dark:bg-indigo-900', 'dark:text-indigo-200');\n+                }, 1500);\n+            }\n+        }\n+\n         const toast = document.querySelector('[data-notification-toast]');\n \n         if (toast) {\n             toast.querySelector('[data-notification-toast-message]').textContent = notification.message || 'New notification';\n"
+  },
+  "diffFromPrevious": ""
+}

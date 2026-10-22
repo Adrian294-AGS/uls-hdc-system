@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-018",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\app.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\app.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\app.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\app.blade.php\"\tpost\n@@ -5,9 +5,10 @@\n         <meta charset=\"utf-8\">\n         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n         <meta name=\"csrf-token\" content=\"{{ csrf_token() }}\">\n \n-        <title>{{ config('app.name', 'Laravel') }}</title>\n+        <title>{{ config('app.name', 'ULS-HDC') }}</title>\n+        <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('images/hdc-logo.png') }}\">\n \n         <!-- Fonts -->\n         <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n         <link href=\"https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap\" rel=\"stylesheet\" />\n"
+  },
+  "diffFromPrevious": ""
+}

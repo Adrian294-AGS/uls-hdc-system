@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-229",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\SaveRecordStepRequest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\SaveRecordStepRequest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\SaveRecordStepRequest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\SaveRecordStepRequest.php\"\tpost\n@@ -374,9 +374,9 @@\n      */\n     private function skillsRules(): array\n     {\n         return [\n-            'skills_to_develop' => ['nullable', 'array'],\n+            'skills_to_develop' => ['required', 'array', 'min:1'],\n             'skills_to_develop.*' => [Rule::in(array_keys(Form5::SKILLS))],\n             'skills_other' => [\n                 'nullable', 'string', 'max:255',\n                 Rule::requiredIf(fn () => in_array('others', (array) $this->input('skills_to_develop'), true)),\n"
+  },
+  "diffFromPrevious": ""
+}

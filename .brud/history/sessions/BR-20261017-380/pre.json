@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-380",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\records\\index.blade.php": "<x-app-layout>\n    <x-slot name=\"header\">\n        <div class=\"flex flex-wrap items-center justify-between gap-2\">\n            <h2 class=\"font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight\">{{ __('Student Records') }}</h2>\n            <p class=\"text-sm text-gray-600 dark:text-gray-400\">{{ trans_choice(':count student|:count students', $students->total()) }}</p>\n        </div>\n    </x-slot>\n\n    <div class=\"py-8\">\n        <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4\">\n            <x-flash />\n\n            @include('staff.partials.filters', [\n                'action' => route('staff.records.index'),\n                'statuses' => \\App\\Support\\StudentRecordQuery::STATUSES,\n            ])\n\n            @include('staff.partials.student-table')\n            </div>\n        </div>\n    </div>\n</x-app-layout>\n"
+  },
+  "diffFromPrevious": ""
+}

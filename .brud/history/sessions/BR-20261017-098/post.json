@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-098",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\EntranceTestResultController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\EntranceTestResultController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Staff\\\\EntranceTestResultController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Staff\\\\EntranceTestResultController.php\"\tpost\n@@ -107,8 +107,10 @@\n         $result->fill($request->validated());\n         $result->updated_by = $request->user()->id;\n         $result->save();\n \n+        AccessLog::record($request->user()->id, AccessLog::ACTION_UPDATE, 'Updated SATA result', $request->ip());\n+\n         return redirect()\n             ->route('staff.sata.show', $result)\n             ->with('status', 'SATA result updated.');\n     }\n"
+  },
+  "diffFromPrevious": ""
+}

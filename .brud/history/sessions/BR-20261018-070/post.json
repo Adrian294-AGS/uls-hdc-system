@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-070",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpost\n@@ -136,9 +136,9 @@\n         $counselor = User::factory()->counselor([$this->cit])->create();\n         $this->actingAs($this->director)->put(route('director.counselors.update', $counselor), [\n             'last_name' => 'Same',\n             'first_name' => 'Person',\n-            'email' => $counselor->email,\n+            'username' => $counselor->username,\n             'colleges' => [$this->cit->id],\n             'role' => 'director',\n         ])->assertSessionHasNoErrors();\n         $this->assertSame(Role::Counselor, $counselor->fresh()->role);\n"
+  },
+  "diffFromPrevious": ""
+}

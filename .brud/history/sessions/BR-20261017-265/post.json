@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-265",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -11,9 +11,9 @@\n             <div class=\"flex\">\n                 <!-- Logo -->\n                 <div class=\"shrink-0 flex items-center\">\n                     <a href=\"{{ route($user->dashboardRoute()) }}\" class=\"flex items-center gap-2\">\n-                        <x-application-logo class=\"block h-10 w-auto max-h-full\" />\n+                        <x-application-logo class=\"block h-10 w-auto max-w-[200px] shrink-0\" />\n                         <span class=\"font-semibold text-gray-800 dark:text-gray-100\">ULS HDC</span>\n                     </a>\n                 </div>\n \n"
+  },
+  "diffFromPrevious": ""
+}

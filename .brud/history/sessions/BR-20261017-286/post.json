@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-286",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\Auth\\LoginRequest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\Auth\\LoginRequest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\Auth\\\\LoginRequest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\Auth\\\\LoginRequest.php\"\tpost\n@@ -55,9 +55,9 @@\n         if (! Auth::user()->is_active) {\n             Auth::guard('web')->logout();\n \n             throw ValidationException::withMessages([\n-                'email' => __('This account has been deactivated. Please contact the HDC Director.'),\n+                'username' => __('This account has been deactivated. Please contact the HDC Director.'),\n             ]);\n         }\n     }\n \n"
+  },
+  "diffFromPrevious": ""
+}

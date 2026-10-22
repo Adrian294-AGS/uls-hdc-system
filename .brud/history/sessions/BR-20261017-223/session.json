@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-223",
+  "timestamp": "2026-10-17T10:00:26.944Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-180026-381",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n  GET|HEAD   staff/records ........................................ staff.records.index › Staff\\RecordController@index\n  GET|HEAD   staff/records/export ............................... staff.records.export › Staff\\RecordController@export\n  GET|HEAD   staff/records/{record} ................................. staff.records.show › Staff\\RecordController@show\n  GET|HEAD   staff/records/{record}/photo ......................... staff.records.photo › Staff\\RecordController@photo\n  POST       staff/records/{record}/review ...................... staff.records.review › Staff\\RecordController@review\n\n                                                                                                    Showing [5] routes\n\n\n   INFO  Compiled views cleared successfully.  \n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan route:list --name=staff.records && php artisan view:clear",
+        "output": "\n  GET|HEAD   staff/records ........................................ staff.records.index › Staff\\RecordController@index\n  GET|HEAD   staff/records/export ............................... staff.records.export › Staff\\RecordController@export\n  GET|HEAD   staff/records/{record} ................................. staff.records.show › Staff\\RecordController@show\n  GET|HEAD   staff/records/{record}/photo ......................... staff.records.photo › Staff\\RecordController@photo\n  POST       staff/records/{record}/review ...................... staff.records.review › Staff\\RecordController@review\n\n                                                                                                    Showing [5] routes\n\n\n   INFO  Compiled views cleared successfully.  \n\n",
+        "exitCode": 0,
+        "duration": 1583,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-343",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\NotificationController.php": "<?php\n\nnamespace App\\Http\\Controllers\\Staff;\n\nuse App\\Http\\Controllers\\Controller;\nuse Illuminate\\Http\\RedirectResponse;\nuse Illuminate\\Http\\Request;\nuse Illuminate\\View\\View;\n\nclass NotificationController extends Controller\n{\n    public function index(Request $request): View\n    {\n        return view('staff.notifications', [\n            'notifications' => $request->user()->notifications()->paginate(20),\n        ]);\n    }\n\n    /**\n     * Mark one notification read and follow its link.\n     */\n    public function open(Request $request, string $notification): RedirectResponse\n    {\n        $notification = $request->user()->notifications()->findOrFail($notification);\n        $notification->markAsRead();\n\n        $url = $notification->data['url'] ?? null;\n\n        // Only follow internal paths stored by our own notifications.\n        return is_string($url) && str_starts_with($url, '/') && ! str_starts_with($url, '//')\n            ? redirect($url)\n            : redirect()->route('staff.notifications.index');\n    }\n\n    public function markAllRead(Request $request): RedirectResponse\n    {\n        $request->user()->unreadNotifications->markAsRead();\n\n        return back()->with('status', 'All notifications marked as read.');\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-329",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\bootstrap\\app.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\bootstrap\\app.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\bootstrap\\\\app.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\bootstrap\\\\app.php\"\tpost\n@@ -14,9 +14,9 @@\n         health: '/up',\n     )\n     ->withBroadcasting(\n         __DIR__.'/../routes/channels.php',\n-        ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum']],\n+        ['middleware' => ['web']],\n     )\n     ->withMiddleware(function (Middleware $middleware): void {\n         $middleware->alias([\n             'role' => RoleMiddleware::class,\n"
+  },
+  "diffFromPrevious": ""
+}

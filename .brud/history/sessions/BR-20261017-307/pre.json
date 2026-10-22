@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-307",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\SampleCounselorSeeder.php": "<?php\n\nnamespace Database\\Seeders;\n\nuse App\\Enums\\Role;\nuse App\\Models\\College;\nuse App\\Models\\User;\nuse Illuminate\\Database\\Seeder;\n\n/**\n * Test-only counselor assigned to CIT. DatabaseSeeder skips this in production.\n */\nclass SampleCounselorSeeder extends Seeder\n{\n    public const EMAIL = 'counselor@uls.test';\n\n    /**\n     * Run the database seeds.\n     */\n    public function run(): void\n    {\n        $counselor = User::firstOrNew(['email' => self::EMAIL]);\n        $counselor->fill([\n            'first_name' => 'Sample',\n            'last_name' => 'Counselor',\n            'password' => 'password',\n        ]);\n        $counselor->role = Role::Counselor;\n        $counselor->email_verified_at ??= now();\n        $counselor->save();\n\n        $counselor->colleges()->sync(College::where('code', 'CIT')->pluck('id'));\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

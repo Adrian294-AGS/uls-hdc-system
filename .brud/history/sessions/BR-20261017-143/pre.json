@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-143",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php": "<?php\n\nrequire __DIR__.'/vendor/autoload.php';\n$app = require_once __DIR__.'/bootstrap/app.php';\n$app->make(Illuminate\\Contracts\\Console\\Kernel::class)->bootstrap();\n\nuse App\\Models\\User;\n\n$student = User::where('role', 'student')->whereNotNull('program_id')->first();\n$collegeId = $student?->program?->college_id;\n\necho 'Student: '.($student?->name ?? 'none').' | college_id: '.($collegeId ?? 'none').PHP_EOL;\n\necho PHP_EOL.'--- staffResponsibleFor('.$collegeId.') ---'.PHP_EOL;\n$list = User::query()->staffResponsibleFor($collegeId)->orderBy('name')->get();\nforeach ($list as $u) {\n    echo '- '.$u->name.' | role: '.$u->role->value.' | active: '.($u->is_active ? 'yes' : 'no').PHP_EOL;\n}\necho 'Count: '.$list->count().PHP_EOL;\n\necho PHP_EOL.'--- all counselors ---'.PHP_EOL;\nforeach (User::where('role', 'counselor')->get() as $u) {\n    echo '- '.$u->name.' | active: '.($u->is_active ? 'yes' : 'no').' | colleges: '.$u->colleges->pluck('id')->implode(',').PHP_EOL;\n}"
+  },
+  "diffFromPrevious": ""
+}

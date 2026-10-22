@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-039",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpost\n@@ -72,9 +72,9 @@\n \n /* Guest-page (login/register) logo: double the default logo size, still responsive. */\n @layer components {\n     .logo-responsive--guest {\n-        width: 80rem;  /* 80px — mobile (2x) */\n+        width: 5rem;  /* 80px — mobile (2x) */\n     }\n \n     @media (min-width: 640px) {   /* sm */\n         .logo-responsive--guest {\n"
+  },
+  "diffFromPrevious": ""
+}

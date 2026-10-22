@@ -1,0 +1,52 @@
+{
+  "sessionId": "BR-20261015-007",
+  "timestamp": "2026-10-15T05:08:00.871Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "create_file"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261015-130800-043",
+      "kind": "create_file",
+      "status": "success",
+      "message": "Created database/migrations/2026_01_01_000000_create_appointments_table.php.",
+      "path": "database/migrations/2026_01_01_000000_create_appointments_table.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_01_01_000000_create_appointments_table.php"
+  ],
+  "metadataUsed": {
+    "create_file": [
+      {
+        "path": "database/migrations/2026_01_01_000000_create_appointments_table.php",
+        "index": "2"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": [],
+  "isDeleted": true,
+  "deletedAt": "2026-10-17T05:11:11.625Z",
+  "expiresAt": "2026-10-24T05:11:11.625Z",
+  "deletedBy": "user",
+  "deleteReason": "manual_wipe",
+  "softDeleteHistory": [
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:09.399Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    },
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:11.625Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    }
+  ]
+}

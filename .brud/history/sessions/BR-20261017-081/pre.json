@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-081",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\DashboardController.php": "<?php\n\nnamespace App\\Http\\Controllers\\Staff;\n\nuse App\\Http\\Controllers\\Controller;\nuse App\\Support\\StudentRecordQuery;\nuse Illuminate\\Http\\Request;\nuse Illuminate\\View\\View;\n\n/**\n * Counselor and director dashboards: headline counts for the colleges they may access.\n */\nclass DashboardController extends Controller\n{\n    public function __invoke(Request $request): View\n    {\n        $user = $request->user();\n\n        return view($user->isDirector() ? 'director.dashboard' : 'counselor.dashboard', [\n            'stats' => (new StudentRecordQuery($user))->summary(),\n        ]);\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

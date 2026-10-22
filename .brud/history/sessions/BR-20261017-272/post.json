@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-272",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -45,9 +45,9 @@\n                         <x-nav-link :href=\"route('director.counselors.index')\" :active=\"request()->routeIs('director.counselors.*')\">\n                             {{ __('Counselors') }}\n                         </x-nav-link>\n                         <x-nav-link :href=\"route('director.colleges.index')\" :active=\"request()->routeIs('director.colleges.*', 'director.programs.*')\">\n-                            {{ __('Colleges & Programs') }}\n+                            {{ __('College') }}\n                         </x-nav-link>\n                     @endif\n                     <x-nav-link :href=\"route('profile.edit')\" :active=\"request()->routeIs('profile.edit')\">\n                         {{ __('Profile') }}\n"
+  },
+  "diffFromPrevious": ""
+}

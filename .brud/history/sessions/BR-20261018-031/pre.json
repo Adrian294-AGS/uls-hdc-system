@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-031",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\Auth\\AuthenticationTest.php": "<?php\n\nnamespace Tests\\Feature\\Auth;\n\nuse App\\Models\\User;\nuse Illuminate\\Foundation\\Testing\\RefreshDatabase;\nuse Tests\\TestCase;\n\nclass AuthenticationTest extends TestCase\n{\n    use RefreshDatabase;\n\n    public function test_login_screen_can_be_rendered(): void\n    {\n        $response = $this->get('/login');\n\n        $response->assertStatus(200);\n    }\n\n    public function test_users_can_authenticate_using_the_login_screen(): void\n    {\n        $user = User::factory()->create();\n\n        $response = $this->post('/login', [\n            'email' => $user->email,\n            'password' => 'password',\n        ]);\n\n        $this->assertAuthenticated();\n        $response->assertRedirect(route('student.dashboard', absolute: false));\n    }\n\n    public function test_users_can_not_authenticate_with_invalid_password(): void\n    {\n        $user = User::factory()->create();\n\n        $this->post('/login', [\n            'email' => $user->email,\n            'password' => 'wrong-password',\n        ]);\n\n        $this->assertGuest();\n    }\n\n    public function test_users_can_logout(): void\n    {\n        $user = User::factory()->create();\n\n        $response = $this->actingAs($user)->post('/logout');\n\n        $this->assertGuest();\n        $response->assertRedirect('/');\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

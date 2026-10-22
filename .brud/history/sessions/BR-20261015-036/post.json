@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-036",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpost\n@@ -73,9 +73,11 @@\n  * Staff side (counselors: assigned colleges only; director: all colleges).\n  */\n Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('staff')->name('staff.')->group(function () {\n     Route::get('/records', [RecordController::class, 'index'])->name('records.index');\n+    Route::get('/records/export', [RecordController::class, 'exportAll'])->name('records.export');\n     Route::get('/records/{record}', [RecordController::class, 'show'])->name('records.show');\n+    Route::get('/records/{record}/export', [RecordController::class, 'exportOne'])->name('records.export-one');\n     Route::get('/records/{record}/photo', [RecordController::class, 'photo'])->name('records.photo');\n     Route::post('/records/{record}/review', [RecordController::class, 'review'])->name('records.review');\n \n     // SATA entrance test results (never exposed to students)\n"
+  },
+  "diffFromPrevious": ""
+}

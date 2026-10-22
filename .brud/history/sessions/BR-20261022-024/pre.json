@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-024",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\application-logo.blade.php": "<img src=\"{{ asset('images/hdc-logo.png') }}\" alt=\"ULS HDC Logo\" {{ $attributes }} />\n"
+  },
+  "diffFromPrevious": ""
+}

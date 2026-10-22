@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-326",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -58,11 +58,9 @@\n             </div>\n \n             <!-- User + Theme + Logout -->\n             <div class=\"hidden lg:flex lg:items-center lg:gap-3 lg:ms-6\">\n-                @if ($isStaff)\n-                    <x-notification-bell :count=\"$unreadCount\" />\n-                @endif\n+                <x-notification-bell :count=\"$unreadCount\" />\n \n                 <div class=\"text-right leading-tight\">\n                     <div class=\"text-sm font-medium text-gray-800 dark:text-gray-100\">{{ Str::before($user->name, ' ') }}</div>\n                     <div class=\"text-xs text-gray-500 dark:text-gray-400\">{{ $user->role->label() }}</div>\n"
+  },
+  "diffFromPrevious": ""
+}

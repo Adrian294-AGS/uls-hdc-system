@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-339",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpost\n@@ -46,8 +46,13 @@\n     Route::put('/records/{record}/steps/{step}', [CumulativeRecordController::class, 'update'])\n         ->whereIn('step', array_keys(Form5::STEPS))\n         ->name('record.update');\n     Route::post('/records/{record}/submit', [CumulativeRecordController::class, 'submit'])->name('record.submit');\n+\n+    // Student Notifications\n+    Route::get('/notifications', [StudentNotificationController::class, 'index'])->name('notifications.index');\n+    Route::post('/notifications/read-all', [StudentNotificationController::class, 'markAllRead'])->name('notifications.read-all');\n+    Route::get('/notifications/{notification}', [StudentNotificationController::class, 'open'])->name('notifications.open');\n });\n \n Route::middleware(['auth', 'verified', 'role:counselor'])->prefix('counselor')->name('counselor.')->group(function () {\n     Route::get('/dashboard', DashboardController::class)->name('dashboard');\n"
+  },
+  "diffFromPrevious": ""
+}

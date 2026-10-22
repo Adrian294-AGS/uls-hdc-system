@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-234",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\SaveRecordStepRequest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\SaveRecordStepRequest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\SaveRecordStepRequest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\SaveRecordStepRequest.php\"\tpost\n@@ -284,14 +284,14 @@\n      */\n     private function healthRules(): array\n     {\n         return [\n-            'height' => ['required', 'string', 'max:30'],\n-            'weight' => ['required', 'string', 'max:30'],\n-            'handicap' => ['required', 'string', 'max:255'],\n+            'height' => ['nullable', 'string', 'max:30'],\n+            'weight' => ['nullable', 'string', 'max:30'],\n+            'handicap' => ['nullable', 'string', 'max:255'],\n             'normal_eyesight' => ['required', 'boolean'],\n             'normal_hearing' => ['required', 'boolean'],\n-            'persistent_illness' => ['required', 'string', 'max:255'],\n+            'persistent_illness' => ['nullable', 'string', 'max:255'],\n             'hospitalized' => ['required', 'boolean'],\n             'hospitalization_reason' => ['nullable', 'required_if:hospitalized,1', 'string', 'max:255'],\n             'had_surgery' => ['required', 'boolean'],\n             'surgery_details' => ['nullable', 'required_if:had_surgery,1', 'string', 'max:255'],\n"
+  },
+  "diffFromPrevious": ""
+}

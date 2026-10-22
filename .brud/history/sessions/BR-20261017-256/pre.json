@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-256",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\DatabaseSeeder.php": "<?php\n\nnamespace Database\\Seeders;\n\nuse Illuminate\\Database\\Seeder;\n\nclass DatabaseSeeder extends Seeder\n{\n    /**\n     * Seed the application's database.\n     */\n    public function run(): void\n    {\n        $this->call([\n            CollegeProgramSeeder::class,\n            DirectorSeeder::class,\n        ]);\n\n        if (! app()->isProduction()) {\n            $this->call(SampleCounselorSeeder::class);\n        }\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

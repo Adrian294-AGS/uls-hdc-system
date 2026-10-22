@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261020-017",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\student\\record\\wizard.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\student\\record\\wizard.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\student\\\\record\\\\wizard.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\student\\\\record\\\\wizard.blade.php\"\tpost\n@@ -33,9 +33,9 @@\n                                 <a href=\"{{ route('student.record.edit', [$record, $key]) }}\"\n                                     @class([\n                                         'flex items-center gap-2 rounded-md px-3 py-2 text-sm',\n                                         'bg-indigo-50 dark:bg-indigo-500/10 font-semibold text-indigo-700 dark:text-indigo-300' => $isCurrent,\n-                                        'text-gray-700 dark:text-gray-300 hover:bg-white/60 dark:hover:bg-white/10' => ! $isCurrent,\n+                                        'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' => ! $isCurrent,\n                                     ])\n                                     @if ($isCurrent) aria-current=\"step\" @endif>\n                                     <x-step-marker :number=\"$loop->iteration\" :done=\"$isDone\" :current=\"$isCurrent\" />\n                                     {{ $title }}\n"
+  },
+  "diffFromPrevious": ""
+}

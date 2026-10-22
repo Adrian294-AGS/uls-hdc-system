@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-140",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\check_staff.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\check_staff.php\"\tpost\n@@ -1,20 +0,0 @@\n-<?php\n-\n-require __DIR__.'/vendor/autoload.php';\n-$app = require_once __DIR__.'/bootstrap/app.php';\n-$app->make(Illuminate\\Contracts\\Console\\Kernel::class)->bootstrap();\n-\n-use App\\Models\\User;\n-use Illuminate\\Support\\Facades\\DB;\n-\n-$student = User::where('role', 'student')->whereNotNull('program_id')->first();\n-echo 'Student: '.($student?->name ?? 'none').PHP_EOL;\n-echo 'college_id: '.($student?->program?->college_id ?? 'none').PHP_EOL;\n-\n-$collegeId = $student?->program?->college_id;\n-\n-echo 'Counselors assigned to that college: '.User::where('role', 'counselor')\n-    ->whereHas('colleges', fn ($q) => $q->where('colleges.id', $collegeId))->count().PHP_EOL;\n-echo 'Total active counselors: '.User::where('role', 'counselor')->where('is_active', true)->count().PHP_EOL;\n-echo 'Counselor-college links: '.DB::table('college_counselor')->count().PHP_EOL;\n-echo 'Students with null program_id: '.User::where('role', 'student')->whereNull('program_id')->count().PHP_EOL;\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

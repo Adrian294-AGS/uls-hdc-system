@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-372",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\.env": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\.env\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\.env\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\.env\"\tpost\n@@ -33,9 +33,9 @@\n SESSION_PATH=/\r\n SESSION_DOMAIN=null\r\n \r\n BROADCAST_CONNECTION=reverb\r\n-FILESYSTEM_DISK=local\r\n+FILESYSTEM_DISK=b2\r\n QUEUE_CONNECTION=database\r\n \r\n CACHE_STORE=database\r\n # CACHE_PREFIX=\r\n"
+  },
+  "diffFromPrevious": ""
+}

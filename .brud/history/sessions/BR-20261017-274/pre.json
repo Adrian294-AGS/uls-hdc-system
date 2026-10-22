@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-274",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tailwind.config.js": "import defaultTheme from 'tailwindcss/defaultTheme';\nimport forms from '@tailwindcss/forms';\n\n/** @type {import('tailwindcss').Config} */\nexport default {\n    darkMode: 'class',\n\n    content: [\n        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',\n        './storage/framework/views/*.php',\n        './resources/views/**/*.blade.php',\n        './app/**/*.php',\n    ],\n\n    theme: {\n        extend: {\n            fontFamily: {\n                sans: ['Figtree', ...defaultTheme.fontFamily.sans],\n            },\n        },\n    },\n\n    plugins: [forms],\n};\n"
+  },
+  "diffFromPrevious": ""
+}

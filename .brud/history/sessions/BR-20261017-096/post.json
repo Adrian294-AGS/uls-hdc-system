@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-096",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Student\\CumulativeRecordController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Student\\CumulativeRecordController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Student\\\\CumulativeRecordController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Student\\\\CumulativeRecordController.php\"\tpost\n@@ -161,8 +161,10 @@\n         $record->status = RecordStatus::Submitted;\n         $record->submitted_at = now();\n         $record->save();\n \n+        AccessLog::record($request->user()->id, AccessLog::ACTION_SUBMIT, 'Submitted Form 5 record', $request->ip());\n+\n         if ($isFirstSubmission) {\n             $student = $request->user()->loadMissing('program');\n \n             Notification::send(\n"
+  },
+  "diffFromPrevious": ""
+}

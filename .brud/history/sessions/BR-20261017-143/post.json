@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-143",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\check_staff.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\check_staff.php\"\tpost\n@@ -1,24 +0,0 @@\n-<?php\n-\n-require __DIR__.'/vendor/autoload.php';\n-$app = require_once __DIR__.'/bootstrap/app.php';\n-$app->make(Illuminate\\Contracts\\Console\\Kernel::class)->bootstrap();\n-\n-use App\\Models\\User;\n-\n-$student = User::where('role', 'student')->whereNotNull('program_id')->first();\n-$collegeId = $student?->program?->college_id;\n-\n-echo 'Student: '.($student?->name ?? 'none').' | college_id: '.($collegeId ?? 'none').PHP_EOL;\n-\n-echo PHP_EOL.'--- staffResponsibleFor('.$collegeId.') ---'.PHP_EOL;\n-$list = User::query()->staffResponsibleFor($collegeId)->orderBy('name')->get();\n-foreach ($list as $u) {\n-    echo '- '.$u->name.' | role: '.$u->role->value.' | active: '.($u->is_active ? 'yes' : 'no').PHP_EOL;\n-}\n-echo 'Count: '.$list->count().PHP_EOL;\n-\n-echo PHP_EOL.'--- all counselors ---'.PHP_EOL;\n-foreach (User::where('role', 'counselor')->get() as $u) {\n-    echo '- '.$u->name.' | active: '.($u->is_active ? 'yes' : 'no').' | colleges: '.$u->colleges->pluck('id')->implode(',').PHP_EOL;\n-}\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-368",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\config\\filesystems.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\config\\filesystems.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\config\\\\filesystems.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\config\\\\filesystems.php\"\tpost\n@@ -69,8 +69,11 @@\n             'endpoint' => env('B2_ENDPOINT'),\n             'use_path_style_endpoint' => env('B2_USE_PATH_STYLE_ENDPOINT', false),\n             'visibility' => 'private',\n             'throw' => true,\n+            'http' => [\n+                'verify' => base_path('cacert.pem'),\n+            ],\n         ],\n \n     ],\n \n"
+  },
+  "diffFromPrevious": ""
+}

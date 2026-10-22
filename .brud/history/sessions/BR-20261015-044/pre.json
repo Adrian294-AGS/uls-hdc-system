@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-044",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\records\\index.blade.php": "<x-app-layout>\n    <x-slot name=\"header\">\n        <div class=\"flex flex-wrap items-center justify-between gap-2\">\n            <h2 class=\"font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight\">{{ __('Student Records') }}</h2>\n            <div class=\"flex items-center gap-3\">\n                <p class=\"text-sm text-gray-600 dark:text-gray-400\">{{ trans_choice(':count student|:count students', $students->total()) }}</p>\n                <a href=\"{{ route('staff.records.export', request()->query()) }}\" class=\"inline-flex items-center px-3 py-1.5 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-700 active:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition ease-in-out duration-150\">\n                    {{ __('Export CSV') }}\n                </a>\n            </div>\n        </div>\n    </x-slot>\n\n    <div class=\"py-8\">\n        <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4\">\n            <x-flash />\n\n            @include('staff.partials.filters', [\n                'action' => route('staff.records.index'),\n                'statuses' => \\App\\Support\\StudentRecordQuery::STATUSES,\n            ])\n\n            @include('staff.partials.student-table')\n        </div>\n    </div>\n</x-app-layout>\n"
+  },
+  "diffFromPrevious": ""
+}

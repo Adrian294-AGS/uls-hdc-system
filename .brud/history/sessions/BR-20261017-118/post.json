@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-118",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\DashboardController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\DashboardController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Staff\\\\DashboardController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Staff\\\\DashboardController.php\"\tpost\n@@ -57,8 +57,12 @@\n             'completionRate' => $stats['total'] > 0\n                 ? round($stats['submitted'] / $stats['total'] * 100)\n                 : 0,\n             'statusLabels' => StudentRecordQuery::STATUSES,\n+            'logs' => AccessLog::query()\n+                ->with('user')\n+                ->orderByDesc('created_at')\n+                ->paginate(25, ['*'], 'log_page'),\n         ]);\n     }\n \n     /**\n"
+  },
+  "diffFromPrevious": ""
+}

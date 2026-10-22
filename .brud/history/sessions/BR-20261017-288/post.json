@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-288",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\Auth\\LoginRequest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\Auth\\LoginRequest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\Auth\\\\LoginRequest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\Auth\\\\LoginRequest.php\"\tpost\n@@ -88,7 +88,7 @@\n      * Get the rate limiting throttle key for the request.\n      */\n     public function throttleKey(): string\n     {\n-        return Str::transliterate(Str::lower($this->string('email')).'|'.$this->ip());\n+        return Str::transliterate(Str::lower($this->string('username')).'|'.$this->ip());\n     }\n }\n"
+  },
+  "diffFromPrevious": ""
+}

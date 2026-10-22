@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-330",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -1,8 +1,8 @@\n @php\n     $user = Auth::user();\n     $isStaff = $user->isCounselor() || $user->isDirector();\n-    $unreadCount = $isStaff ? $user->unreadNotifications()->count() : 0;\n+    $unreadCount = $user->unreadNotifications()->count();\n @endphp\n \n <nav x-data=\"{ open: false }\"\n     data-realtime-user-id=\"{{ $user->id }}\"\n"
+  },
+  "diffFromPrevious": ""
+}

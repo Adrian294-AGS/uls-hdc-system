@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-152",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\form\\select.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\form\\select.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\form\\\\select.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\form\\\\select.blade.php\"\tpost\n@@ -12,9 +12,9 @@\n     </x-input-label>\n     <select id=\"{{ $id }}\" name=\"{{ \\App\\Support\\FormName::html($name) }}\"\n         class=\"mt-1 block w-full glass-input focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm dark:focus:border-indigo-400 dark:focus:ring-indigo-400\"\n         {{ $attributes->except(['class', 'x-show', 'x-cloak'])->merge($extra) }}>\n-        <option value=\"\">{{ $placeholder }}</option>\n+        <option value=\"\" @selected($selected === '')>{{ $placeholder }}</option>\n         @if ($slot->isNotEmpty())\n             {{ $slot }}\n         @else\n             @foreach ($options as $optionValue => $optionLabel)\n"
+  },
+  "diffFromPrevious": ""
+}

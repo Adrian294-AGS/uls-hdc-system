@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-348",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\flash.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\flash.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\flash.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\components\\\\flash.blade.php\"\tpost\n@@ -1,6 +1,10 @@\n @if (session('status'))\n-    <div class=\"rounded-md bg-green-50 dark:bg-green-500/10 px-4 py-3 text-sm text-green-800 dark:text-green-300\" role=\"status\">{{ session('status') }}</div>\n+    <div class=\"rounded-lg border border-green-500/50 bg-green-600 px-4 py-3 text-sm font-medium text-white shadow-lg backdrop-blur-sm dark:bg-green-500/80\" role=\"status\">\n+        {{ session('status') }}\n+    </div>\n @endif\n @if (session('error'))\n-    <div class=\"rounded-md bg-red-50 dark:bg-red-500/10 px-4 py-3 text-sm text-red-800 dark:text-red-300\" role=\"alert\">{{ session('error') }}</div>\n+    <div class=\"rounded-lg border border-red-500/50 bg-red-600 px-4 py-3 text-sm font-medium text-white shadow-lg backdrop-blur-sm dark:bg-red-500/80\" role=\"alert\">\n+        {{ session('error') }}\n+    </div>\n @endif\n"
+  },
+  "diffFromPrevious": ""
+}

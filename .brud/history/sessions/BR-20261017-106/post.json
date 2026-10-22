@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-106",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Director\\CollegeController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Director\\CollegeController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Director\\\\CollegeController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Director\\\\CollegeController.php\"\tpost\n@@ -58,8 +58,10 @@\n     public function update(CollegeRequest $request, College $college): RedirectResponse\n     {\n         $college->update($request->validated());\n \n+        AccessLog::record($request->user()->id, AccessLog::ACTION_MANAGE, \"Updated college: {$college->code}\", $request->ip());\n+\n         return redirect()\n             ->route('director.colleges.edit', $college)\n             ->with('status', \"Saved college {$college->code}.\");\n     }\n"
+  },
+  "diffFromPrevious": ""
+}

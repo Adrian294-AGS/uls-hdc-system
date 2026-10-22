@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-301",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_000001_make_student_number_nullable_on_users_table.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_000001_make_student_number_nullable_on_users_table.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\migrations\\\\2026_10_17_000001_make_student_number_nullable_on_users_table.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\migrations\\\\2026_10_17_000001_make_student_number_nullable_on_users_table.php\"\tpost\n@@ -0,0 +1,23 @@\n+<?php\n+\n+use Illuminate\\Database\\Migrations\\Migration;\n+use Illuminate\\Database\\Schema\\Blueprint;\n+use Illuminate\\Support\\Facades\\Schema;\n+\n+return new class extends Migration\n+{\n+    public function up(): void\n+    {\n+        Schema::table('users', function (Blueprint $table) {\n+            // Make student_number nullable so new registrations without it don't fail\n+            $table->string('student_number', 30)->nullable()->change();\n+        });\n+    }\n+\n+    public function down(): void\n+    {\n+        Schema::table('users', function (Blueprint $table) {\n+            $table->string('student_number', 30)->nullable(false)->change();\n+        });\n+    }\n+};\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

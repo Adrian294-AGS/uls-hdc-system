@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-149",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\check_staff.php": "<?php\n\nrequire __DIR__.'/vendor/autoload.php';\n$app = require_once __DIR__.'/bootstrap/app.php';\n$app->make(Illuminate\\Contracts\\Console\\Kernel::class)->bootstrap();\n\nuse App\\Models\\User;\nuse Illuminate\\Support\\Facades\\Blade;\n\n$student = User::where('role', 'student')->whereNotNull('program_id')->first();\n$collegeId = $student?->program?->college_id;\n$staff = User::query()->staffResponsibleFor($collegeId)->orderBy('name')->get();\n\n// Render the exact component markup the appointment form uses.\n$blade = '<x-form.select name=\"staff_id\" :label=\"\\'HDC staff member\\'\" :required=\"true\" :placeholder=\"\\'Select a staff member\\'\">'\n    .'@foreach ($staff as $staffMember)'\n    .'<option value=\"{{ $staffMember->id }}\" @selected((string) old(\\'staff_id\\') === (string) $staffMember->id)>{{ $staffMember->name }} ({{ $staffMember->role->label() }})</option>'\n    .'@endforeach'\n    .'</x-form.select>';\n\necho Blade::render($blade, ['staff' => $staff]).PHP_EOL;"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-065",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpost\n@@ -87,9 +87,9 @@\n \n         $this->actingAs($this->director)->post(route('director.counselors.store'), [\n             'last_name' => 'Reyes',\n             'first_name' => 'Rosa',\n-            'email' => 'rosa@uls.test',\n+            'username' => 'rosa-reyes',\n             'password' => 'Temp-pass-123',\n             'colleges' => [$this->cit->id],\n         ])->assertSessionHasNoErrors()->assertRedirect(route('director.counselors.index'));\n \n"
+  },
+  "diffFromPrevious": ""
+}

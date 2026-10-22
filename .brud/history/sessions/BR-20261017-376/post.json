@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-376",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\index.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\index.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\appointments\\\\index.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\appointments\\\\index.blade.php\"\tpost\n@@ -185,8 +185,9 @@\n                                     </tbody>\n                                 </table>\n                             </div>\n                         @endif\n+                        </div>\n                     </section>\n                 </div>\n             @endif\n         </div>\n"
+  },
+  "diffFromPrevious": ""
+}

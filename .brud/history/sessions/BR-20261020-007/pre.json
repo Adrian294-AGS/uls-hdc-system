@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261020-007",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\components\\flash.blade.php": "@if (session('status'))\n    <div class=\"rounded-lg border border-green-600 bg-green-600 px-4 py-3 text-sm font-medium text-white shadow-md dark:bg-green-700\" role=\"status\">\n        {{ session('status') }}\n    </div>\n@endif\n@if (session('error'))\n    <div class=\"rounded-lg border border-red-500/50 bg-red-600 px-4 py-3 text-sm font-medium text-white shadow-lg backdrop-blur-sm dark:bg-red-500/80\" role=\"alert\">\n        {{ session('error') }}\n    </div>\n@endif\n"
+  },
+  "diffFromPrevious": ""
+}

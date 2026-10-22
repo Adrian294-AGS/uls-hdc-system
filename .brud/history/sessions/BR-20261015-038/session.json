@@ -1,0 +1,52 @@
+{
+  "sessionId": "BR-20261015-038",
+  "timestamp": "2026-10-15T06:15:09.777Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261015-141509-106",
+      "kind": "search_replace",
+      "status": "success",
+      "message": "Patched resources/views/staff/records/show.blade.php.",
+      "path": "resources/views/staff/records/show.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\records\\show.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/staff/records/show.blade.php",
+        "index": "2"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": [],
+  "isDeleted": true,
+  "deletedAt": "2026-10-17T05:11:12.179Z",
+  "expiresAt": "2026-10-24T05:11:12.179Z",
+  "deletedBy": "user",
+  "deleteReason": "manual_wipe",
+  "softDeleteHistory": [
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:09.864Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    },
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:12.179Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    }
+  ]
+}

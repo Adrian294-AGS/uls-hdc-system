@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261019-001",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Events\\AppointmentStatusChanged.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Events\\AppointmentStatusChanged.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Events\\\\AppointmentStatusChanged.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Events\\\\AppointmentStatusChanged.php\"\tpost\n@@ -0,0 +1,32 @@\n+<?php\n+\n+namespace App\\Events;\n+\n+use App\\Models\\Appointment;\n+use Illuminate\\Broadcasting\\Channel;\n+use Illuminate\\Broadcasting\\InteractsWithSockets;\n+use Illuminate\\Contracts\\Broadcasting\\ShouldBroadcast;\n+use Illuminate\\Foundation\\Events\\Dispatchable;\n+use Illuminate\\Queue\\SerializesModels;\n+\n+class AppointmentStatusChanged implements ShouldBroadcast\n+{\n+    use Dispatchable, InteractsWithSockets, SerializesModels;\n+\n+    public function __construct(public Appointment $appointment) {}\n+\n+    public function broadcastOn(): array\n+    {\n+        return [\n+            new Channel('appointments'),\n+        ];\n+    }\n+\n+    public function broadcastWith(): array\n+    {\n+        return [\n+            'appointment_id' => $this->appointment->id,\n+            'status' => ucfirst($this->appointment->status),\n+        ];\n+    }\n+}\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

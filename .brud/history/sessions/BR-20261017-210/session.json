@@ -1,0 +1,33 @@
+{
+  "sessionId": "BR-20261017-210",
+  "timestamp": "2026-10-17T09:36:10.999Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-173610-341",
+      "kind": "search_replace",
+      "status": "aborted",
+      "message": "The text \"        <div class=\"lg:col-span-2 flex items-center gap-3 mt-7\">\n            <x-primary-button class=\"text-xs px-3 py-1.5\">{{ __('Apply filters') }}</x-primary-button>\n            @if (array_filter($filters))\n                <a href=\"{{ $action }}\" class=\"text-sm text-gray-600 dark:text-gray-400 underline hover:text-gray-900 dark:hover:text-gray-100\">{{ __('Clear') }}</a>\n            @endif\n        </div>\n    </div>\n</form>\" was not found in \"resources/views/appointments/partials/filters.blade.php\".",
+      "path": "resources/views/appointments/partials/filters.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\partials\\filters.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/appointments/partials/filters.blade.php",
+        "index": "2"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-355",
+  "timestamp": "2026-10-17T14:28:32.358Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-222832-082",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current\n                                 Dload  Upload  Total   Spent   Left   Speed\n  0      0   0      0   0      0      0      0                              0100 184.4k 100 184.4k   0      0 319.1k      0                              0100 184.4k 100 184.4k   0      0 319.0k      0                              0100 184.4k 100 184.4k   0      0 318.9k      0                              0\n",
+      "path": "",
+      "data": {
+        "command": "curl -o cacert.pem https://curl.se/ca/cacert.pem",
+        "output": "  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current\n                                 Dload  Upload  Total   Spent   Left   Speed\n  0      0   0      0   0      0      0      0                              0100 184.4k 100 184.4k   0      0 319.1k      0                              0100 184.4k 100 184.4k   0      0 319.0k      0                              0100 184.4k 100 184.4k   0      0 318.9k      0                              0\n",
+        "exitCode": 0,
+        "duration": 660,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

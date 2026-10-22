@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-069",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpost\n@@ -127,9 +127,9 @@\n             'is_active' => '0',\n             'must_change_password' => '0',\n         ])->assertSessionHasNoErrors();\n \n-        $user = User::where('email', 'sam@uls.test')->firstOrFail();\n+        $user = User::where('username', 'sam-sneaky')->firstOrFail();\n         $this->assertSame(Role::Counselor, $user->role);\n         $this->assertTrue($user->is_active);\n         $this->assertTrue($user->must_change_password);\n \n"
+  },
+  "diffFromPrevious": ""
+}

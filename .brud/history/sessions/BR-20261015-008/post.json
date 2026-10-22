@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-008",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\Appointment.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\Appointment.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\Appointment.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Models\\\\Appointment.php\"\tpost\n@@ -0,0 +1,39 @@\n+<?php\n+\n+namespace App\\Models;\n+\n+use App\\Enums\\AppointmentStatus;\n+use Illuminate\\Database\\Eloquent\\Attributes\\Fillable;\n+use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\n+use Illuminate\\Database\\Eloquent\\Model;\n+use Illuminate\\Database\\Eloquent\\Relations\\BelongsTo;\n+\n+#[Fillable(['student_id', 'counselor_id', 'scheduled_at', 'purpose', 'notes', 'status', 'rejection_reason'])]\n+class Appointment extends Model\n+{\n+    use HasFactory;\n+\n+    protected function casts(): array\n+    {\n+        return [\n+            'scheduled_at' => 'datetime',\n+            'status' => AppointmentStatus::class,\n+        ];\n+    }\n+\n+    /**\n+     * The student who requested the appointment.\n+     */\n+    public function student(): BelongsTo\n+    {\n+        return $this->belongsTo(User::class, 'student_id');\n+    }\n+\n+    /**\n+     * The counselor or admin assigned to the appointment.\n+     */\n+    public function counselor(): BelongsTo\n+    {\n+        return $this->belongsTo(User::class, 'counselor_id');\n+    }\n+}\n\\ No newline at end of file\n"
+  },
+  "diffFromPrevious": ""
+}

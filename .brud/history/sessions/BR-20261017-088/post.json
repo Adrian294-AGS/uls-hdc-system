@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-088",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\director\\dashboard.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\director\\dashboard.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\director\\\\dashboard.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\director\\\\dashboard.blade.php\"\tpost\n@@ -71,9 +71,9 @@\n                                             <td class=\"px-4 py-2 text-right tabular-nums text-gray-700 dark:text-gray-300\">{{ $row['counts']['total'] }}</td>\n                                         </tr>\n                                     @empty\n                                         <tr>\n-                                            <td colspan=\"{{ count(App\\Support\\StudentRecordQuery::STATUSES) + 2 }}\" class=\"px-4 py-2 pl-8 text-gray-500 dark:text-gray-400\">{{ __('No students.') }}</td>\n+                                            <td colspan=\"{{ count($statusLabels) + 2 }}\" class=\"px-4 py-2 pl-8 text-gray-500 dark:text-gray-400\">{{ __('No students.') }}</td>\n                                         </tr>\n                                     @endforelse\n                                 @endforeach\n                             </tbody>\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-040",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\RecordController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\RecordController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Staff\\\\RecordController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Staff\\\\RecordController.php\"\tpost\n@@ -106,9 +106,9 @@\n \n             foreach ($students as $student) {\n                 $rec = $student->latestCumulativeRecord;\n                 fputcsv($file, [\n-                    $student->student_id ?? 'N/A',\n+                    $student->student_number ?? 'N/A',\n                     $student->last_name,\n                     $student->first_name,\n                     $student->email,\n                     $student->program->college->code ?? 'N/A',\n"
+  },
+  "diffFromPrevious": ""
+}

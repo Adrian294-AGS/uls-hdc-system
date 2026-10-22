@@ -1,0 +1,33 @@
+{
+  "sessionId": "BR-20261017-168",
+  "timestamp": "2026-10-17T08:38:40.334Z",
+  "originalPrompt": "",
+  "status": "failure",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-163840-273",
+      "kind": "search_replace",
+      "status": "aborted",
+      "message": "The text \"                                            <td class=\"px-4 py-3 text-right\">\n                                                <button type=\"button\" x-data=\"\" x-on:click.prevent=\"$dispatch('open-modal', 'view-appointment-{{ $appointment->id }}')\" class=\"text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium\">\n                                                    {{ __('View') }}\n                                                </button>\n                                            </td>\" was not found in \"resources/views/appointments/index.blade.php\".",
+      "path": "resources/views/appointments/index.blade.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\index.blade.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "resources/views/appointments/index.blade.php",
+        "index": "1"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

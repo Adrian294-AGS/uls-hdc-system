@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-007",
+  "timestamp": "2026-10-17T05:37:31.291Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-133731-027",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n  Dropping all tables ................................................................................... 83.96ms DONE\n\n   INFO  Preparing database.  \n\n  Creating migration table ............................................................................... 9.91ms DONE\n\n   INFO  Running migrations.  \n\n  0001_01_01_000000_create_users_table .................................................................. 49.39ms DONE\n  0001_01_01_000001_create_cache_table .................................................................. 48.76ms DONE\n  0001_01_01_000002_create_jobs_table ................................................................... 42.95ms DONE\n  2026_10_13_195942_create_colleges_table ............................................................... 18.82ms DONE\n  2026_10_13_195943_create_programs_table ............................................................... 39.82ms DONE\n  2026_10_13_195945_create_college_counselor_table ...................................................... 42.84ms DONE\n  2026_10_13_195946_add_role_and_student_fields_to_users_table .......................................... 74.06ms DONE\n  2026_10_13_201222_create_cumulative_records_table ..................................................... 96.65ms DONE\n  2026_10_13_201223_create_cumulative_record_child_tables .............................................. 132.02ms DONE\n  2026_10_13_203759_create_notifications_table .......................................................... 19.62ms DONE\n  2026_10_13_203800_create_access_logs_table ............................................................ 73.07ms DONE\n  2026_10_13_213835_add_account_status_to_users_table ................................................... 20.65ms DONE\n  2026_10_13_221531_create_entrance_test_results_table ................................................. 106.82ms DONE\n  2026_10_13_221532_add_entrance_test_result_to_access_logs_table ....................................... 73.59ms DONE\n  2026_10_17_053406_create_appointments_table ........................................................... 75.08ms DONE\n\n\n   INFO  Seeding database.  \n\n  Database\\Seeders\\CollegeProgramSeeder ...................................................................... RUNNING  \n  Database\\Seeders\\CollegeProgramSeeder ................................................................... 40 ms DONE  \n\n  Database\\Seeders\\DirectorSeeder ............................................................................ RUNNING  \n  Database\\Seeders\\DirectorSeeder ........................................................................ 202 ms DONE  \n\n  Database\\Seeders\\SampleCounselorSeeder ..................................................................... RUNNING  \n  Database\\Seeders\\SampleCounselorSeeder ................................................................. 202 ms DONE  \n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan migrate:fresh --seed",
+        "output": "\n  Dropping all tables ................................................................................... 83.96ms DONE\n\n   INFO  Preparing database.  \n\n  Creating migration table ............................................................................... 9.91ms DONE\n\n   INFO  Running migrations.  \n\n  0001_01_01_000000_create_users_table .................................................................. 49.39ms DONE\n  0001_01_01_000001_create_cache_table .................................................................. 48.76ms DONE\n  0001_01_01_000002_create_jobs_table ................................................................... 42.95ms DONE\n  2026_10_13_195942_create_colleges_table ............................................................... 18.82ms DONE\n  2026_10_13_195943_create_programs_table ............................................................... 39.82ms DONE\n  2026_10_13_195945_create_college_counselor_table ...................................................... 42.84ms DONE\n  2026_10_13_195946_add_role_and_student_fields_to_users_table .......................................... 74.06ms DONE\n  2026_10_13_201222_create_cumulative_records_table ..................................................... 96.65ms DONE\n  2026_10_13_201223_create_cumulative_record_child_tables .............................................. 132.02ms DONE\n  2026_10_13_203759_create_notifications_table .......................................................... 19.62ms DONE\n  2026_10_13_203800_create_access_logs_table ............................................................ 73.07ms DONE\n  2026_10_13_213835_add_account_status_to_users_table ................................................... 20.65ms DONE\n  2026_10_13_221531_create_entrance_test_results_table ................................................. 106.82ms DONE\n  2026_10_13_221532_add_entrance_test_result_to_access_logs_table ....................................... 73.59ms DONE\n  2026_10_17_053406_create_appointments_table ........................................................... 75.08ms DONE\n\n\n   INFO  Seeding database.  \n\n  Database\\Seeders\\CollegeProgramSeeder ...................................................................... RUNNING  \n  Database\\Seeders\\CollegeProgramSeeder ................................................................... 40 ms DONE  \n\n  Database\\Seeders\\DirectorSeeder ............................................................................ RUNNING  \n  Database\\Seeders\\DirectorSeeder ........................................................................ 202 ms DONE  \n\n  Database\\Seeders\\SampleCounselorSeeder ..................................................................... RUNNING  \n  Database\\Seeders\\SampleCounselorSeeder ................................................................. 202 ms DONE  \n\n",
+        "exitCode": 0,
+        "duration": 2040,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

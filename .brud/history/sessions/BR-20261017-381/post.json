@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-381",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\tracker.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\tracker.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\staff\\\\tracker.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\staff\\\\tracker.blade.php\"\tpost\n@@ -16,8 +16,9 @@\n                 'action' => route('staff.tracker'),\n                 'statuses' => array_intersect_key($statusLabels, array_flip([StudentRecordQuery::NOT_STARTED, 'draft'])),\n             ])\n \n+            <div x-data=\"realtimeTable(window.location.href)\" data-realtime-wrapper=\"staff-tracker-wrapper\">\n             <div class=\"glass-panel sm:rounded-lg p-4 flex flex-wrap items-center justify-between gap-3\">\n                 <p class=\"text-sm text-gray-700 dark:text-gray-300\">\n                     <span class=\"text-2xl font-semibold tabular-nums text-gray-900 dark:text-gray-100\">{{ number_format($withoutSata) }}</span>\n                     {{ trans_choice('student without a SATA result|students without a SATA result', $withoutSata) }}\n"
+  },
+  "diffFromPrevious": ""
+}

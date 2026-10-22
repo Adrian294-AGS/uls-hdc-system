@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-285",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\Auth\\LoginRequest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Requests\\Auth\\LoginRequest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\Auth\\\\LoginRequest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Requests\\\\Auth\\\\LoginRequest.php\"\tpost\n@@ -41,13 +41,13 @@\n     public function authenticate(): void\n     {\n         $this->ensureIsNotRateLimited();\n \n-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {\n+        if (! Auth::attempt($this->only('username', 'password'), $this->boolean('remember'))) {\n             RateLimiter::hit($this->throttleKey());\n \n             throw ValidationException::withMessages([\n-                'email' => trans('auth.failed'),\n+                'username' => trans('auth.failed'),\n             ]);\n         }\n \n         RateLimiter::clear($this->throttleKey());\n"
+  },
+  "diffFromPrevious": ""
+}

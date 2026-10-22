@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-380",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\records\\index.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\staff\\records\\index.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\staff\\\\records\\\\index.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\staff\\\\records\\\\index.blade.php\"\tpost\n@@ -14,9 +14,10 @@\n                 'action' => route('staff.records.index'),\n                 'statuses' => \\App\\Support\\StudentRecordQuery::STATUSES,\n             ])\n \n-            @include('staff.partials.student-table')\n+            <div x-data=\"realtimeTable(window.location.href)\" data-realtime-wrapper=\"staff-records-table\">\n+                @include('staff.partials.student-table')\n             </div>\n         </div>\n     </div>\n </x-app-layout>\n"
+  },
+  "diffFromPrevious": ""
+}

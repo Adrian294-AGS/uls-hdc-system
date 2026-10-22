@@ -1,0 +1,52 @@
+{
+  "sessionId": "BR-20261015-040",
+  "timestamp": "2026-10-15T06:30:01.759Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "search_replace"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261015-143001-112",
+      "kind": "search_replace",
+      "status": "success",
+      "message": "Patched app/Http/Controllers/Staff/RecordController.php.",
+      "path": "app/Http/Controllers/Staff/RecordController.php"
+    }
+  ],
+  "filesAffected": [
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Staff\\RecordController.php"
+  ],
+  "metadataUsed": {
+    "search_replace": [
+      {
+        "path": "app/Http/Controllers/Staff/RecordController.php",
+        "index": "1"
+      }
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": [],
+  "isDeleted": true,
+  "deletedAt": "2026-10-17T05:11:12.208Z",
+  "expiresAt": "2026-10-24T05:11:12.208Z",
+  "deletedBy": "user",
+  "deleteReason": "manual_wipe",
+  "softDeleteHistory": [
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:09.892Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    },
+    {
+      "action": "soft_delete",
+      "at": "2026-10-17T05:11:12.208Z",
+      "by": "user",
+      "reason": "manual_wipe"
+    }
+  ]
+}

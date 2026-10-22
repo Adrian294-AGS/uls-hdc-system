@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-019",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\layouts\\navigation.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\layouts\\\\navigation.blade.php\"\tpost\n@@ -98,8 +98,11 @@\n             @if ($user->isStudent())\n                 <x-responsive-nav-link :href=\"route('student.record.index')\" :active=\"request()->routeIs('student.record.*')\">\n                     {{ __('My Record') }}\n                 </x-responsive-nav-link>\n+                <x-responsive-nav-link :href=\"route('student.appointments.index')\" :active=\"request()->routeIs('student.appointments.*')\">\n+                    {{ __('Appointments') }}\n+                </x-responsive-nav-link>\n             @endif\n             @if ($isStaff)\n                 <x-responsive-nav-link :href=\"route('staff.records.index')\" :active=\"request()->routeIs('staff.records.*')\">\n                     {{ __('Records') }}\n"
+  },
+  "diffFromPrevious": ""
+}

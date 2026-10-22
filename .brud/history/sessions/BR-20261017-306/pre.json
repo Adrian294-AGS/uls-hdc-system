@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-306",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\seeders\\DirectorSeeder.php": "<?php\n\nnamespace Database\\Seeders;\n\nuse App\\Enums\\Role;\nuse App\\Models\\User;\nuse Illuminate\\Database\\Seeder;\nuse RuntimeException;\n\n/**\n * Creates the single HDC Director account from DIRECTOR_EMAIL / DIRECTOR_PASSWORD in .env.\n * If the account already exists it is left untouched (its password is not reset).\n */\nclass DirectorSeeder extends Seeder\n{\n    /**\n     * Run the database seeds.\n     */\n    public function run(): void\n    {\n        $config = config('hdc.director');\n\n        if (blank($config['email']) || blank($config['password'])) {\n            throw new RuntimeException('Set DIRECTOR_EMAIL and DIRECTOR_PASSWORD in .env before seeding the director account.');\n        }\n\n        if (User::where('email', $config['email'])->exists()) {\n            $this->command?->info(\"Director account {$config['email']} already exists; skipped.\");\n\n            return;\n        }\n\n        $director = new User([\n            'first_name' => $config['first_name'],\n            'last_name' => $config['last_name'],\n            'email' => $config['email'],\n            'password' => $config['password'],\n        ]);\n        $director->role = Role::Director;\n        $director->email_verified_at = now();\n        $director->save();\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-029",
+  "timestamp": "2026-10-17T06:05:07.431Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-140507-073",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\ndiff --git a/app/Http/Controllers/Auth/RegisteredUserController.php b/app/Http/Controllers/Auth/RegisteredUserController.php\nindex 3f5e71d..fa1a5be 100644\n--- a/app/Http/Controllers/Auth/RegisteredUserController.php\n+++ b/app/Http/Controllers/Auth/RegisteredUserController.php\n@@ -42,9 +42,9 @@ public function create(): View\n     public function store(Request $request): RedirectResponse\n     {\n         $validated = $request->validate([\n-            'last_name' => ['required', 'string', 'max:100'],\n-            'first_name' => ['required', 'string', 'max:100'],\n-            'middle_name' => ['nullable', 'string', 'max:100'],\n+            'last_name' => ['required', 'string', 'max:100', 'regex:/^[\\p{L}\\p{M} .\\'-]+$/u'],\n+            'first_name' => ['required', 'string', 'max:100', 'regex:/^[\\p{L}\\p{M} .\\'-]+$/u'],\n+            'middle_name' => ['nullable', 'string', 'max:100', 'regex:/^[\\p{L}\\p{M} .\\'-]+$/u'],\n             'student_number' => ['required', 'string', 'max:30', 'regex:/^[A-Za-z0-9-]+$/', 'unique:'.User::class],\n             'program_id' => ['required', 'integer', 'exists:'.Program::class.',id'],\n             'year_level' => ['required', 'integer', 'between:1,5'],\n@@ -52,6 +52,9 @@ public function store(Request $request): RedirectResponse\n             'password' => ['required', 'confirmed', Rules\\Password::defaults()],\n         ], [\n             'student_number.regex' => 'The student number may only contain letters, numbers and dashes.',\n+            'last_name.regex' => 'Use letters, spaces, periods, apostrophes and hyphens only.',\n+            'first_name.regex' => 'Use letters, spaces, periods, apostrophes and hyphens only.',\n+            'middle_name.regex' => 'Use letters, spaces, periods, apostrophes and hyphens only.',\n         ], [\n             'program_id' => 'program',\n         ]);\n",
+      "path": "",
+      "data": {
+        "command": "git diff app/Http/Controllers/Auth/RegisteredUserController.php",
+        "output": "diff --git a/app/Http/Controllers/Auth/RegisteredUserController.php b/app/Http/Controllers/Auth/RegisteredUserController.php\nindex 3f5e71d..fa1a5be 100644\n--- a/app/Http/Controllers/Auth/RegisteredUserController.php\n+++ b/app/Http/Controllers/Auth/RegisteredUserController.php\n@@ -42,9 +42,9 @@ public function create(): View\n     public function store(Request $request): RedirectResponse\n     {\n         $validated = $request->validate([\n-            'last_name' => ['required', 'string', 'max:100'],\n-            'first_name' => ['required', 'string', 'max:100'],\n-            'middle_name' => ['nullable', 'string', 'max:100'],\n+            'last_name' => ['required', 'string', 'max:100', 'regex:/^[\\p{L}\\p{M} .\\'-]+$/u'],\n+            'first_name' => ['required', 'string', 'max:100', 'regex:/^[\\p{L}\\p{M} .\\'-]+$/u'],\n+            'middle_name' => ['nullable', 'string', 'max:100', 'regex:/^[\\p{L}\\p{M} .\\'-]+$/u'],\n             'student_number' => ['required', 'string', 'max:30', 'regex:/^[A-Za-z0-9-]+$/', 'unique:'.User::class],\n             'program_id' => ['required', 'integer', 'exists:'.Program::class.',id'],\n             'year_level' => ['required', 'integer', 'between:1,5'],\n@@ -52,6 +52,9 @@ public function store(Request $request): RedirectResponse\n             'password' => ['required', 'confirmed', Rules\\Password::defaults()],\n         ], [\n             'student_number.regex' => 'The student number may only contain letters, numbers and dashes.',\n+            'last_name.regex' => 'Use letters, spaces, periods, apostrophes and hyphens only.',\n+            'first_name.regex' => 'Use letters, spaces, periods, apostrophes and hyphens only.',\n+            'middle_name.regex' => 'Use letters, spaces, periods, apostrophes and hyphens only.',\n         ], [\n             'program_id' => 'program',\n         ]);\n",
+        "exitCode": 0,
+        "duration": 96,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

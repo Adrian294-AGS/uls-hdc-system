@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-074",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpost\n@@ -169,9 +169,9 @@\n             'colleges' => [$this->con->id],\n         ])->assertSessionHasNoErrors();\n \n         $counselor->refresh();\n-        $this->assertSame('renamed@uls.test', $counselor->email);\n+        $this->assertSame('counselor-renamed', $counselor->username);\n         $this->assertSame('Counselor Renamed', $counselor->name);\n         $this->assertSame([$this->con->id], $counselor->colleges->pluck('id')->all());\n         $this->assertTrue(Hash::check('New-temp-789', $counselor->password));\n         $this->assertTrue($counselor->must_change_password);\n"
+  },
+  "diffFromPrevious": ""
+}

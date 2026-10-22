@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-328",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\bootstrap\\app.php": "<?php\n\nuse App\\Http\\Middleware\\EnsureAccountIsUsable;\nuse App\\Http\\Middleware\\RoleMiddleware;\nuse Illuminate\\Foundation\\Application;\nuse Illuminate\\Foundation\\Configuration\\Exceptions;\nuse Illuminate\\Foundation\\Configuration\\Middleware;\nuse Illuminate\\Http\\Request;\n\nreturn Application::configure(basePath: dirname(__DIR__))\n    ->withRouting(\n        web: __DIR__.'/../routes/web.php',\n        commands: __DIR__.'/../routes/console.php',\n        channels: __DIR__.'/../routes/channels.php',\n        health: '/up',\n    )\n    ->withMiddleware(function (Middleware $middleware): void {\n        $middleware->alias([\n            'role' => RoleMiddleware::class,\n        ]);\n\n        $middleware->web(append: [\n            EnsureAccountIsUsable::class,\n        ]);\n    })\n    ->withExceptions(function (Exceptions $exceptions): void {\n        $exceptions->shouldRenderJsonWhen(\n            fn (Request $request) => $request->is('api/*') || $request->expectsJson(),\n        );\n    })->create();\n"
+  },
+  "diffFromPrevious": ""
+}

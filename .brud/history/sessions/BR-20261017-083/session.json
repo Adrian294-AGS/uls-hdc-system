@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-083",
+  "timestamp": "2026-10-17T07:05:04.257Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-150504-156",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n\n   INFO  Compiled views cleared successfully.  \n\n\n   INFO  Clearing cached bootstrap files.  \n\n  config ................................................................................................. 3.41ms DONE\n  cache ................................................................................................. 95.62ms DONE\n  compiled ............................................................................................... 4.07ms DONE\n  events ................................................................................................. 0.93ms DONE\n  routes ................................................................................................. 1.28ms DONE\n  views ................................................................................................. 12.43ms DONE\n\n",
+      "path": "",
+      "data": {
+        "command": "php artisan view:clear && php artisan optimize:clear",
+        "output": "\n   INFO  Compiled views cleared successfully.  \n\n\n   INFO  Clearing cached bootstrap files.  \n\n  config ................................................................................................. 3.41ms DONE\n  cache ................................................................................................. 95.62ms DONE\n  compiled ............................................................................................... 4.07ms DONE\n  events ................................................................................................. 0.93ms DONE\n  routes ................................................................................................. 1.28ms DONE\n  views ................................................................................................. 12.43ms DONE\n\n",
+        "exitCode": 0,
+        "duration": 1418,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

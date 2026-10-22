@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-129",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\index.blade.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\appointments\\index.blade.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\appointments\\\\index.blade.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\views\\\\appointments\\\\index.blade.php\"\tpost\n@@ -24,9 +24,9 @@\n                         <p class=\"text-sm text-gray-600 dark:text-gray-400\">\r\n                             {{ __('There are no HDC staff members available for your college yet. Please contact the HDC for assistance.') }}\r\n                         </p>\r\n                     @else\r\n-                        <form method=\"POST\" action=\"{{ route('appointments.store') }}\" class=\"space-y-5\">\r\n+                        <form method=\"POST\" action=\"{{ route('appointments.store') }}\" class=\"space-y-6\">\r\n                             @csrf\r\n \r\n                             <x-form.select name=\"staff_id\" :label=\"__('HDC staff member')\" :required=\"true\" :placeholder=\"__('Select a staff member')\">\r\n                                 @foreach ($staff as $staffMember)\r\n"
+  },
+  "diffFromPrevious": ""
+}

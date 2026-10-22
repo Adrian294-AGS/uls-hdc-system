@@ -1,0 +1,35 @@
+{
+  "sessionId": "BR-20261017-353",
+  "timestamp": "2026-10-17T14:28:04.201Z",
+  "originalPrompt": "",
+  "status": "success",
+  "operationCount": 1,
+  "operationTypes": [
+    "terminal_command"
+  ],
+  "operations": [
+    {
+      "operationIndex": 0,
+      "operationId": "OP-20261017-222804-080",
+      "kind": "terminal_command",
+      "status": "success",
+      "message": "Terminal command executed successfully.\nOutput:\n--- BUCKET ROOT DIRECTORIES ---\nERROR: Unable to list contents for '', shallow listing\n\nReason: Error executing \"ListObjectsV2\" on \"https://hdc-bucket.s3.us-east-005.backblazeb2.com/?list-type=2&prefix=&delimiter=%2F\"; AWS HTTP error:\ncURL error 60: SSL certificate OpenSSL verify result: unable to get local issuer certificate (20) (see https://curl.se/libcurl/c/libcurl-errors.html) for https://hdc-bucket.s3.us-east-005.backblazeb2.com/?list-type=2&prefix=&delimiter=%2F\n",
+      "path": "",
+      "data": {
+        "command": "php test_b2.php",
+        "output": "--- BUCKET ROOT DIRECTORIES ---\nERROR: Unable to list contents for '', shallow listing\n\nReason: Error executing \"ListObjectsV2\" on \"https://hdc-bucket.s3.us-east-005.backblazeb2.com/?list-type=2&prefix=&delimiter=%2F\"; AWS HTTP error:\ncURL error 60: SSL certificate OpenSSL verify result: unable to get local issuer certificate (20) (see https://curl.se/libcurl/c/libcurl-errors.html) for https://hdc-bucket.s3.us-east-005.backblazeb2.com/?list-type=2&prefix=&delimiter=%2F\n",
+        "exitCode": 0,
+        "duration": 2657,
+        "success": true
+      }
+    }
+  ],
+  "filesAffected": [],
+  "metadataUsed": {
+    "terminal_command": [
+      {}
+    ]
+  },
+  "terminalCommands": [],
+  "revertCommands": []
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-274",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tailwind.config.js": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tailwind.config.js\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tailwind.config.js\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tailwind.config.js\"\tpost\n@@ -16,8 +16,17 @@\n         extend: {\n             fontFamily: {\n                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],\n             },\n+            colors: {\n+                hdc: {\n+                    blue: '#0088D1',\n+                    pink: '#D458A4',\n+                    cream: '#F8FAFC',\n+                    dark: '#0F172A',\n+                    text: '#1E293B',\n+                }\n+            }\n         },\n     },\n \n     plugins: [forms],\n"
+  },
+  "diffFromPrevious": ""
+}

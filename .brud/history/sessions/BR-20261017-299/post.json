@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-299",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Auth\\\\RegisteredUserController.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\app\\\\Http\\\\Controllers\\\\Auth\\\\RegisteredUserController.php\"\tpost\n@@ -59,9 +59,9 @@\n         $user = new User([\n             'last_name' => $validated['last_name'],\n             'first_name' => $validated['first_name'],\n             'middle_name' => $validated['middle_name'] ?? null,\n-            'student_number' => $validated['student_number'],\n+            'username' => $validated['username'],\n             'program_id' => $validated['program_id'],\n             'year_level' => $validated['year_level'],\n             'email' => $validated['email'],\n             'password' => Hash::make($validated['password']),\n"
+  },
+  "diffFromPrevious": ""
+}

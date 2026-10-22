@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261015-011",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\routes\\web.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\routes\\\\web.php\"\tpost\n@@ -29,8 +29,14 @@\n     Route::get('/dashboard', function (Request $request) {\n         return view('student.dashboard', ['record' => $request->user()->latestCumulativeRecord]);\n     })->name('dashboard');\n \n+    // Appointments\n+    Route::get('/appointments', [\\App\\Http\\Controllers\\Student\\AppointmentController::class, 'index'])->name('appointments.index');\n+    Route::get('/appointments/create', [\\App\\Http\\Controllers\\Student\\AppointmentController::class, 'create'])->name('appointments.create');\n+    Route::post('/appointments', [\\App\\Http\\Controllers\\Student\\AppointmentController::class, 'store'])->name('appointments.store');\n+    Route::patch('/appointments/{appointment}/cancel', [\\App\\Http\\Controllers\\Student\\AppointmentController::class, 'cancel'])->name('appointments.cancel');\n+\n     // Form 5: Student Cumulative Record wizard\n     Route::get('/record', [CumulativeRecordController::class, 'index'])->name('record.index');\n     Route::get('/record/start', [CumulativeRecordController::class, 'create'])->name('record.create');\n     Route::post('/record', [CumulativeRecordController::class, 'store'])->name('record.store');\n"
+  },
+  "diffFromPrevious": ""
+}

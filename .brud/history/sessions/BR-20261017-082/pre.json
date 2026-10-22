@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-082",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\views\\director\\dashboard.blade.php": "<x-app-layout>\n    <x-slot name=\"header\">\n        <h2 class=\"font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight\">\n            {{ __('Director Dashboard') }}\n        </h2>\n    </x-slot>\n\n    <x-welcome-card>\n        {{ __('You have access to all colleges.') }}\n    </x-welcome-card>\n\n    <x-staff-stats :stats=\"$stats\" />\n</x-app-layout>\n"
+  },
+  "diffFromPrevious": ""
+}

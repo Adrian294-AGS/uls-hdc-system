@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-328",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\bootstrap\\app.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\bootstrap\\app.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\bootstrap\\\\app.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\bootstrap\\\\app.php\"\tpost\n@@ -10,11 +10,14 @@\n return Application::configure(basePath: dirname(__DIR__))\n     ->withRouting(\n         web: __DIR__.'/../routes/web.php',\n         commands: __DIR__.'/../routes/console.php',\n-        channels: __DIR__.'/../routes/channels.php',\n         health: '/up',\n     )\n+    ->withBroadcasting(\n+        __DIR__.'/../routes/channels.php',\n+        ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum']],\n+    )\n     ->withMiddleware(function (Middleware $middleware): void {\n         $middleware->alias([\n             'role' => RoleMiddleware::class,\n         ]);\n"
+  },
+  "diffFromPrevious": ""
+}

@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-004",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_053406_create_appointments_table.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\database\\migrations\\2026_10_17_053406_create_appointments_table.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\migrations\\\\2026_10_17_053406_create_appointments_table.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\database\\\\migrations\\\\2026_10_17_053406_create_appointments_table.php\"\tpost\n@@ -12,8 +12,14 @@\n     public function up(): void\n     {\n         Schema::create('appointments', function (Blueprint $table) {\n             $table->id();\n+            $table->foreignId('student_id')->constrained('users')->cascadeOnDelete();\n+            $table->foreignId('staff_id')->constrained('users')->cascadeOnDelete(); // counselor / staff / admin\n+            $table->dateTime('scheduled_at');\n+            $table->string('status')->default('pending'); // pending, approved, rejected, completed\n+            $table->string('purpose');\n+            $table->text('notes')->nullable();\n             $table->timestamps();\n         });\n     }\n \n"
+  },
+  "diffFromPrevious": ""
+}

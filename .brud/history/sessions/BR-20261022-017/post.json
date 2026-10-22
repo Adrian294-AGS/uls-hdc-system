@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-017",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\config\\app.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\config\\app.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\config\\\\app.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\config\\\\app.php\"\tpost\n@@ -12,9 +12,9 @@\n     | other UI elements where an application name needs to be displayed.\n     |\n     */\n \n-    'name' => env('APP_NAME', 'Laravel'),\n+    'name' => env('APP_NAME', 'ULS-HDC'),\n \n     /*\n     |--------------------------------------------------------------------------\n     | Application Environment\n"
+  },
+  "diffFromPrevious": ""
+}

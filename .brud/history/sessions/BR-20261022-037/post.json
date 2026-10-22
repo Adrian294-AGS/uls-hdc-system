@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261022-037",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\resources\\css\\app.css\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\resources\\\\css\\\\app.css\"\tpost\n@@ -68,4 +68,29 @@\n             width: 4rem;  /* 64px */\n         }\n     }\n }\n+\n+/* Guest-page (login/register) logo: double the default logo size, still responsive. */\n+@layer components {\n+    .logo-responsive--guest {\n+        width: 5rem;  /* 80px — mobile (2x) */\n+    }\n+\n+    @media (min-width: 640px) {   /* sm */\n+        .logo-responsive--guest {\n+            width: 6rem;  /* 96px (2x) */\n+        }\n+    }\n+\n+    @media (min-width: 768px) {   /* md */\n+        .logo-responsive--guest {\n+            width: 7rem;  /* 112px (2x) */\n+        }\n+    }\n+\n+    @media (min-width: 1024px) {  /* lg */\n+        .logo-responsive--guest {\n+            width: 8rem;  /* 128px (2x) */\n+        }\n+    }\n+}\n"
+  },
+  "diffFromPrevious": ""
+}

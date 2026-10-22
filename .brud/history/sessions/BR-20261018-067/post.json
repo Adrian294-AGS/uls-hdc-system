@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261018-067",
+  "snapshotType": "post",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php": "Index: c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\tests\\Feature\\DirectorToolsTest.php\n===================================================================\n--- \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpre\n+++ \"c:\\\\Users\\\\LENOVO\\\\Desktop\\\\uls-hdc-system\\\\tests\\\\Feature\\\\DirectorToolsTest.php\"\tpost\n@@ -98,9 +98,9 @@\n         $this->assertTrue($counselor->must_change_password);\n         $this->assertSame([$this->cit->id], $counselor->colleges->pluck('id')->all());\n \n         auth()->logout();\n-        $this->post('/login', ['email' => 'rosa@uls.test', 'password' => 'Temp-pass-123'])->assertRedirect();\n+        $this->post('/login', ['username' => 'rosa-reyes', 'password' => 'Temp-pass-123'])->assertRedirect();\n         $this->assertAuthenticatedAs($counselor);\n         $this->assertNotNull($counselor->fresh()->last_login_at);\n \n         $this->put(route('password.change.update'), [\n"
+  },
+  "diffFromPrevious": ""
+}

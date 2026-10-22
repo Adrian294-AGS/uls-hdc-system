@@ -1,0 +1,8 @@
+{
+  "sessionId": "BR-20261017-092",
+  "snapshotType": "pre",
+  "files": {
+    "c:\\Users\\LENOVO\\Desktop\\uls-hdc-system\\app\\Models\\AccessLog.php": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Attributes\\Fillable;\nuse Illuminate\\Database\\Eloquent\\Model;\nuse Illuminate\\Database\\Eloquent\\Relations\\BelongsTo;\n\n/**\n * One row per staff view/action on a full Form 5 record.\n */\n#[Fillable(['user_id', 'cumulative_record_id', 'entrance_test_result_id', 'action', 'ip'])]\nclass AccessLog extends Model\n{\n    public const UPDATED_AT = null;\n\n    public const ACTION_VIEW = 'view';\n\n    public const ACTION_REVIEW = 'review';\n\n    public const ACTION_VIEW_SATA = 'view_sata';\n\n    /**\n     * @return BelongsTo<EntranceTestResult, $this>\n     */\n    public function entranceTestResult(): BelongsTo\n    {\n        return $this->belongsTo(EntranceTestResult::class);\n    }\n\n    /**\n     * @return BelongsTo<User, $this>\n     */\n    public function user(): BelongsTo\n    {\n        return $this->belongsTo(User::class);\n    }\n\n    /**\n     * @return BelongsTo<CumulativeRecord, $this>\n     */\n    public function record(): BelongsTo\n    {\n        return $this->belongsTo(CumulativeRecord::class, 'cumulative_record_id');\n    }\n}\n"
+  },
+  "diffFromPrevious": ""
+}
