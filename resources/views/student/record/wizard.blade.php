@@ -65,9 +65,6 @@
                     <x-progress-bar :percent="$record->progressPercent()" class="mt-2" />
                 </div>
 
-                @if (session('status'))
-                    <div class="rounded-md bg-green-50 dark:bg-green-500/10 px-4 py-3 text-sm text-green-800 dark:text-green-300" role="status">{{ session('status') }}</div>
-                @endif
 
                 @if ($record->status === \App\Enums\RecordStatus::Submitted)
                     <div class="rounded-md bg-blue-50 dark:bg-blue-500/10 px-4 py-3 text-sm text-blue-800 dark:text-blue-300">

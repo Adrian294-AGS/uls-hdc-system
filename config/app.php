@@ -56,6 +56,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Force HTTPS
+    |--------------------------------------------------------------------------
+    |
+    | When true, plain HTTP requests are redirected to HTTPS and every generated
+    | URL uses https://. On by default in production.
+    |
+    */
+
+    'force_https' => (bool) env('FORCE_HTTPS', env('APP_ENV') === 'production'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |

@@ -47,6 +47,7 @@ class TrackerController extends Controller
             'students' => $query->notSubmitted()
                 ->with(['program.college', 'latestCumulativeRecord'])
                 ->withExists('entranceTestResults as has_sata')
+                ->withIntakeSummary()
                 ->orderBy('users.last_name')
                 ->orderBy('users.first_name')
                 ->paginate(20)

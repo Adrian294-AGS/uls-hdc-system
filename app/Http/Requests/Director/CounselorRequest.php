@@ -4,6 +4,7 @@ namespace App\Http\Requests\Director;
 
 use App\Models\College;
 use App\Models\User;
+use App\Support\Validation;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -29,9 +30,9 @@ class CounselorRequest extends FormRequest
         $counselor = $this->route('counselor');
 
         return [
-            'last_name' => ['required', 'string', 'max:100'],
-            'first_name' => ['required', 'string', 'max:100'],
-            'middle_name' => ['nullable', 'string', 'max:100'],
+            'last_name' => Validation::name(),
+            'first_name' => Validation::name(),
+            'middle_name' => Validation::name(required: false),
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($counselor)],
             // Required when creating; optional on edit (filled = reset to a new temporary password).
             'password' => [$counselor ? 'nullable' : 'required', 'string', Password::defaults()],
@@ -50,6 +51,7 @@ class CounselorRequest extends FormRequest
         return [
             'colleges.required' => 'Assign at least one college.',
             'colleges.min' => 'Assign at least one college.',
+            ...Validation::messages(['last_name' => 'name', 'first_name' => 'name', 'middle_name' => 'name']),
         ];
     }
 

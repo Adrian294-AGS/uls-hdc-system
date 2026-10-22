@@ -28,6 +28,7 @@ class RecordController extends Controller
             'students' => $query->students()
                 ->with(['program.college', 'latestCumulativeRecord'])
                 ->withExists('entranceTestResults as has_sata')
+                ->withIntakeSummary()
                 ->orderBy('users.last_name')
                 ->orderBy('users.first_name')
                 ->paginate(20)
@@ -55,6 +56,7 @@ class RecordController extends Controller
             'record' => $record,
             'sata' => $sata,
             'sataCount' => $record->student->entranceTestResults()->count(),
+            'intakes' => $record->student->intakeInterviews()->with('counselor')->latest('id')->get(),
         ]);
     }
 

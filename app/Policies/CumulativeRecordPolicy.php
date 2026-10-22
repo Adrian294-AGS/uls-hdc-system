@@ -24,6 +24,23 @@ class CumulativeRecordPolicy
     }
 
     /**
+     * Download the record (students: their own Form 5 PDF; staff: records they may view).
+     */
+    public function export(User $user, CumulativeRecord $record): bool
+    {
+        return $this->view($user, $record);
+    }
+
+    /**
+     * Include SATA results or Form 8 intake interviews in an export: never students; only the
+     * director or a counselor assigned to the student's college.
+     */
+    public function exportConfidential(User $user, CumulativeRecord $record): bool
+    {
+        return ! $user->isStudent() && $record->student->isVisibleTo($user);
+    }
+
+    /**
      * Only students start their own Form 5.
      */
     public function create(User $user): bool

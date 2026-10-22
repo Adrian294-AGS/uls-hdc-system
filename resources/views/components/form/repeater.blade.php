@@ -44,7 +44,9 @@
                             @else
                                 <input type="{{ $column['type'] ?? 'text' }}" x-model="row.{{ $key }}" :id="'{{ $name }}_' + index + '_{{ $key }}'" :name="'{{ $name }}[' + index + '][{{ $key }}]'"
                                     class="mt-1 block w-full rounded-md glass-input text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:focus:border-indigo-400 dark:focus:ring-indigo-400"
-                                    @if (($column['type'] ?? 'text') === 'number') min="0" max="120" @endif>
+                                    @if (($column['type'] ?? 'text') === 'number') min="0" max="120" @else maxlength="255" @endif
+                                    @foreach ($column['attributes'] ?? [] as $attribute => $attributeValue) {{ $attribute }}="{{ $attributeValue }}" @endforeach
+                                    :aria-invalid="error(index, '{{ $key }}') ? 'true' : null">
                             @endif
                             <p x-show="error(index, '{{ $key }}')" x-text="error(index, '{{ $key }}')" class="mt-1 text-xs text-red-600 dark:text-red-400"></p>
                         </div>

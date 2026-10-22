@@ -34,7 +34,6 @@
 
     <div class="py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <x-flash />
 
             @if ($errors->any())
                 <div class="rounded-md bg-red-50 dark:bg-red-500/10 px-4 py-3 text-sm text-red-800 dark:text-red-300" role="alert">
@@ -43,6 +42,7 @@
             @endif
 
             <form method="POST" action="{{ $editing ? route('staff.sata.update', $result) : route('staff.sata.store', $student) }}"
+                @if ($editing) data-confirm="{{ __('Save the changes to this SATA result?') }}" data-confirm-button="{{ __('Save changes') }}" @endif
                 class="glass-panel sm:rounded-lg p-4 sm:p-6"
                 x-data="sataForm(@js($initial), @js(config('sata.ranges')))">
                 <h3 class="text-base font-semibold text-gray-900 dark:text-gray-100">{{ __('Scholastic Abilities Test for Adults (SATA)') }}</h3>
@@ -130,7 +130,7 @@
                     </div>
                     <div>
                         <x-input-label for="exam_date">{{ __('Date of examination') }} <span class="text-red-600 dark:text-red-400" aria-hidden="true">*</span></x-input-label>
-                        <input id="exam_date" name="exam_date" type="date" max="{{ now()->format('Y-m-d') }}" required
+                        <input id="exam_date" name="exam_date" type="date" min="2000-01-01" max="{{ \App\Support\Validation::today() }}" required
                             value="{{ $fieldValue('exam_date') }}" class="{{ $fieldClasses('exam_date', 'mt-1') }}">
                         <x-input-error :messages="$errors->get('exam_date')" class="mt-2" />
                     </div>

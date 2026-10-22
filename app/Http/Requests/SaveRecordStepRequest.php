@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Models\CumulativeRecord;
 use App\Models\Program;
 use App\Support\Form5;
+use App\Support\Validation;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -39,6 +40,12 @@ class SaveRecordStepRequest extends FormRequest
      */
     protected function prepareForValidation(): void
     {
+        foreach (['contact_number', 'emergency_contact_number'] as $phone) {
+            if ($this->has($phone)) {
+                $this->merge([$phone => Validation::normalizePhone($this->input($phone))]);
+            }
+        }
+
         foreach (['siblings', 'schools', 'organizations'] as $section) {
             if (! is_array($this->input($section))) {
                 continue;
@@ -91,6 +98,12 @@ class SaveRecordStepRequest extends FormRequest
             'siblings.*.name.required' => 'Enter the name or remove this row.',
             'schools.*.school_name.required' => 'Enter the name of the school or remove this row.',
             'organizations.*.organization.required' => 'Enter the organization or remove this row.',
+            'birth_date.before' => 'The birth date must be in the past.',
+            ...Validation::messages([
+                'last_name' => 'name', 'first_name' => 'name', 'middle_name' => 'name', 'spouse_name' => 'name',
+                'emergency_contact_name' => 'name', 'parents.*.name' => 'name', 'siblings.*.name' => 'name',
+                'contact_number' => 'phone', 'emergency_contact_number' => 'phone',
+            ]),
         ];
     }
 
@@ -209,27 +222,27 @@ class SaveRecordStepRequest extends FormRequest
     private function personalRules(): array
     {
         return [
-            'last_name' => ['required', 'string', 'max:100'],
-            'first_name' => ['required', 'string', 'max:100'],
-            'middle_name' => ['nullable', 'string', 'max:100'],
+            'last_name' => Validation::name(),
+            'first_name' => Validation::name(),
+            'middle_name' => Validation::name(required: false),
             'program_id' => ['required', 'integer', Rule::exists(Program::class, 'id')],
             'year_level' => ['required', 'integer', Rule::in(array_keys(Form5::YEAR_LEVELS))],
             'major' => ['nullable', 'string', 'max:255'],
             'home_address' => ['required', 'string', 'max:500'],
             'sex' => ['required', Rule::in(array_keys(Form5::SEXES))],
             'civil_status' => ['required', Rule::in(array_keys(Form5::CIVIL_STATUSES))],
-            'contact_number' => ['required', 'string', 'max:50'],
+            'contact_number' => Validation::phone(),
             'email' => ['required', 'email', 'max:255'],
-            'birth_date' => ['required', 'date', 'before:today', 'after:1900-01-01'],
+            'birth_date' => ['required', 'date', 'before:'.Validation::today(), 'after:1900-01-01'],
             'place_of_birth' => ['required', 'string', 'max:255'],
             'nationality' => ['required', 'string', 'max:100'],
             'religion' => ['nullable', 'string', 'max:100'],
             'ethnicity' => ['nullable', 'string', 'max:100'],
             'boarding_address' => ['nullable', 'string', 'max:500'],
-            'emergency_contact_name' => ['required', 'string', 'max:255'],
+            'emergency_contact_name' => Validation::name(max: 255),
             'emergency_contact_address' => ['required', 'string', 'max:500'],
-            'emergency_contact_number' => ['required', 'string', 'max:50'],
-            'spouse_name' => ['nullable', 'required_if:civil_status,married', 'string', 'max:255'],
+            'emergency_contact_number' => Validation::phone(),
+            'spouse_name' => ['nullable', 'required_if:civil_status,married', 'string', 'max:255', 'regex:'.Validation::NAME_REGEX],
             'number_of_children' => ['nullable', 'integer', 'min:0', 'max:30'],
         ];
     }
@@ -246,7 +259,7 @@ class SaveRecordStepRequest extends FormRequest
             'family_concern' => ['nullable', 'string', 'max:5000'],
             'home_language' => ['nullable', 'string', 'max:255'],
             'siblings' => ['nullable', 'array', 'max:'.Form5::MAX_SIBLINGS],
-            'siblings.*.name' => ['required', 'string', 'max:255'],
+            'siblings.*.name' => ['required', 'string', 'max:255', 'regex:'.Validation::NAME_REGEX],
             'siblings.*.sex' => ['nullable', Rule::in(array_keys(Form5::SEXES))],
             'siblings.*.age' => ['nullable', 'integer', 'min:0', 'max:120'],
             'siblings.*.year_course_school' => ['nullable', 'string', 'max:255'],
@@ -255,7 +268,7 @@ class SaveRecordStepRequest extends FormRequest
 
         foreach (array_keys(Form5::PARENT_RELATIONS) as $relation) {
             $rules += [
-                "parents.$relation.name" => ['nullable', 'string', 'max:255'],
+                "parents.$relation.name" => Validation::name(required: false, max: 255),
                 "parents.$relation.age" => ['nullable', 'integer', 'min:10', 'max:120'],
                 "parents.$relation.religion" => ['nullable', 'string', 'max:100'],
                 "parents.$relation.occupation" => ['nullable', 'string', 'max:255'],

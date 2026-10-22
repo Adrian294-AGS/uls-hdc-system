@@ -1,16 +1,23 @@
 <?php
 
+use App\Http\Controllers\Director\BackupController;
 use App\Http\Controllers\Director\CollegeController;
 use App\Http\Controllers\Director\CounselorController;
 use App\Http\Controllers\Director\ProgramController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Staff\DashboardController;
 use App\Http\Controllers\Staff\EntranceTestResultController;
+use App\Http\Controllers\Staff\ImportController;
+use App\Http\Controllers\Staff\IntakeInterviewController;
 use App\Http\Controllers\Staff\NotificationController;
 use App\Http\Controllers\Staff\RecordController;
+use App\Http\Controllers\Staff\RecordExportController;
+use App\Http\Controllers\Staff\RecordListExportController;
+use App\Http\Controllers\Staff\ReportController;
 use App\Http\Controllers\Staff\TrackerController;
 use App\Http\Controllers\Student\CumulativeRecordController;
 use App\Support\Form5;
+use App\Support\Reports\Report;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +43,7 @@ Route::middleware(['auth', 'verified', 'role:student'])->prefix('student')->name
     Route::post('/record', [CumulativeRecordController::class, 'store'])->name('record.store');
     Route::get('/records/{record}', [CumulativeRecordController::class, 'show'])->name('record.show');
     Route::get('/records/{record}/photo', [CumulativeRecordController::class, 'photo'])->name('record.photo');
+    Route::get('/records/{record}/pdf', [CumulativeRecordController::class, 'pdf'])->name('record.pdf');
     Route::get('/records/{record}/steps/{step}', [CumulativeRecordController::class, 'edit'])
         ->whereIn('step', array_keys(Form5::STEPS))
         ->name('record.edit');
@@ -56,6 +64,12 @@ Route::middleware(['auth', 'verified', 'role:director'])->prefix('director')->na
     Route::patch('/counselors/{counselor}/deactivate', [CounselorController::class, 'deactivate'])->name('counselors.deactivate');
     Route::patch('/counselors/{counselor}/reactivate', [CounselorController::class, 'reactivate'])->name('counselors.reactivate');
 
+    // FR-11 backups
+    Route::get('/backups', [BackupController::class, 'index'])->name('backups.index');
+    Route::post('/backups', [BackupController::class, 'store'])->name('backups.store');
+    Route::get('/backups/{filename}', [BackupController::class, 'download'])->where('filename', '[A-Za-z0-9._-]+\.zip')->name('backups.download');
+    Route::delete('/backups/{filename}', [BackupController::class, 'destroy'])->where('filename', '[A-Za-z0-9._-]+\.zip')->name('backups.destroy');
+
     Route::resource('colleges', CollegeController::class)->except(['show']);
     Route::post('/programs', [ProgramController::class, 'store'])->name('programs.store');
     Route::get('/programs/{program}/edit', [ProgramController::class, 'edit'])->name('programs.edit');
@@ -68,7 +82,9 @@ Route::middleware(['auth', 'verified', 'role:director'])->prefix('director')->na
  */
 Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('staff')->name('staff.')->group(function () {
     Route::get('/records', [RecordController::class, 'index'])->name('records.index');
+    Route::get('/records/export', RecordListExportController::class)->name('records.export-list');
     Route::get('/records/{record}', [RecordController::class, 'show'])->name('records.show');
+    Route::get('/records/{record}/export', RecordExportController::class)->name('records.export');
     Route::get('/records/{record}/photo', [RecordController::class, 'photo'])->name('records.photo');
     Route::post('/records/{record}/review', [RecordController::class, 'review'])->name('records.review');
 
@@ -80,11 +96,37 @@ Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('staf
     Route::get('/sata/{result}/edit', [EntranceTestResultController::class, 'edit'])->name('sata.edit');
     Route::put('/sata/{result}', [EntranceTestResultController::class, 'update'])->name('sata.update');
 
+    // Form 8 intake interviews (highly sensitive; never exposed to students)
+    Route::get('/students/{student}/intake/create', [IntakeInterviewController::class, 'create'])->name('intake.create');
+    Route::post('/students/{student}/intake', [IntakeInterviewController::class, 'store'])->name('intake.store');
+    Route::get('/intake/{interview}', [IntakeInterviewController::class, 'show'])->name('intake.show');
+    Route::get('/intake/{interview}/edit', [IntakeInterviewController::class, 'edit'])->name('intake.edit');
+    Route::put('/intake/{interview}', [IntakeInterviewController::class, 'update'])->name('intake.update');
+
+    // Excel/CSV import (counselors: their own colleges only, checked per row)
+    Route::get('/imports', [ImportController::class, 'index'])->name('imports.index');
+    Route::get('/imports/templates/{type}.{format}', [ImportController::class, 'template'])->name('imports.template');
+    Route::post('/imports', [ImportController::class, 'preview'])->name('imports.preview');
+    Route::get('/imports/{token}', [ImportController::class, 'show'])->name('imports.show');
+    Route::post('/imports/{token}', [ImportController::class, 'store'])->name('imports.store');
+    Route::get('/imports/{token}/problems.csv', [ImportController::class, 'errors'])->name('imports.errors');
+    Route::delete('/imports/{token}', [ImportController::class, 'destroy'])->name('imports.destroy');
+
     Route::get('/tracker', TrackerController::class)->name('tracker');
 
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');
     Route::post('/notifications/read-all', [NotificationController::class, 'markAllRead'])->name('notifications.read-all');
     Route::get('/notifications/{notification}', [NotificationController::class, 'open'])->name('notifications.open');
+});
+
+/*
+ * Aggregate reports (FR-09): counts only. Counselors see their assigned colleges; the director sees all.
+ */
+Route::middleware(['auth', 'verified', 'role:counselor,director'])->prefix('reports')->name('reports.')->group(function () {
+    Route::get('/', [ReportController::class, 'show'])->name('index');
+    Route::get('/{report}', [ReportController::class, 'show'])->whereIn('report', array_keys(Report::REPORTS))->name('show');
+    Route::get('/{report}/csv', [ReportController::class, 'csv'])->whereIn('report', array_keys(Report::REPORTS))->name('csv');
+    Route::get('/{report}/print', [ReportController::class, 'print'])->whereIn('report', array_keys(Report::REPORTS))->name('print');
 });
 
 Route::middleware('auth')->group(function () {

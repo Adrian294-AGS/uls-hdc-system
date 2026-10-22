@@ -33,7 +33,17 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/private'),
-            'serve' => true,
+            // Private files (Form 5 photos) are only served through authorized controller routes.
+            'serve' => false,
+            'throw' => false,
+            'report' => false,
+        ],
+
+        // Encrypted backup archives (spatie/laravel-backup). Never publicly served; copy them off the server too.
+        'backups' => [
+            'driver' => 'local',
+            'root' => env('BACKUP_PATH', storage_path('app/backups')),
+            'serve' => false,
             'throw' => false,
             'report' => false,
         ],

@@ -41,13 +41,27 @@ final class StudentRecordQuery
         'not_encoded' => 'Not encoded',
     ];
 
+    public const INTAKE_FOLLOW_UP = 'follow_up';
+
+    /**
+     * Intake interview filter keys => labels (status of the student's latest intake interview).
+     *
+     * @var array<string, string>
+     */
+    public const INTAKE_FILTERS = [
+        'none' => 'None',
+        'draft' => 'Draft',
+        'finalized' => 'Finalized',
+        self::INTAKE_FOLLOW_UP => 'Needs follow-up',
+    ];
+
     /**
      * @var Collection<int, int>
      */
     private Collection $collegeIds;
 
     /**
-     * @param  array{college_id?: int|null, program_id?: int|null, year_level?: int|null, status?: string|null, sata?: string|null, q?: string|null}  $filters
+     * @param  array{college_id?: int|null, program_id?: int|null, year_level?: int|null, status?: string|null, sata?: string|null, intake?: string|null, q?: string|null}  $filters
      */
     public function __construct(private User $viewer, private array $filters = [])
     {
@@ -69,6 +83,7 @@ final class StudentRecordQuery
         $yearLevel = $request->integer('year_level') ?: null;
         $status = $request->string('status')->toString() ?: null;
         $sata = $request->string('sata')->toString() ?: null;
+        $intake = $request->string('intake')->toString() ?: null;
 
         $query->filters = [
             'college_id' => $query->collegeIds->contains($collegeId) ? $collegeId : null,
@@ -76,6 +91,7 @@ final class StudentRecordQuery
             'year_level' => array_key_exists((int) $yearLevel, Form5::YEAR_LEVELS) ? $yearLevel : null,
             'status' => in_array($status, $allowedStatuses ?? array_keys(self::STATUSES), true) ? $status : null,
             'sata' => array_key_exists((string) $sata, self::SATA_FILTERS) ? $sata : null,
+            'intake' => array_key_exists((string) $intake, self::INTAKE_FILTERS) ? $intake : null,
             'q' => mb_substr(trim($request->string('q')->toString()), 0, 100) ?: null,
         ];
 
@@ -124,7 +140,8 @@ final class StudentRecordQuery
             ->when($this->filters['status'] ?? null, fn (Builder $query, string $status) => $this->applyStatus($query, $status))
             ->when($this->filters['sata'] ?? null, fn (Builder $query, string $sata) => $sata === 'encoded'
                 ? $query->whereHas('entranceTestResults')
-                : $query->whereDoesntHave('entranceTestResults'));
+                : $query->whereDoesntHave('entranceTestResults'))
+            ->when($this->filters['intake'] ?? null, fn (Builder $query, string $intake) => $this->applyIntake($query, $intake));
     }
 
     /**
@@ -215,6 +232,18 @@ final class StudentRecordQuery
                         ->orWhere('users.student_number', 'like', $like);
                 });
             });
+    }
+
+    /**
+     * @param  Builder<User>  $query
+     */
+    private function applyIntake(Builder $query, string $intake): void
+    {
+        match ($intake) {
+            'none' => $query->whereDoesntHave('intakeInterviews'),
+            self::INTAKE_FOLLOW_UP => $query->whereHas('intakeInterviews', fn (Builder $interviews) => $interviews->needingFollowUp()),
+            default => $query->whereHas('latestIntakeInterview', fn (Builder $interview) => $interview->where('status', $intake)),
+        };
     }
 
     /**

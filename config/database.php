@@ -59,6 +59,19 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
+            // Used by spatie/laravel-backup (mysqldump). Set DB_DUMP_BINARY_PATH if mysqldump is not on the PATH.
+            // GTID purged OFF and --no-tablespaces keep the dump restorable (and dumpable) on shared hosting,
+            // where the database user has no SUPER or PROCESS privilege.
+            'dump' => array_filter([
+                'use_single_transaction' => true,
+                'mysql_gtid_purged' => 'OFF',
+                'add_extra_option' => '--no-tablespaces',
+                // The web server and cron often run with a minimal PATH, so look in the usual places too.
+                'dump_binary_path' => env('DB_DUMP_BINARY_PATH') ?: collect([
+                    '/usr/bin', '/usr/local/bin', '/usr/local/mysql/bin', '/opt/homebrew/bin', '/opt/homebrew/opt/mysql-client/bin',
+                    'C:\\xampp\\mysql\\bin', 'C:\\laragon\\bin\\mysql\\current\\bin',
+                ])->first(fn (string $directory) => is_file($directory.'/mysqldump') || is_file($directory.'\\mysqldump.exe')),
+            ]),
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],

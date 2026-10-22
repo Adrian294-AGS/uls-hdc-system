@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\View\View;
 
@@ -35,12 +36,13 @@ class ForcedPasswordController extends Controller
         $user = $request->user();
         $user->password = $validated['password'];
         $user->must_change_password = false;
+        $user->setRememberToken(Str::random(60));
         $user->save();
 
         $request->session()->regenerate();
 
         return redirect()
             ->route($user->dashboardRoute())
-            ->with('status', 'Your password has been changed.');
+            ->with('status', 'Your password has been changed. You were signed out on your other devices.');
     }
 }
