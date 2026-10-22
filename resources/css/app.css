@@ -40,3 +40,58 @@
         }
     }
 }
+
+/* Responsive logo sizing — edit the width values here to resize every logo app-wide.
+   The image keeps its aspect ratio automatically (height: auto). */
+@layer components {
+    .logo-responsive {
+        width: 2.5rem; /* 40px — mobile */
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    @media (min-width: 640px) {   /* sm */
+        .logo-responsive {
+            width: 3rem;  /* 48px */
+        }
+    }
+
+    @media (min-width: 768px) {   /* md */
+        .logo-responsive {
+            width: 3.5rem; /* 56px */
+        }
+    }
+
+    @media (min-width: 1024px) {  /* lg */
+        .logo-responsive {
+            width: 4rem;  /* 64px */
+        }
+    }
+}
+
+/* Guest-page (login/register) logo: double the default logo size, still responsive. */
+@layer components {
+    .logo-responsive--guest {
+        width: 6rem;  /* 96px — mobile */
+        max-width: none;
+    }
+
+    @media (min-width: 640px) {   /* sm */
+        .logo-responsive--guest {
+            width: 8rem;  /* 128px */
+        }
+    }
+
+    @media (min-width: 768px) {   /* md */
+        .logo-responsive--guest {
+            width: 10rem;  /* 160px */
+        }
+    }
+
+    @media (min-width: 1024px) {  /* lg */
+        .logo-responsive--guest {
+            width: 12rem;  /* 192px */
+        }
+    }
+}

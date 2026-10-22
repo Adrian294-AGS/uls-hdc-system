@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'ULS-HDC') }}</title>
+        <link rel="icon" type="image/png" href="{{ asset('images/hdc-logo.png') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -27,7 +28,7 @@
         <div class="relative z-0 min-h-screen flex flex-col justify-center items-center px-4 pt-16 pb-8 sm:pt-8">
             <div class="glass-card w-full sm:max-w-md px-6 py-6 sm:px-8">
                 <a href="/" class="flex flex-col items-center gap-2 text-center">
-                    <x-application-logo class="w-16 h-16 fill-current text-gray-700 dark:text-gray-200" />
+                    <x-application-logo class="!w-32 !h-auto max-w-none" />
                     <span class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">ULS HDC</span>
                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ __('Human Development Center') }}</span>
                 </a>

@@ -70,7 +70,7 @@ DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=uls_hdc_system
 DB_USERNAME=root
-DB_PASSWORD=your-local-mysql-password
+DB_PASSWORD=
 
 DIRECTOR_EMAIL=director@uls.test
 DIRECTOR_PASSWORD=Local-dev-2026!     # 10+ characters: upper and lower case, a number and a symbol
